@@ -1,0 +1,24 @@
+{
+  "timestamp": "2026-09-14T21:11:40.899558+08:00",
+  "groups": {
+    "kernel": [
+      "0001-ath12k-romulus13-rfkill-workaround.patch",
+      "0002-romulus13-qspi-touchpad.patch",
+      "0003-romulus13-gtch-spi-touchscreen.patch"
+    ],
+    "iptsd": [
+      "0001-v3.1.0-to-sl7-tested-fork.patch",
+      "0002-iptsd-preserve-contact-and-button-state.patch"
+    ],
+    "iptsd-packaging": [
+      "0001-no-upgrade-hid-reprobe.patch"
+    ]
+  },
+  "validation": [
+    "validation/final-patchset-reproduction.json",
+    "validation/day-final-state.json",
+    "validation/current-artifacts.json"
+  ],
+  "original_calibration_retained": true,
+  "default_boot_promoted_with_user_approval": true
+}

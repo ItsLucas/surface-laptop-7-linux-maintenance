@@ -1,0 +1,47 @@
+[
+  {
+    "epoch_ms": 1789388914780.6697,
+    "ready": "ready",
+    "bus_error_count": "0 (0)",
+    "device_initiated_reset_count": "0",
+    "power/runtime_status": "unsupported",
+    "/sys/devices/platform/soc@0/8c0000.geniqup/88c000.spi/spi_master/spi0/power/runtime_status": "suspended",
+    "/sys/devices/platform/soc@0/8c0000.geniqup/88c000.spi/power/runtime_status": "suspended",
+    "/sys/devices/platform/soc@0/8c0000.geniqup/power/runtime_status": "unsupported",
+    "/sys/devices/platform/soc@0/power/runtime_status": "unsupported",
+    "/sys/devices/platform/power/runtime_status": "unsupported",
+    "irq": "183:      41640          0          0          0          0          0          0          0          0          0          0          0  msmgpio                      3 Level     spi0.0",
+    "process_exe": "/usr/bin/iptsd",
+    "process_stack": "[<0>] hidraw_read+0x23c/0x3f0 [hid]\n[<0>] vfs_read+0xd0/0x380\n[<0>] ksys_read+0x70/0x130\n[<0>] __arm64_sys_read+0x24/0x50\n[<0>] invoke_syscall.constprop.0+0xb0/0x130\n[<0>] el0_svc_common.constprop.0+0x44/0x140\n[<0>] do_el0_svc+0x28/0x58\n[<0>] el0_svc+0x48/0x310\n[<0>] el0t_64_sync_handler+0xc0/0x110\n[<0>] el0t_64_sync+0x1b8/0x1c0\n"
+  },
+  {
+    "epoch_ms": 1789388915086.7444,
+    "ready": "ready",
+    "bus_error_count": "0 (0)",
+    "device_initiated_reset_count": "0",
+    "power/runtime_status": "unsupported",
+    "/sys/devices/platform/soc@0/8c0000.geniqup/88c000.spi/spi_master/spi0/power/runtime_status": "suspended",
+    "/sys/devices/platform/soc@0/8c0000.geniqup/88c000.spi/power/runtime_status": "suspended",
+    "/sys/devices/platform/soc@0/8c0000.geniqup/power/runtime_status": "unsupported",
+    "/sys/devices/platform/soc@0/power/runtime_status": "unsupported",
+    "/sys/devices/platform/power/runtime_status": "unsupported",
+    "irq": "183:      41640          0          0          0          0          0          0          0          0          0          0          0  msmgpio                      3 Level     spi0.0",
+    "process_exe": "/usr/bin/iptsd",
+    "process_stack": "[<0>] hidraw_read+0x23c/0x3f0 [hid]\n[<0>] vfs_read+0xd0/0x380\n[<0>] ksys_read+0x70/0x130\n[<0>] __arm64_sys_read+0x24/0x50\n[<0>] invoke_syscall.constprop.0+0xb0/0x130\n[<0>] el0_svc_common.constprop.0+0x44/0x140\n[<0>] do_el0_svc+0x28/0x58\n[<0>] el0_svc+0x48/0x310\n[<0>] el0t_64_sync_handler+0xc0/0x110\n[<0>] el0t_64_sync+0x1b8/0x1c0\n"
+  },
+  {
+    "epoch_ms": 1789388915394.9146,
+    "ready": "ready",
+    "bus_error_count": "0 (0)",
+    "device_initiated_reset_count": "0",
+    "power/runtime_status": "unsupported",
+    "/sys/devices/platform/soc@0/8c0000.geniqup/88c000.spi/spi_master/spi0/power/runtime_status": "suspended",
+    "/sys/devices/platform/soc@0/8c0000.geniqup/88c000.spi/power/runtime_status": "suspended",
+    "/sys/devices/platform/soc@0/8c0000.geniqup/power/runtime_status": "unsupported",
+    "/sys/devices/platform/soc@0/power/runtime_status": "unsupported",
+    "/sys/devices/platform/power/runtime_status": "unsupported",
+    "irq": "183:      41640          0          0          0          0          0          0          0          0          0          0          0  msmgpio                      3 Level     spi0.0",
+    "process_exe": "/usr/bin/iptsd",
+    "process_stack": "[<0>] hidraw_read+0x23c/0x3f0 [hid]\n[<0>] vfs_read+0xd0/0x380\n[<0>] ksys_read+0x70/0x130\n[<0>] __arm64_sys_read+0x24/0x50\n[<0>] invoke_syscall.constprop.0+0xb0/0x130\n[<0>] el0_svc_common.constprop.0+0x44/0x140\n[<0>] do_el0_svc+0x28/0x58\n[<0>] el0_svc+0x48/0x310\n[<0>] el0t_64_sync_handler+0xc0/0x110\n[<0>] el0t_64_sync+0x1b8/0x1c0\n"
+  }
+]

@@ -1,0 +1,13 @@
+Validation performed on Windows, 2026-09-14.
+PASS: all shell scripts parsed with GNU Bash 5.3 (bash -n).
+PASS: shipped shell scripts use LF without a UTF-8 BOM.
+PASS: original board has 66 names; patched board has 67 names.
+PASS: all 66 existing name-to-payload mappings preserved byte-for-byte.
+PASS: new 1107/255 name uses exactly the existing 3378/255 payload.
+PASS: all 25 board payloads and the regulatory data are preserved.
+PASS: independent Qualcomm ath12k-bdencoder parses the result and agrees.
+PASS: patch is idempotent; truncated/corrupt/missing-source input rejected.
+PASS: no network downloads are required by the Linux installer/collector.
+NOT TESTED: actual execution of root installation scripts on Linux hardware.
+NOT TESTED: whether this kernel still needs an rfkill workaround after BDF loading.
+Hardware validation requires reboot and collection on the user's SL7.

@@ -1,0 +1,24 @@
+{
+  "base": "5f3214c1f4629e3505484eec54dc5946fa4e634a",
+  "head": "0e9944fa4cf2ccf575f5162bfd53ed4dc1592251",
+  "source": "https://github.com/ProgrammerIn-wonderland/ELLX-Kernel",
+  "files": [
+    "arch/arm64/boot/dts/qcom/x1e80100-microsoft-romulus.dtsi",
+    "drivers/dma/qcom/gpi.c",
+    "drivers/hid/spi-hid/Kconfig",
+    "drivers/hid/spi-hid/Makefile",
+    "drivers/hid/spi-hid/hid/hid-ids.h",
+    "drivers/hid/spi-hid/spi-hid-core.c",
+    "drivers/hid/spi-hid/spi-hid-core.h",
+    "drivers/hid/spi-hid/spi-hid_trace.h",
+    "drivers/hid/spi-hid/trace.c",
+    "drivers/spi/spi-geni-qcom.c",
+    "include/dt-bindings/dma/qcom-gpi.h",
+    "include/linux/dma/qcom-gpi-dma.h",
+    "drivers/hid/Kconfig",
+    "drivers/hid/Makefile",
+    "drivers/hid/hid-core.c",
+    "include/linux/hid.h",
+    "Documentation/devicetree/bindings/input/hid-over-spi.yaml"
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "file": "touchpad-click-fix/passive-health-202535.jsonl",
+  "finished": true,
+  "samples": 60,
+  "total_packets": 0,
+  "report_id_counts": {},
+  "irq_first": 33937,
+  "irq_last": 33937,
+  "ready_values": [
+    "ready"
+  ],
+  "error_values": [
+    "0 (0)"
+  ],
+  "reset_values": [
+    "0"
+  ],
+  "seconds_with_packets": 0,
+  "idle_samples_are_not_proof_of_failure": true
+}

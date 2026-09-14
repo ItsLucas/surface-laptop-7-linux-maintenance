@@ -1,0 +1,17 @@
+{
+  "drivers/spi/spi-geni-qcom.c": "757cef9f4299c951f25f3fdaff5a7a51cad7a9d49d4ec4f26b4eb809535ad821",
+  "drivers/dma/qcom/gpi.c": "1d50f609e41c5273b714b19bacfb5f719caa784ab60719ef25fe4e347dcc761b",
+  "include/dt-bindings/dma/qcom-gpi.h": "f26db2622a1b6b31114f12285f7b5e7036981a37a1413fe00961144c48c71013",
+  "include/linux/dma/qcom-gpi-dma.h": "909a894aa4e01f268cf2c70d7d3369a5c8795c5af7c5c5b1d4c0bb68acb1249f",
+  "drivers/hid/hid-core.c": "84db9e202a18c97d1081b72fb53c9cfe9a4c7ba87c3f840bc28e24f7f6d32e10",
+  "include/linux/hid.h": "1707421ec77951ecc18fa35eda3cb575696d0fec14b3480305411b69892b0a13",
+  "drivers/hid/Kconfig": "179d364c531da569dc264e56120177d202dd796f1d6e0ab3da2c666b81df57b0",
+  "drivers/hid/Makefile": "1fab3c998d7aa9424c12bca73275b517a7927b6392c9a2094be7e2eae6b62a78",
+  "arch/arm64/boot/dts/qcom/x1e80100-microsoft-romulus13.dts": "ce11d123cf41e2227a4e0c01be56c53ae844135fdaf0d31ba689680506ddb73b",
+  "drivers/hid/spi-hid/Kconfig": "d117f5973fbeeb22b8b10b75270befe4804ca238e186bb5be0a12939403a5f0c",
+  "drivers/hid/spi-hid/Makefile": "9a00fc8fba96cc2281f8f51514884e398d208ec454b4e769b26bd0d3ff0e80d0",
+  "drivers/hid/spi-hid/spi-hid-core.c": "985a1b60361acd72cbe5f4563fd37407d49bb6d69fa3c95e13b4a77a259f1c9a",
+  "drivers/hid/spi-hid/spi-hid-core.h": "703cdc293c45cd5638634ab292b5734e59dbb74496bdc9a8b1a413069effb31f",
+  "arch/arm64/boot/dts/qcom/x1e80100-microsoft-romulus13-touchpad.dtsi": "d9cc655198df76c4f14648b2b952c442a88a4491273252a26642b37cc7fe860f",
+  "drivers/net/wireless/ath/ath12k/core.c": "a13a665e0f9f4f2c9050b746422d48309cb9a21da4ca1a844785ecb59f552387"
+}

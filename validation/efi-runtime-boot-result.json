@@ -1,0 +1,19 @@
+{
+  "recorded_at": "2026-09-14T14:38:19.144698+08:00",
+  "boot_succeeded": true,
+  "parameter": "efi=runtime",
+  "secure_boot": "SecureBoot enabled",
+  "lockdown": "none [integrity] confidentiality",
+  "result": "Native firmware GetVariable reports EFI_UNSUPPORTED; MOK remains unimported. One-time parameter test did not solve kernel trust.",
+  "log": [
+    "secureboot: Secure boot enabled",
+    "Kernel is locked down from EFI Secure Boot mode; see man kernel_lockdown.7",
+    "Remapping and enabling EFI services.",
+    "integrity: secureboot mode unknown",
+    "integrity: Couldn't get size: Unsupported (0x8000000000000003)",
+    "integrity: MODSIGN: Couldn't get UEFI db list",
+    "integrity: Couldn't get size: Unsupported (0x8000000000000003)",
+    "integrity: Couldn't get UEFI dbx list"
+  ],
+  "next_direction": "User requested combined Wi-Fi and touchpad support in one signed Ubuntu-source kernel; use distinct release 7.2.0-5-sl7 and built-in module certificate, preserve normal efi=noruntime boot configuration."
+}

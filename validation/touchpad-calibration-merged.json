@@ -1,0 +1,18 @@
+{
+  "sources": [
+    "/home/lucas/code/sl7-wifi-fix/calibration/20260914-160432/iptsd_calib_045E_0C77_1789373132_2mm.conf",
+    "/home/lucas/code/sl7-wifi-fix/calibration/20260914-161126/iptsd_calib_045E_0C77_1789373516_2mm.conf"
+  ],
+  "total_samples": 10361,
+  "values": {
+    "SizeMin": 0.8,
+    "SizeMax": 2.0,
+    "AspectMin": 1.0,
+    "AspectMax": 2.1
+  },
+  "method": "Union of both recommended 2mm calibration ranges",
+  "user_validation_pending": false,
+  "user_feedback": "都正常了",
+  "validated_at": "2026-09-14T16:13:39.280704+08:00",
+  "installed_config": "/etc/iptsd.d/91-calibration-045E-0C77.conf"
+}

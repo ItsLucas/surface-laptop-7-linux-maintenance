@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-09-14T16:41:23.661008+08:00",
+  "approved": true,
+  "test_installed": true,
+  "test_image": "/boot/sl7/7.2.0-5-sl7-touchscreen-test/kernel.efi",
+  "test_image_sha256": "d25c3487fb3374fe14de3bf56895a28d247a7ab90c532bfb31209f02b536e093",
+  "test_entry": "sl7-touchscreen-test",
+  "next_entry": "sl7-touchscreen-test",
+  "default_entry": "sl7-combined-kernel",
+  "original_kernel_and_initrd_unchanged": true,
+  "same_kernel_release": "7.2.0-5-sl7",
+  "reuses_original_initrd": true,
+  "secure_boot": "SecureBoot enabled",
+  "backup_directory": "/var/backups/sl7-combined/touchscreen-test-20260914-164122",
+  "touchscreen_runtime_tested": false,
+  "awaiting_user_reboot": true
+}

@@ -1,0 +1,38 @@
+secureboot: Secure boot enabled
+Kernel is locked down from EFI Secure Boot mode; see man kernel_lockdown.7
+Loaded X.509 cert 'Canonical Ltd. Secure Boot Signing: 61482aa2830d0ab2ad5af10b7250da9033ddcef0'
+Loaded X.509 cert 'Canonical Ltd. Secure Boot Signing (2017): 242ade75ac4a15e50d50c84b0d45ff3eae707a03'
+Loaded X.509 cert 'Canonical Ltd. Secure Boot Signing (ESM 2018): 365188c1d374d6b07c3c8f240f8ef722433d6a8b'
+Loaded X.509 cert 'Canonical Ltd. Secure Boot Signing (2019): c0746fd6c5da3ae827864651ad66ae47fe24b3e8'
+Loaded X.509 cert 'Canonical Ltd. Secure Boot Signing (2021 v1): a8d54bbb3825cfb94fa13c9f8a594a195c107b8d'
+Loaded X.509 cert 'Canonical Ltd. Secure Boot Signing (2021 v2): 4cf046892d6fd3c9a5b03f98d845f90851dc6a8c'
+Loaded X.509 cert 'Canonical Ltd. Secure Boot Signing (2021 v3): 100437bb6de6e469b581e61cd66bce3ef4ed53af'
+Loaded X.509 cert 'Canonical Ltd. Secure Boot Signing (Ubuntu Core 2019): c1d57b8f6b743f23ee41f4f7ee292f06eecadfb9'
+integrity: secureboot mode unknown, no efi
+input: spi 045E:0C77 as /devices/platform/soc@0/8c0000.geniqup/88c000.spi/spi_master/spi0/spi0.0/001C:045E:0C77.0002/input/input4
+input: spi 045E:0C77 as /devices/platform/soc@0/8c0000.geniqup/88c000.spi/spi_master/spi0/spi0.0/001C:045E:0C77.0002/input/input5
+input: spi 045E:0C77 as /devices/platform/soc@0/8c0000.geniqup/88c000.spi/spi_master/spi0/spi0.0/001C:045E:0C77.0002/input/input6
+input: spi 045E:0C77 Mouse as /devices/platform/soc@0/8c0000.geniqup/88c000.spi/spi_master/spi0/spi0.0/001C:045E:0C77.0002/input/input7
+input: spi 045E:0C77 Touchpad as /devices/platform/soc@0/8c0000.geniqup/88c000.spi/spi_master/spi0/spi0.0/001C:045E:0C77.0002/input/input8
+hid-generic 001C:045E:0C77.0002: input,hidraw1: SPI HID v3.00 Mouse [spi 045E:0C77] on spi0.0
+input: spi 045E:0C6F as /devices/platform/soc@0/ac0000.geniqup/a88000.spi/spi_master/spi1/spi1.0/001C:045E:0C6F.0003/input/input9
+input: spi 045E:0C6F as /devices/platform/soc@0/ac0000.geniqup/a88000.spi/spi_master/spi1/spi1.0/001C:045E:0C6F.0003/input/input10
+input: spi 045E:0C6F Touchscreen as /devices/platform/soc@0/ac0000.geniqup/a88000.spi/spi_master/spi1/spi1.0/001C:045E:0C6F.0003/input/input11
+input: spi 045E:0C6F as /devices/platform/soc@0/ac0000.geniqup/a88000.spi/spi_master/spi1/spi1.0/001C:045E:0C6F.0003/input/input12
+hid-generic 001C:045E:0C6F.0003: input,hidraw2: SPI HID v3.00 Device [spi 045E:0C6F] on spi1.0
+input: spi 045E:0C77 UNKNOWN as /devices/platform/soc@0/8c0000.geniqup/88c000.spi/spi_master/spi0/spi0.0/001C:045E:0C77.0002/input/input13
+input: spi 045E:0C77 UNKNOWN as /devices/platform/soc@0/8c0000.geniqup/88c000.spi/spi_master/spi0/spi0.0/001C:045E:0C77.0002/input/input14
+input: spi 045E:0C77 UNKNOWN as /devices/platform/soc@0/8c0000.geniqup/88c000.spi/spi_master/spi0/spi0.0/001C:045E:0C77.0002/input/input15
+input: spi 045E:0C77 Mouse as /devices/platform/soc@0/8c0000.geniqup/88c000.spi/spi_master/spi0/spi0.0/001C:045E:0C77.0002/input/input16
+input: spi 045E:0C77 Touchpad as /devices/platform/soc@0/8c0000.geniqup/88c000.spi/spi_master/spi0/spi0.0/001C:045E:0C77.0002/input/input17
+hid-multitouch 001C:045E:0C77.0002: input,hidraw1: SPI HID v3.00 Mouse [spi 045E:0C77] on spi0.0
+input: IPTSD Virtual Touchscreen 045E:0C6F as /devices/virtual/input/input19
+input: IPTSD Virtual Stylus 045E:0C6F as /devices/virtual/input/input20
+input: IPTSD Virtual Touchpad 045E:0C77 as /devices/virtual/input/input21
+input: IPTSD Virtual Touchscreen 045E:0C6F as /devices/virtual/input/input23
+input: IPTSD Virtual Stylus 045E:0C6F as /devices/virtual/input/input24
+input: IPTSD Virtual Touchpad 045E:0C77 as /devices/virtual/input/input25
+spi_hid spi0.0: SPI transfer timed out
+spi_hid spi0.0: Body read failed: -110
+spi_hid spi0.0: Response timeout for type 4 (2000ms)
+spi_hid spi0.0: GET_FEATURE 0x06 failed: -110

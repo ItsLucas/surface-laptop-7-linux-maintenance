@@ -1,0 +1,188 @@
+{
+  "session": "1789388532904",
+  "sequence": 49,
+  "count": 10,
+  "doubles": 0,
+  "events": [
+    {
+      "type": "pointerdown",
+      "epoch_ms": 1789388534451,
+      "ms": 139990,
+      "detail": 0
+    },
+    {
+      "type": "pointerup",
+      "epoch_ms": 1789388534632,
+      "ms": 140171,
+      "detail": 0
+    },
+    {
+      "type": "click",
+      "epoch_ms": 1789388534633,
+      "ms": 140172,
+      "detail": 1
+    },
+    {
+      "type": "pointerdown",
+      "epoch_ms": 1789388535476,
+      "ms": 141015,
+      "detail": 0
+    },
+    {
+      "type": "pointerup",
+      "epoch_ms": 1789388535659,
+      "ms": 141198,
+      "detail": 0
+    },
+    {
+      "type": "click",
+      "epoch_ms": 1789388535659,
+      "ms": 141198,
+      "detail": 1
+    },
+    {
+      "type": "pointerdown",
+      "epoch_ms": 1789388536512,
+      "ms": 142051,
+      "detail": 0
+    },
+    {
+      "type": "pointerup",
+      "epoch_ms": 1789388536693,
+      "ms": 142232,
+      "detail": 0
+    },
+    {
+      "type": "click",
+      "epoch_ms": 1789388536694,
+      "ms": 142233,
+      "detail": 1
+    },
+    {
+      "type": "pointerdown",
+      "epoch_ms": 1789388537545,
+      "ms": 143084,
+      "detail": 0
+    },
+    {
+      "type": "pointerup",
+      "epoch_ms": 1789388537726,
+      "ms": 143265,
+      "detail": 0
+    },
+    {
+      "type": "click",
+      "epoch_ms": 1789388537726,
+      "ms": 143265,
+      "detail": 1
+    },
+    {
+      "type": "pointerdown",
+      "epoch_ms": 1789388538566,
+      "ms": 144105,
+      "detail": 0
+    },
+    {
+      "type": "pointerup",
+      "epoch_ms": 1789388538745,
+      "ms": 144284,
+      "detail": 0
+    },
+    {
+      "type": "click",
+      "epoch_ms": 1789388538746,
+      "ms": 144285,
+      "detail": 1
+    },
+    {
+      "type": "pointerdown",
+      "epoch_ms": 1789388539489,
+      "ms": 145028,
+      "detail": 0
+    },
+    {
+      "type": "pointerup",
+      "epoch_ms": 1789388539671,
+      "ms": 145211,
+      "detail": 0
+    },
+    {
+      "type": "click",
+      "epoch_ms": 1789388539672,
+      "ms": 145211,
+      "detail": 1
+    },
+    {
+      "type": "pointerdown",
+      "epoch_ms": 1789388540480,
+      "ms": 146019,
+      "detail": 0
+    },
+    {
+      "type": "pointerup",
+      "epoch_ms": 1789388540657,
+      "ms": 146196,
+      "detail": 0
+    },
+    {
+      "type": "click",
+      "epoch_ms": 1789388540658,
+      "ms": 146197,
+      "detail": 1
+    },
+    {
+      "type": "pointerdown",
+      "epoch_ms": 1789388541442,
+      "ms": 146981,
+      "detail": 0
+    },
+    {
+      "type": "pointerup",
+      "epoch_ms": 1789388541622,
+      "ms": 147161,
+      "detail": 0
+    },
+    {
+      "type": "click",
+      "epoch_ms": 1789388541623,
+      "ms": 147162,
+      "detail": 1
+    },
+    {
+      "type": "pointerdown",
+      "epoch_ms": 1789388542421,
+      "ms": 147960,
+      "detail": 0
+    },
+    {
+      "type": "pointerup",
+      "epoch_ms": 1789388542601,
+      "ms": 148140,
+      "detail": 0
+    },
+    {
+      "type": "click",
+      "epoch_ms": 1789388542602,
+      "ms": 148141,
+      "detail": 1
+    },
+    {
+      "type": "pointerdown",
+      "epoch_ms": 1789388543367,
+      "ms": 148906,
+      "detail": 0
+    },
+    {
+      "type": "pointerup",
+      "epoch_ms": 1789388543550,
+      "ms": 149089,
+      "detail": 0
+    },
+    {
+      "type": "click",
+      "epoch_ms": 1789388543551,
+      "ms": 149090,
+      "detail": 1
+    }
+  ]
+}

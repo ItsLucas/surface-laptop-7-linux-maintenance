@@ -1,0 +1,11 @@
+{
+  "candidate_sha256": "94003dc6c6c1e194054037ced995eb2258a08e1c346acaaf0964a37c673e927f",
+  "inner_kernel_identical": true,
+  "only_pe_section_changed": ".dtbauto",
+  "signature_verified": true,
+  "boot_mok_enrolled": true,
+  "reuses_existing_signed_modules_and_initrd": true,
+  "current_initrd_sha256": "581c333e17580bd4b80ad36ea50bf823713ed360483e86afcf203177f10c0654",
+  "touchpad_alignment_checked": true,
+  "runtime_tested": false
+}

@@ -1,0 +1,12 @@
+#!/bin/sh
+set -e
+case "$1" in
+    remove|purge)
+        if [ -d /run/systemd/system ]; then
+            systemctl daemon-reload
+        fi
+        if [ -S /run/udev/control ]; then
+            udevadm control --reload-rules
+        fi
+        ;;
+esac

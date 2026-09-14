@@ -1,0 +1,19 @@
+{
+  "timestamp": "2026-09-14T16:50:05.672075+08:00",
+  "action": "one target-only driver bind",
+  "bind_result": {
+    "exit": 1,
+    "stdout": "",
+    "stderr": "OSError: [Errno 6] No such device or address\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"<string>\", line 1, in <module>\n    from pathlib import Path; Path('/sys/bus/i2c/drivers/i2c_hid_of/bind').write_text('8-0034')\n                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^\n  File \"/usr/lib/python3.14/pathlib/__init__.py\", line 810, in write_text\n    with self.open(mode='w', encoding=encoding, errors=errors, newline=newline) as f:\n         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nOSError: [Errno 6] No such device or address\n"
+  },
+  "bound_after": false,
+  "kernel_log": [
+    "[  352.170146] Lucas-X1E kernel: i2c_hid_of 8-0034: supply vdd not found, using dummy regulator",
+    "[  352.170562] Lucas-X1E kernel: i2c_hid_of 8-0034: supply vddl not found, using dummy regulator",
+    "[  352.171011] Lucas-X1E kernel: i2c_hid_of 8-0034: nothing at this address: -6",
+    "[  352.172115] Lucas-X1E kernel: i2c_hid_of 8-0034: supply vdd not found, using dummy regulator",
+    "[  352.172270] Lucas-X1E kernel: i2c_hid_of 8-0034: supply vddl not found, using dummy regulator",
+    "[  352.172403] Lucas-X1E kernel: i2c_hid_of 8-0034: nothing at this address: -6"
+  ],
+  "debug_flags_restored": true
+}

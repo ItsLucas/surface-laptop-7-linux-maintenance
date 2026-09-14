@@ -1,0 +1,24 @@
+{
+  "timestamp": "2026-09-14T16:10:30.982922+08:00",
+  "running_kernel": "7.2.0-5-sl7",
+  "secure_boot": "SecureBoot enabled",
+  "lockdown": "none [integrity] confidentiality",
+  "wifi_current_address": "78:86:2e:5e:ec:47",
+  "wifi_rescan_exit": 0,
+  "wifi_visible_network_count": 4,
+  "wifi_rfkill": [
+    {
+      "hard": 0,
+      "soft": 0
+    }
+  ],
+  "services": {
+    "sl7-wifi-mac.service": "active",
+    "iptsd@dev-hidraw1.service": "active"
+  },
+  "bluetooth_address_matches_uefi_family": true,
+  "corporate_connection_tested": false,
+  "next_boot_mac_tested": false,
+  "touchpad_calibration_user_confirmed": true,
+  "default_kernel_configured": "sl7-combined-kernel"
+}

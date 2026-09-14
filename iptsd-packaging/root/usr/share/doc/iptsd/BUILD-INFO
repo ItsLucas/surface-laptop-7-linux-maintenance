@@ -1,0 +1,7 @@
+Source: https://github.com/alex-lentz/iptsd
+Commit: 3663e96e758145801c3cb1ce7c72f362d0d4a5f5
+Compiler: g++-15, Ubuntu 15.3.0-3ubuntu1
+Options: prefix=/usr, release, b_lto=false, debug_tools=calibrate,dump,perf, wrap-mode=nodownload
+Systemd/udev development metadata was available at configure time; both integrations are included.
+Contact threshold preset: https://github.com/bryce-hoehn/linux-surface-laptop-7/blob/main/config/touchpad/91-calibration-045E-0C77.conf
+This preset is a community starting point; physical dimensions are read from device metadata.

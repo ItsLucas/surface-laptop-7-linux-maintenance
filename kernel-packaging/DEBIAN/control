@@ -1,0 +1,12 @@
+Package: linux-image-7.2.0-5-sl7
+Version: 7.2.0-5.5+sl7.1
+Architecture: arm64
+Maintainer: Local Surface Support <root@localhost>
+Depends: kmod, dracut-core, grub-efi-arm64-signed, shim-signed, mokutil, sbsigntool, iptsd (>= 3.1.0+sl7.1)
+Section: kernel
+Priority: optional
+Description: Ubuntu kernel with Surface Laptop 7 Wi-Fi and QSPI touchpad support
+ Built from Ubuntu linux 7.2.0-5.5 with a scoped ath12k rfkill workaround,
+ QSPI/GPI/HID-SPI support, and the Romulus13 touchpad device tree.
+ Uses signed modules and a separately signed Stubble kernel image.
+ Installs a separate boot entry and preserves the normal Ubuntu default.

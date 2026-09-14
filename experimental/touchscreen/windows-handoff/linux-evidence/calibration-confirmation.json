@@ -1,0 +1,11 @@
+{
+  "loaded_config": "/etc/iptsd.d/91-calibration-045E-0C77.conf",
+  "hash_matches_final": true,
+  "iptsd_log": "Started iptsd@dev-hidraw1.service - Intel Precise Touch & Stylus Daemon.\n[16:44:20.603] [info] Loading config /usr/share/iptsd/surface-laptop-7-qspi.conf.\n[16:44:20.603] [info] Loading config /etc/iptsd.conf.\n[16:44:20.604] [info] Loading config /etc/iptsd.d/91-calibration-045E-0C77.conf.\n[16:44:20.604] [info] Connected to device 045E:0C77\n[16:44:20.604] [info] Running in Touchpad mode\n[16:44:20.604] [warning] Stylus is disabled!\n",
+  "values": {
+    "SizeMin": 0.8,
+    "SizeMax": 2.0,
+    "AspectMin": 1.0,
+    "AspectMax": 2.1
+  }
+}

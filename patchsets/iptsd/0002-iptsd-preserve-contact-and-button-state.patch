@@ -1,0 +1,177 @@
+--- a/src/apps/daemon/touch.hpp
++++ b/src/apps/daemon/touch.hpp
+@@ -20,6 +20,7 @@
+ #include <chrono>
+ #include <cmath>
+ #include <iterator>
++#include <map>
+ #include <memory>
+ #include <optional>
+ #include <set>
+@@ -62,6 +63,9 @@
+ 
+ 	// The difference between m_last and m_current.
+ 	std::set<usize> m_lift {};
++
++	// Last accepted contacts still present in the kernel multitouch slots.
++	std::map<usize, contacts::Contact<f64>> m_emitted {};
+ 
+ 	// The index of the contact that is emitted through the singletouch API.
+ 	usize m_single_index = 0;
+@@ -311,66 +315,50 @@
+ 	 */
+ 	void process(const std::vector<contacts::Contact<f64>> &contacts)
+ 	{
+-		bool reset_singletouch = true;
+-
++		std::map<usize, contacts::Contact<f64>> next;
+ 		const f64 ox = m_overshoot / m_config.width;
+ 		const f64 oy = m_overshoot / m_config.height;
+ 
+-		for (const contacts::Contact<f64> &contact : contacts) {
+-			// Ignore contacts without an index
++		for (const auto &contact : contacts) {
+ 			if (!contact.index.has_value())
+ 				continue;
+ 
+ 			const usize index = contact.index.value();
+-
+-			// Ignore unstable changes
+-			if (!contact.stable.value_or(true))
++			if (!contact.stable.value_or(true)) {
++				// An unstable measurement does not lift an already accepted contact.
++				// Keep its last coordinates, matching the unchanged multitouch slot.
++				const auto previous = m_emitted.find(index);
++				if (previous != m_emitted.end())
++					next.emplace(index, previous->second);
+ 				continue;
+-
+-			// Check if the contact is too far outside of the screen.
+-			bool lift = !contact.valid.value_or(true);
+-			lift |= contact.mean.x() < -ox || contact.mean.x() > (ox + 1);
+-			lift |= contact.mean.y() < -oy || contact.mean.y() > (oy + 1);
+-
+-			if (!lift)
+-				this->emit_multitouch(contact);
+-			else
++			}
++
++			if (!contact.valid.value_or(true) || contact.mean.x() < -ox ||
++			    contact.mean.x() > (ox + 1) || contact.mean.y() < -oy ||
++			    contact.mean.y() > (oy + 1))
++				continue;
++
++			next.emplace(index, contact);
++			this->emit_multitouch(contact);
++		}
++
++		for (const auto &[index, contact] : m_emitted) {
++			if (next.find(index) == next.end())
+ 				this->lift_multitouch(index);
+-
+-			// If this is the selected singletouch contact, emit a singletouch event.
+-			if (m_single_index != index)
+-				continue;
+-
+-			if (!lift) {
+-				this->emit_singletouch(contact);
+-				reset_singletouch = false;
+-			}
+-		}
+-
+-		for (const usize &index : m_lift)
+-			this->lift_multitouch(index);
+-
+-		if (reset_singletouch) {
++		}
++		m_emitted = std::move(next);
++
++		if (m_emitted.empty()) {
+ 			this->lift_singletouch();
+-
+-			// Search for a new contact to emit as singletouch events.
+-			for (const contacts::Contact<f64> &contact : contacts) {
+-				// Ignore contacts without an index
+-				if (!contact.index.has_value())
+-					continue;
+-
+-				const usize index = contact.index.value();
+-
+-				if (index == m_single_index)
+-					continue;
+-
+-				if (!contact.valid.value_or(true))
+-					continue;
+-
+-				m_single_index = index;
+-				return;
+-			}
+-		}
++			return;
++		}
++
++		// Select a replacement in this frame, without a false all-fingers-up frame.
++		auto primary = m_emitted.find(m_single_index);
++		if (primary == m_emitted.end())
++			primary = m_emitted.begin();
++		m_single_index = primary->first;
++		this->emit_singletouch(primary->second);
+ 	}
+ 
+ 	/*!
+@@ -468,7 +456,6 @@
+ 		m_uinput->emit(EV_KEY, BTN_TOUCH, 0);
+ 
+ 		if (m_info.is_touchpad()) {
+-			m_uinput->emit(EV_KEY, BTN_LEFT, 0);
+ 			m_uinput->emit(EV_KEY, BTN_TOOL_FINGER, 0);
+ 			m_uinput->emit(EV_KEY, BTN_TOOL_DOUBLETAP, 0);
+ 			m_uinput->emit(EV_KEY, BTN_TOOL_TRIPLETAP, 0);
+@@ -495,11 +482,11 @@
+ 		m_uinput->emit(EV_KEY, BTN_TOUCH, 1);
+ 
+ 		if (m_info.is_touchpad()) {
+-			m_uinput->emit(EV_KEY, BTN_TOOL_FINGER, m_current.size() == 1 ? 1 : 0);
+-			m_uinput->emit(EV_KEY, BTN_TOOL_DOUBLETAP, m_current.size() == 2 ? 1 : 0);
+-			m_uinput->emit(EV_KEY, BTN_TOOL_TRIPLETAP, m_current.size() == 3 ? 1 : 0);
+-			m_uinput->emit(EV_KEY, BTN_TOOL_QUADTAP, m_current.size() == 4 ? 1 : 0);
+-			m_uinput->emit(EV_KEY, BTN_TOOL_QUINTTAP, m_current.size() >= 5 ? 1 : 0);
++			m_uinput->emit(EV_KEY, BTN_TOOL_FINGER, m_emitted.size() == 1 ? 1 : 0);
++			m_uinput->emit(EV_KEY, BTN_TOOL_DOUBLETAP, m_emitted.size() == 2 ? 1 : 0);
++			m_uinput->emit(EV_KEY, BTN_TOOL_TRIPLETAP, m_emitted.size() == 3 ? 1 : 0);
++			m_uinput->emit(EV_KEY, BTN_TOOL_QUADTAP, m_emitted.size() == 4 ? 1 : 0);
++			m_uinput->emit(EV_KEY, BTN_TOOL_QUINTTAP, m_emitted.size() >= 5 ? 1 : 0);
+ 		}
+ 
+ 		m_uinput->emit(EV_ABS, ABS_X, x);
+@@ -509,19 +496,19 @@
+ 	/*!
+ 	 * Lifts all currently active inputs.
+ 	 */
+-	void lift_all() const
+-	{
+-		for (const usize &index : m_current) {
+-			m_uinput->emit(EV_ABS, ABS_MT_SLOT, casts::to<i32>(index));
++	void lift_all()
++	{
++		for (const auto &[index, contact] : m_emitted)
+ 			this->lift_multitouch(index);
+-		}
+-
+-		for (const usize &index : m_last) {
+-			m_uinput->emit(EV_ABS, ABS_MT_SLOT, casts::to<i32>(index));
+-			this->lift_multitouch(index);
+-		}
+-
++		m_emitted.clear();
+ 		this->lift_singletouch();
++
++		// Palm suppression and explicit disable release the physical button too.
++		// Ordinary contact loss must not synthesize a physical button release.
++		if (m_info.is_touchpad())
++			m_uinput->emit(EV_KEY, BTN_LEFT, 0);
++		m_button_state = false;
++		m_button_initialized = false;
+ 	}
+ 
+ 	/*!

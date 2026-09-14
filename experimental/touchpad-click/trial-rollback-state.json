@@ -1,0 +1,11 @@
+{
+  "service": "iptsd@dev-hidraw1.service",
+  "hidraw": "hidraw1",
+  "override": "/run/systemd/system/iptsd@dev-hidraw1.service.d/90-sl7-click-test.conf",
+  "override_text": "[Service]\nExecStart=\nExecStart=/run/sl7-iptsd-click-test/iptsd /dev/hidraw1\n",
+  "automatic_rollback_seconds": 180,
+  "original_binary_sha256": "f9a9a8cd09d1bdf5d224cdef8623f10d0d6b15680707ba29125a546616cb65ee",
+  "candidate_binary_sha256": "dc04340014d582072807275a5caf90932c2b4766ad44b3362c64a5e724f96282",
+  "calibration_sha256": "14f90f9eaaa855f4bdf52cdc41d158a9d763d4d0e35f6af40166c0f74c5b3847",
+  "restored": true
+}

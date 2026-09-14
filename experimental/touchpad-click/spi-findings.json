@@ -1,0 +1,21 @@
+{
+  "timestamp": "2026-09-14T20:54:35.324446+08:00",
+  "spi_messages_with_completion": 40722,
+  "pending_messages": 0,
+  "trace_dropped_events": 0,
+  "max_submit_to_done_ms": 19.514,
+  "heatmap_absent_during_marked_hang": true,
+  "heatmap_normal_dimensions": [
+    18,
+    26
+  ],
+  "heatmap_normal_bytes": 468,
+  "flags_observed_normal": 4,
+  "flags_observed_hang": 8,
+  "additional_report_type_during_hang": 18,
+  "report_type_meaning_confirmed": false,
+  "runtime_pm_test_applied": false,
+  "all_tracing_finished": true,
+  "next_priority": "Boot existing authorized SPI touchscreen test, then verify hardware",
+  "windows_comparison_handoff_local_only": "/home/lucas/code/sl7-touchpad-hang-windows-handoff-20260914"
+}

@@ -1,0 +1,45 @@
+The Meson build system
+Version: 1.10.1
+Source dir: /home/lucas/code/sl7-wifi-fix/touchpad-click-fix/source
+Build dir: /home/lucas/code/sl7-wifi-fix/touchpad-click-fix/build
+Build type: native build
+Project name: iptsd
+Project version: 3
+C++ compiler for the host machine: g++-15 (gcc 15.3.0 "g++-15 (Ubuntu 15.3.0-3ubuntu1) 15.3.0")
+C++ linker for the host machine: g++-15 ld.bfd 2.47
+Host machine cpu family: aarch64
+Host machine cpu: aarch64
+Configuring iptsd@.service using configuration
+Configuring 50-iptsd.rules using configuration
+Found pkg-config: YES (/usr/bin/pkg-config) 2.5.1
+Run-time dependency systemd found: YES 261
+Run-time dependency udev found: YES 261
+Compiler for C++ supports arguments -Wmissing-include-dirs: YES 
+Compiler for C++ supports arguments -Winit-self: YES 
+Compiler for C++ supports arguments -Wimplicit-fallthrough: YES 
+Compiler for C++ supports arguments -Wdouble-promotion: YES 
+Compiler for C++ supports arguments -Wconversion: YES 
+Compiler for C++ supports arguments -D_GLIBCXX_ASSERTIONS: YES 
+Compiler for C++ supports arguments -DSPDLOG_FMT_EXTERNAL: YES 
+Compiler for C++ supports arguments -march=armv8.2-a+crypto+fp16+rcpc+dotprod: YES 
+Configuring configure.h using configuration
+Run-time dependency cli11 found: YES 2.6.1
+Run-time dependency eigen3 found: YES 3.4.0
+Run-time dependency fmt found: YES 10.1.0
+Run-time dependency inireader found: YES 61
+Found CMake: /usr/bin/cmake (4.3.4)
+Run-time dependency microsoft.gsl (modules: Microsoft.GSL::GSL) found: YES 4.2.1
+Run-time dependency spdlog found: YES 1.15.3
+Library stdc++fs found: YES
+Build targets in project: 5
+
+iptsd 3
+
+  User defined options
+    b_lto      : false
+    buildtype  : release
+    debug_tools: calibrate,dump,perf
+    prefix     : /usr
+    wrap_mode  : nodownload
+
+Found ninja-1.13.2 at /usr/bin/ninja

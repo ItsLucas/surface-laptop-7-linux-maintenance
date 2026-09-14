@@ -1,0 +1,34 @@
+{
+  "created": "2026-09-14T21:09:54.786129+08:00",
+  "kernel_source": "Ubuntu 7.2.0-5.5",
+  "kernel_release": "7.2.0-5-sl7",
+  "current_iptsd": "3.1.0+sl7.2-1",
+  "current_boot_entry": "sl7-spi-touchscreen-test",
+  "files": {
+    "packages/iptsd_3.1.0+sl7.1_arm64.deb": {
+      "sha256": "ee26b4941cf982fc5f5299170f9dc5d993c3639da5c950eb28b5fa61915ac4d0",
+      "bytes": 450614,
+      "role": "rollback"
+    },
+    "packages/iptsd_3.1.0+sl7.2-1_arm64.deb": {
+      "sha256": "8c2c08c77d88d31111e651b2c5127f29acb08a975628dd542915f3882003c28b",
+      "bytes": 448926,
+      "role": "current"
+    },
+    "packages/linux-image-7.2.0-5-sl7_7.2.0-5.5+sl7.1_arm64.deb": {
+      "sha256": "fea73d237108ca5724581f92faadba6cb2591dcee752fb74b0c532678afa4848",
+      "bytes": 194649486,
+      "role": "current"
+    },
+    "boot/sl7/7.2.0-5-sl7/initrd.img": {
+      "sha256": "581c333e17580bd4b80ad36ea50bf823713ed360483e86afcf203177f10c0654",
+      "bytes": 106698846,
+      "role": "current"
+    },
+    "boot/sl7/7.2.0-5-sl7-spi-touchscreen-test/kernel.efi": {
+      "sha256": "94003dc6c6c1e194054037ced995eb2258a08e1c346acaaf0964a37c673e927f",
+      "bytes": 18058208,
+      "role": "current"
+    }
+  }
+}

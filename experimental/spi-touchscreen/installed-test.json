@@ -1,0 +1,16 @@
+{
+  "timestamp": "2026-09-14T20:02:05.972411+08:00",
+  "approved": true,
+  "installed_image": "/boot/sl7/7.2.0-5-sl7-spi-touchscreen-test/kernel.efi",
+  "image_sha256": "94003dc6c6c1e194054037ced995eb2258a08e1c346acaaf0964a37c673e927f",
+  "entry": "sl7-spi-touchscreen-test",
+  "default": "sl7-combined-kernel",
+  "next_entry": "sl7-spi-touchscreen-test",
+  "retired_i2c_test_entry": true,
+  "backup": "/var/backups/sl7-combined/spi-touchscreen-test-20260914-200204",
+  "normal_kernel_initrd_and_touchpad_calibration_unchanged": true,
+  "same_original_kernel_and_modules": true,
+  "power_always_on_for_initial_test": true,
+  "secure_boot": "SecureBoot enabled",
+  "runtime_tested": false
+}

@@ -1,0 +1,13 @@
+{
+  "upstream": "https://github.com/linux-surface/iptsd",
+  "base_tag": "v3.1.0",
+  "base_commit": "a83bc1232f7096f8b33b50fdbda249cd640de670",
+  "fork": "https://github.com/alex-lentz/iptsd",
+  "tested_commit": "3663e96e758145801c3cb1ce7c72f362d0d4a5f5",
+  "uncommitted_changes": false,
+  "diffstat": " README.md                         | 51 ++++++++++++++++++++++++++++------\n etc/iptsd.conf                    |  9 ++++++\n etc/meson.build                   |  9 ++++++\n etc/systemd-sleep/iptsd           |  4 +++\n etc/systemd/iptsd@.service.in     |  2 ++\n src/apps/daemon/daemon.hpp        | 14 ++++++++++\n src/apps/daemon/touch.hpp         | 58 ++++++++++++++++++++++++++++++++++++---\n src/contacts/tracking/tracker.hpp | 13 ++++++++-\n src/core/generic/application.hpp  | 17 ++++++++++++\n src/core/generic/config.hpp       |  1 +\n src/core/linux/config-loader.hpp  |  1 +\n src/core/linux/runner.hpp         | 12 +++++---\n src/ipts/descriptor.hpp           | 13 +++++++++\n src/ipts/device.hpp               | 20 +++++++++++++-\n src/ipts/parser.hpp               | 19 +++++++++++--\n src/ipts/protocol/descriptor.hpp  | 18 ++++++++++++\n 16 files changed, 239 insertions(+), 22 deletions(-)\n",
+  "final_local_source_patch": "0002-iptsd-preserve-contact-and-button-state.patch",
+  "final_package_version": "3.1.0+sl7.2-1",
+  "final_source_snapshot": "sources/iptsd-sl7-click-fixed-source.tar.gz",
+  "known_heatmap_suppression_unresolved": true
+}

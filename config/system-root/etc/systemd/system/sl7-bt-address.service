@@ -1,0 +1,13 @@
+[Unit]
+Description=Restore Surface Laptop 7 Bluetooth address from UEFI
+After=systemd-udevd.service
+Before=bluetooth.service
+ConditionPathExists=/sys/firmware/efi/efivars/MacAddressEmulationAddress-b7f95555-4ea5-4786-b088-78ba350a1b56
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/sbin/sl7-bt-address
+TimeoutStartSec=60
+
+[Install]
+WantedBy=multi-user.target

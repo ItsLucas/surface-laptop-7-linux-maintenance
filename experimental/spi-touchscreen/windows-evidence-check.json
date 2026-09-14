@@ -1,0 +1,7 @@
+{
+  "delivered_manifest_files_verified": 64,
+  "gtch_itch_sp11_resource_buffers_present_in_original_aml": true,
+  "active_windows_device": "MSHW0461 / GTCH",
+  "linux_spi_controller": "spi10 / 0xa88000",
+  "old_i2c_hypothesis_applies_to_different_branch": true
+}

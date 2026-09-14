@@ -1,0 +1,326 @@
+{
+  "session": "1789387972331",
+  "sequence": 34,
+  "count": 17,
+  "doubles": 2,
+  "events": [
+    {
+      "type": "pointerdown",
+      "epoch_ms": 1789387973173,
+      "ms": 22854,
+      "detail": 0
+    },
+    {
+      "type": "pointerup",
+      "epoch_ms": 1789387973612,
+      "ms": 23293,
+      "detail": 0
+    },
+    {
+      "type": "click",
+      "epoch_ms": 1789387973613,
+      "ms": 23294,
+      "detail": 1
+    },
+    {
+      "type": "pointerdown",
+      "epoch_ms": 1789387974292,
+      "ms": 23973,
+      "detail": 0
+    },
+    {
+      "type": "pointerup",
+      "epoch_ms": 1789387974770,
+      "ms": 24451,
+      "detail": 0
+    },
+    {
+      "type": "click",
+      "epoch_ms": 1789387974770,
+      "ms": 24451,
+      "detail": 1
+    },
+    {
+      "type": "pointerdown",
+      "epoch_ms": 1789387974796,
+      "ms": 24477,
+      "detail": 0
+    },
+    {
+      "type": "pointerup",
+      "epoch_ms": 1789387974976,
+      "ms": 24657,
+      "detail": 0
+    },
+    {
+      "type": "click",
+      "epoch_ms": 1789387974976,
+      "ms": 24657,
+      "detail": 1
+    },
+    {
+      "type": "pointerdown",
+      "epoch_ms": 1789387975493,
+      "ms": 25174,
+      "detail": 0
+    },
+    {
+      "type": "pointerup",
+      "epoch_ms": 1789387976076,
+      "ms": 25757,
+      "detail": 0
+    },
+    {
+      "type": "click",
+      "epoch_ms": 1789387976077,
+      "ms": 25758,
+      "detail": 1
+    },
+    {
+      "type": "pointerdown",
+      "epoch_ms": 1789387976791,
+      "ms": 26472,
+      "detail": 0
+    },
+    {
+      "type": "pointerup",
+      "epoch_ms": 1789387976791,
+      "ms": 26472,
+      "detail": 0
+    },
+    {
+      "type": "click",
+      "epoch_ms": 1789387976792,
+      "ms": 26473,
+      "detail": 1
+    },
+    {
+      "type": "pointerdown",
+      "epoch_ms": 1789387976792,
+      "ms": 26473,
+      "detail": 0
+    },
+    {
+      "type": "pointerup",
+      "epoch_ms": 1789387977291,
+      "ms": 26972,
+      "detail": 0
+    },
+    {
+      "type": "click",
+      "epoch_ms": 1789387977292,
+      "ms": 26973,
+      "detail": 2
+    },
+    {
+      "type": "dblclick",
+      "epoch_ms": 1789387977292,
+      "ms": 26973,
+      "detail": 2
+    },
+    {
+      "type": "pointerdown",
+      "epoch_ms": 1789387978112,
+      "ms": 27793,
+      "detail": 0
+    },
+    {
+      "type": "pointerup",
+      "epoch_ms": 1789387978799,
+      "ms": 28480,
+      "detail": 0
+    },
+    {
+      "type": "click",
+      "epoch_ms": 1789387978799,
+      "ms": 28480,
+      "detail": 1
+    },
+    {
+      "type": "pointerdown",
+      "epoch_ms": 1789387979521,
+      "ms": 29202,
+      "detail": 0
+    },
+    {
+      "type": "pointerup",
+      "epoch_ms": 1789387979548,
+      "ms": 29229,
+      "detail": 0
+    },
+    {
+      "type": "click",
+      "epoch_ms": 1789387979549,
+      "ms": 29230,
+      "detail": 1
+    },
+    {
+      "type": "pointerdown",
+      "epoch_ms": 1789387980034,
+      "ms": 29715,
+      "detail": 0
+    },
+    {
+      "type": "pointerup",
+      "epoch_ms": 1789387980214,
+      "ms": 29895,
+      "detail": 0
+    },
+    {
+      "type": "click",
+      "epoch_ms": 1789387980215,
+      "ms": 29896,
+      "detail": 1
+    },
+    {
+      "type": "pointerdown",
+      "epoch_ms": 1789387980760,
+      "ms": 30441,
+      "detail": 0
+    },
+    {
+      "type": "pointerup",
+      "epoch_ms": 1789387980866,
+      "ms": 30547,
+      "detail": 0
+    },
+    {
+      "type": "click",
+      "epoch_ms": 1789387980866,
+      "ms": 30547,
+      "detail": 1
+    },
+    {
+      "type": "pointerdown",
+      "epoch_ms": 1789387980979,
+      "ms": 30660,
+      "detail": 0
+    },
+    {
+      "type": "pointerup",
+      "epoch_ms": 1789387981103,
+      "ms": 30784,
+      "detail": 0
+    },
+    {
+      "type": "click",
+      "epoch_ms": 1789387981103,
+      "ms": 30784,
+      "detail": 2
+    },
+    {
+      "type": "dblclick",
+      "epoch_ms": 1789387981103,
+      "ms": 30784,
+      "detail": 2
+    },
+    {
+      "type": "pointerdown",
+      "epoch_ms": 1789387981104,
+      "ms": 30785,
+      "detail": 0
+    },
+    {
+      "type": "pointerup",
+      "epoch_ms": 1789387981359,
+      "ms": 31040,
+      "detail": 0
+    },
+    {
+      "type": "click",
+      "epoch_ms": 1789387981360,
+      "ms": 31041,
+      "detail": 3
+    },
+    {
+      "type": "pointerdown",
+      "epoch_ms": 1789387982033,
+      "ms": 31714,
+      "detail": 0
+    },
+    {
+      "type": "pointerup",
+      "epoch_ms": 1789387982529,
+      "ms": 32210,
+      "detail": 0
+    },
+    {
+      "type": "click",
+      "epoch_ms": 1789387982530,
+      "ms": 32211,
+      "detail": 1
+    },
+    {
+      "type": "pointerdown",
+      "epoch_ms": 1789387983178,
+      "ms": 32859,
+      "detail": 0
+    },
+    {
+      "type": "pointerup",
+      "epoch_ms": 1789387983333,
+      "ms": 33014,
+      "detail": 0
+    },
+    {
+      "type": "click",
+      "epoch_ms": 1789387983333,
+      "ms": 33014,
+      "detail": 1
+    },
+    {
+      "type": "pointerdown",
+      "epoch_ms": 1789387983366,
+      "ms": 33047,
+      "detail": 0
+    },
+    {
+      "type": "pointerup",
+      "epoch_ms": 1789387983608,
+      "ms": 33289,
+      "detail": 0
+    },
+    {
+      "type": "click",
+      "epoch_ms": 1789387983609,
+      "ms": 33290,
+      "detail": 1
+    },
+    {
+      "type": "pointerdown",
+      "epoch_ms": 1789387983807,
+      "ms": 33488,
+      "detail": 0
+    },
+    {
+      "type": "pointerup",
+      "epoch_ms": 1789387983992,
+      "ms": 33673,
+      "detail": 0
+    },
+    {
+      "type": "click",
+      "epoch_ms": 1789387983993,
+      "ms": 33674,
+      "detail": 1
+    },
+    {
+      "type": "pointerdown",
+      "epoch_ms": 1789387984526,
+      "ms": 34207,
+      "detail": 0
+    },
+    {
+      "type": "pointerup",
+      "epoch_ms": 1789387984531,
+      "ms": 34212,
+      "detail": 0
+    },
+    {
+      "type": "click",
+      "epoch_ms": 1789387984531,
+      "ms": 34212,
+      "detail": 1
+    }
+  ]
+}

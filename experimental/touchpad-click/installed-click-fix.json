@@ -1,0 +1,16 @@
+{
+  "timestamp": "2026-09-14T21:02:19.185300+08:00",
+  "user_approved": true,
+  "installed_version": "3.1.0+sl7.2",
+  "package_sha256": "67404c090557a71498f1d2e3d3cb8e2863c6d099d8617eafa10383da5bc16672",
+  "binary_sha256": "26c9ca51dfc97372f4ae4dd7767ae42a49f49220fdc2d1c9b990bd9ff3c06822",
+  "services": {
+    "00000C6F": "iptsd@dev-hidraw2.service",
+    "00000C77": "iptsd@dev-hidraw1.service"
+  },
+  "both_services_running_patched_binary": true,
+  "calibration_unchanged": true,
+  "boot_configuration_unchanged_by_package_install": true,
+  "backup": "/var/backups/sl7-combined/click-fix-installed-20260914-210218",
+  "known_heatmap_suppression_issue_not_claimed_fixed": true
+}

@@ -1,0 +1,89 @@
+{
+  "ok": true,
+  "release": "7.2.0-5-sl7",
+  "signed_modules_checked": 8643,
+  "all_module_hashes_architectures_versions_and_signature_trailers_match": true,
+  "all_imported_symbol_crcs_checked_using_kernel_version_table_rules": 358295,
+  "depmod_legacy_table_false_positives_explained": 101,
+  "module_public_certificate_embedded_in_kernel": true,
+  "critical_module_cryptographic_and_symbol_checks": {
+    "gpi": {
+      "imported_symbols_checked": 67,
+      "signature": {
+        "present": true,
+        "cryptographically_verified": true,
+        "pkcs7_bytes": 552,
+        "certificate_sha256": "9090c15e23590f75a7ab614fd566eaad85cc8c3be34a5ef6e3b67c4631f4669d",
+        "certificate_subject": "subject=CN=SL7 WiFi Local Module Signing 2026",
+        "kernel_trust_checked": false
+      }
+    },
+    "spi_hid": {
+      "imported_symbols_checked": 59,
+      "signature": {
+        "present": true,
+        "cryptographically_verified": true,
+        "pkcs7_bytes": 552,
+        "certificate_sha256": "9090c15e23590f75a7ab614fd566eaad85cc8c3be34a5ef6e3b67c4631f4669d",
+        "certificate_subject": "subject=CN=SL7 WiFi Local Module Signing 2026",
+        "kernel_trust_checked": false
+      }
+    },
+    "surface_hid": {
+      "imported_symbols_checked": 15,
+      "signature": {
+        "present": true,
+        "cryptographically_verified": true,
+        "pkcs7_bytes": 552,
+        "certificate_sha256": "9090c15e23590f75a7ab614fd566eaad85cc8c3be34a5ef6e3b67c4631f4669d",
+        "certificate_subject": "subject=CN=SL7 WiFi Local Module Signing 2026",
+        "kernel_trust_checked": false
+      }
+    },
+    "ath12k": {
+      "imported_symbols_checked": 340,
+      "signature": {
+        "present": true,
+        "cryptographically_verified": true,
+        "pkcs7_bytes": 552,
+        "certificate_sha256": "9090c15e23590f75a7ab614fd566eaad85cc8c3be34a5ef6e3b67c4631f4669d",
+        "certificate_subject": "subject=CN=SL7 WiFi Local Module Signing 2026",
+        "kernel_trust_checked": false
+      }
+    },
+    "ath12k_wifi7": {
+      "imported_symbols_checked": 177,
+      "signature": {
+        "present": true,
+        "cryptographically_verified": true,
+        "pkcs7_bytes": 552,
+        "certificate_sha256": "9090c15e23590f75a7ab614fd566eaad85cc8c3be34a5ef6e3b67c4631f4669d",
+        "certificate_subject": "subject=CN=SL7 WiFi Local Module Signing 2026",
+        "kernel_trust_checked": false
+      }
+    },
+    "nvme": {
+      "imported_symbols_checked": 184,
+      "signature": {
+        "present": true,
+        "cryptographically_verified": true,
+        "pkcs7_bytes": 552,
+        "certificate_sha256": "9090c15e23590f75a7ab614fd566eaad85cc8c3be34a5ef6e3b67c4631f4669d",
+        "certificate_subject": "subject=CN=SL7 WiFi Local Module Signing 2026",
+        "kernel_trust_checked": false
+      }
+    },
+    "spi_geni_qcom": {
+      "imported_symbols_checked": 89,
+      "signature": {
+        "present": true,
+        "cryptographically_verified": true,
+        "pkcs7_bytes": 552,
+        "certificate_sha256": "9090c15e23590f75a7ab614fd566eaad85cc8c3be34a5ef6e3b67c4631f4669d",
+        "certificate_subject": "subject=CN=SL7 WiFi Local Module Signing 2026",
+        "kernel_trust_checked": false
+      }
+    }
+  },
+  "hardware_runtime_tested": false
+}

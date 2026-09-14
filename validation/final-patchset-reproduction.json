@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-09-14T21:07:17.509470+08:00",
+  "kernel_base": "Ubuntu 7.2.0-5.5 original source package",
+  "kernel_patch_count": 3,
+  "kernel_patches_apply_without_fuzz": true,
+  "touchscreen_overlay_matches_booted_source": true,
+  "iptsd_patch_count": 2,
+  "iptsd_result_files_matched": 147,
+  "entire_patched_iptsd_source_matches_build_input": true,
+  "output": [
+    "patching file drivers/net/wireless/ath/ath12k/core.c\n",
+    "patching file drivers/spi/spi-geni-qcom.c\npatching file drivers/dma/qcom/gpi.c\npatching file include/dt-bindings/dma/qcom-gpi.h\npatching file include/linux/dma/qcom-gpi-dma.h\npatching file drivers/hid/hid-core.c\npatching file include/linux/hid.h\npatching file drivers/hid/Kconfig\npatching file drivers/hid/Makefile\npatching file arch/arm64/boot/dts/qcom/x1e80100-microsoft-romulus13.dts\npatching file drivers/hid/spi-hid/Kconfig\npatching file drivers/hid/spi-hid/Makefile\npatching file drivers/hid/spi-hid/spi-hid-core.c\npatching file drivers/hid/spi-hid/spi-hid-core.h\npatching file arch/arm64/boot/dts/qcom/x1e80100-microsoft-romulus13-touchpad.dtsi\n",
+    "patching file arch/arm64/boot/dts/qcom/x1e80100-microsoft-romulus13.dts\npatching file arch/arm64/boot/dts/qcom/x1e80100-microsoft-romulus13-gtch-test.dtsi\n",
+    "patching file README.md\npatching file etc/iptsd.conf\npatching file etc/meson.build\npatching file etc/systemd-sleep/iptsd\npatching file etc/systemd/iptsd@.service.in\npatching file src/apps/daemon/daemon.hpp\npatching file src/apps/daemon/touch.hpp\npatching file src/contacts/tracking/tracker.hpp\npatching file src/core/generic/application.hpp\npatching file src/core/generic/config.hpp\npatching file src/core/linux/config-loader.hpp\npatching file src/core/linux/runner.hpp\npatching file src/ipts/descriptor.hpp\npatching file src/ipts/device.hpp\npatching file src/ipts/parser.hpp\npatching file src/ipts/protocol/descriptor.hpp\n",
+    "patching file src/apps/daemon/touch.hpp\n"
+  ]
+}

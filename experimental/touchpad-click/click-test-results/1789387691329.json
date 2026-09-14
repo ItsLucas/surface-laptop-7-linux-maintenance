@@ -1,0 +1,178 @@
+{
+  "session": "1789387691329",
+  "sequence": 12,
+  "count": 11,
+  "doubles": 1,
+  "events": [
+    {
+      "type": "pointerdown",
+      "ms": 3499,
+      "detail": 0
+    },
+    {
+      "type": "pointerup",
+      "ms": 3581,
+      "detail": 0
+    },
+    {
+      "type": "click",
+      "ms": 3581,
+      "detail": 1
+    },
+    {
+      "type": "pointerdown",
+      "ms": 3683,
+      "detail": 0
+    },
+    {
+      "type": "pointerup",
+      "ms": 3867,
+      "detail": 0
+    },
+    {
+      "type": "click",
+      "ms": 3868,
+      "detail": 2
+    },
+    {
+      "type": "dblclick",
+      "ms": 3868,
+      "detail": 2
+    },
+    {
+      "type": "pointerdown",
+      "ms": 5076,
+      "detail": 0
+    },
+    {
+      "type": "pointerup",
+      "ms": 5269,
+      "detail": 0
+    },
+    {
+      "type": "click",
+      "ms": 5269,
+      "detail": 1
+    },
+    {
+      "type": "pointerdown",
+      "ms": 6643,
+      "detail": 0
+    },
+    {
+      "type": "pointerup",
+      "ms": 6829,
+      "detail": 0
+    },
+    {
+      "type": "click",
+      "ms": 6830,
+      "detail": 1
+    },
+    {
+      "type": "pointerdown",
+      "ms": 8187,
+      "detail": 0
+    },
+    {
+      "type": "pointerup",
+      "ms": 8369,
+      "detail": 0
+    },
+    {
+      "type": "click",
+      "ms": 8369,
+      "detail": 1
+    },
+    {
+      "type": "pointerdown",
+      "ms": 9525,
+      "detail": 0
+    },
+    {
+      "type": "pointerup",
+      "ms": 9721,
+      "detail": 0
+    },
+    {
+      "type": "click",
+      "ms": 9722,
+      "detail": 1
+    },
+    {
+      "type": "pointerdown",
+      "ms": 10817,
+      "detail": 0
+    },
+    {
+      "type": "pointerup",
+      "ms": 11008,
+      "detail": 0
+    },
+    {
+      "type": "click",
+      "ms": 11009,
+      "detail": 1
+    },
+    {
+      "type": "pointerdown",
+      "ms": 12148,
+      "detail": 0
+    },
+    {
+      "type": "pointerup",
+      "ms": 12334,
+      "detail": 0
+    },
+    {
+      "type": "click",
+      "ms": 12335,
+      "detail": 1
+    },
+    {
+      "type": "pointerdown",
+      "ms": 13412,
+      "detail": 0
+    },
+    {
+      "type": "pointerup",
+      "ms": 13614,
+      "detail": 0
+    },
+    {
+      "type": "click",
+      "ms": 13615,
+      "detail": 1
+    },
+    {
+      "type": "pointerdown",
+      "ms": 14721,
+      "detail": 0
+    },
+    {
+      "type": "pointerup",
+      "ms": 14901,
+      "detail": 0
+    },
+    {
+      "type": "click",
+      "ms": 14902,
+      "detail": 1
+    },
+    {
+      "type": "pointerdown",
+      "ms": 15923,
+      "detail": 0
+    },
+    {
+      "type": "pointerup",
+      "ms": 16116,
+      "detail": 0
+    },
+    {
+      "type": "click",
+      "ms": 16116,
+      "detail": 1
+    }
+  ]
+}

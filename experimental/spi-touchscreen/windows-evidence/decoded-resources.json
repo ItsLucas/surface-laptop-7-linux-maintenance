@@ -1,0 +1,123 @@
+{
+  "GTCH": [
+    {
+      "offset": 0,
+      "tag": "0x8e",
+      "hex": "8e1c00010002020000010900005a620208000000005c5f53422e5350313100",
+      "type": "SPI",
+      "max_hz": 40000000,
+      "source": "\\_SB.SP11",
+      "bits": 8,
+      "phase": 0,
+      "polarity": 0,
+      "chip_select": 0,
+      "type_flags": 0
+    },
+    {
+      "offset": 31,
+      "tag": "0x8c",
+      "hex": "8c2000010001001300010000000017000019002300000033005c5f53422e47494f3000",
+      "type": "GPIO interrupt",
+      "flags": "0x13",
+      "pin_config": 1,
+      "pins": [
+        51
+      ],
+      "source": "\\_SB.GIO0"
+    },
+    {
+      "offset": 66,
+      "tag": "0x8c",
+      "hex": "8c2000010101000000020000000017000019002300000040005c5f53422e47494f3000",
+      "type": "GPIO IO",
+      "flags": "0x0",
+      "pin_config": 2,
+      "pins": [
+        64
+      ],
+      "source": "\\_SB.GIO0"
+    },
+    {
+      "offset": 101,
+      "tag": "0x8c",
+      "hex": "8c2000010001001100020000000017000019002300000080035c5f53422e47494f3000",
+      "type": "GPIO interrupt",
+      "flags": "0x11",
+      "pin_config": 2,
+      "pins": [
+        896
+      ],
+      "source": "\\_SB.GIO0"
+    },
+    {
+      "offset": 136,
+      "tag": "0x79",
+      "hex": "7900"
+    }
+  ],
+  "ITCH": [
+    {
+      "offset": 0,
+      "tag": "0x8e",
+      "hex": "8e1900010001020000010600801a060034005c5f53422e4932433900",
+      "type": "I2C",
+      "max_hz": 400000,
+      "source": "\\_SB.I2C9",
+      "address": "0x34"
+    },
+    {
+      "offset": 28,
+      "tag": "0x8c",
+      "hex": "8c2000010001000200010000000017000019002300000026005c5f53422e47494f3000",
+      "type": "GPIO interrupt",
+      "flags": "0x2",
+      "pin_config": 1,
+      "pins": [
+        38
+      ],
+      "source": "\\_SB.GIO0"
+    },
+    {
+      "offset": 63,
+      "tag": "0x8c",
+      "hex": "8c200001010100000002000000001700001900230000001f005c5f53422e47494f3000",
+      "type": "GPIO IO",
+      "flags": "0x0",
+      "pin_config": 2,
+      "pins": [
+        31
+      ],
+      "source": "\\_SB.GIO0"
+    },
+    {
+      "offset": 98,
+      "tag": "0x79",
+      "hex": "7900"
+    }
+  ],
+  "SP11": [
+    {
+      "offset": 0,
+      "tag": "0x86",
+      "hex": "860900010080a80000400000",
+      "type": "Memory32Fixed",
+      "address": "0xa88000",
+      "size": "0x4000"
+    },
+    {
+      "offset": 12,
+      "tag": "0x89",
+      "hex": "890600010142030000",
+      "type": "ExtendedInterrupt",
+      "flags": "0x1",
+      "interrupts": [
+        834
+      ]
+    },
+    {
+      "offset": 21,
+      "tag": "0x79",
+      "hex": "7900"
+    }
+  ]
+}

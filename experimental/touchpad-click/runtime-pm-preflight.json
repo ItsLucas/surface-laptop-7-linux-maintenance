@@ -1,0 +1,10 @@
+{
+  "read_only_preflight_passed": true,
+  "control": "/sys/devices/platform/soc@0/8c0000.geniqup/88c000.spi/power/control",
+  "original_control": "auto",
+  "test_control": "on",
+  "automatic_restore_seconds": 180,
+  "iptsd_restarted": false,
+  "boot_and_gpio_unchanged": true,
+  "restored": false
+}

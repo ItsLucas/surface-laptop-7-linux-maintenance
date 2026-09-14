@@ -1,0 +1,89 @@
+{
+  "start_epoch_ms": 1789389336939.883,
+  "start_monotonic": 3327.113722085,
+  "irqs": {
+    "129": "88c000.spi",
+    "161": "gpi-dma",
+    "183": "spi0.0"
+  },
+  "pids": {
+    "425": "spi0",
+    "426": "irq/183-spi0.0",
+    "20079": "iptsd"
+  },
+  "hidraw": "hidraw1",
+  "spi": "spi0.0",
+  "trace_instance": "/sys/kernel/tracing/instances/sl7_spi_23004",
+  "events": [
+    {
+      "event": "spi/spi_message_submit",
+      "filter": "bus_num == 0 && chip_select == 0"
+    },
+    {
+      "event": "spi/spi_message_start",
+      "filter": "bus_num == 0 && chip_select == 0"
+    },
+    {
+      "event": "spi/spi_message_done",
+      "filter": "bus_num == 0 && chip_select == 0"
+    },
+    {
+      "event": "spi/spi_controller_busy",
+      "filter": "bus_num == 0"
+    },
+    {
+      "event": "spi/spi_controller_idle",
+      "filter": "bus_num == 0"
+    },
+    {
+      "event": "qcom_geni_spi/geni_spi_transfer",
+      "filter": "name == \"88c000.spi\""
+    },
+    {
+      "event": "qcom_geni_spi/geni_spi_irq",
+      "filter": "name == \"88c000.spi\""
+    },
+    {
+      "event": "qcom_geni_spi/geni_spi_clk_cfg",
+      "filter": "name == \"88c000.spi\""
+    },
+    {
+      "event": "qcom_geni_spi/geni_spi_setup_params",
+      "filter": "name == \"88c000.spi\""
+    },
+    {
+      "event": "rpm/rpm_suspend",
+      "filter": "name == \"88c000.spi\""
+    },
+    {
+      "event": "rpm/rpm_resume",
+      "filter": "name == \"88c000.spi\""
+    },
+    {
+      "event": "rpm/rpm_idle",
+      "filter": "name == \"88c000.spi\""
+    },
+    {
+      "event": "rpm/rpm_return_int",
+      "filter": "name == \"88c000.spi\""
+    },
+    {
+      "event": "irq/irq_handler_entry",
+      "filter": "irq == 129 || irq == 161 || irq == 183"
+    },
+    {
+      "event": "irq/irq_handler_exit",
+      "filter": "irq == 129 || irq == 161 || irq == 183"
+    },
+    {
+      "event": "sched/sched_switch",
+      "filter": "prev_pid == 425 || next_pid == 425 || prev_pid == 426 || next_pid == 426 || prev_pid == 20079 || next_pid == 20079"
+    },
+    {
+      "event": "sched/sched_waking",
+      "filter": "pid == 425 || pid == 426 || pid == 20079"
+    }
+  ],
+  "spi_payload_tracepoints_disabled": true,
+  "driver_and_power_settings_changed": false
+}

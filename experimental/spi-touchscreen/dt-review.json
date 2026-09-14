@@ -1,0 +1,90 @@
+{
+  "ok": true,
+  "baseline_matches_known_good_boot_dtb": true,
+  "existing_nodes_checked": 1419,
+  "existing_node_property_changes": [
+    [
+      "/soc@0/dma-controller@a00000",
+      "status"
+    ],
+    [
+      "/soc@0/geniqup@ac0000/spi@a88000",
+      "compatible"
+    ],
+    [
+      "/soc@0/geniqup@ac0000/spi@a88000",
+      "dmas"
+    ],
+    [
+      "/soc@0/geniqup@ac0000/spi@a88000",
+      "pinctrl-0"
+    ],
+    [
+      "/soc@0/geniqup@ac0000/spi@a88000",
+      "status"
+    ],
+    [
+      "/soc@0/geniqup@ac0000/spi@a88000",
+      "qcom,qspi-read-dummy-clocks"
+    ],
+    [
+      "/soc@0/geniqup@ac0000/spi@a88000",
+      "qcom,qspi-read-opcode"
+    ],
+    [
+      "/soc@0/geniqup@ac0000/spi@a88000",
+      "qcom,qspi-read-cmd-bytes"
+    ],
+    [
+      "/soc@0/geniqup@ac0000/spi@a88000",
+      "spi-max-frequency"
+    ],
+    [
+      "/__symbols__",
+      "gtch_reset_active"
+    ],
+    [
+      "/__symbols__",
+      "gtch"
+    ],
+    [
+      "/__symbols__",
+      "gtch_power_pin"
+    ],
+    [
+      "/__symbols__",
+      "gtch_interrupt"
+    ],
+    [
+      "/__symbols__",
+      "qup_qspi10_data23"
+    ],
+    [
+      "/__symbols__",
+      "gtch_reset_assert"
+    ],
+    [
+      "/__symbols__",
+      "gtch_power"
+    ]
+  ],
+  "new_nodes": [
+    "/regulator-gtch-power",
+    "/soc@0/geniqup@ac0000/spi@a88000/touchscreen@0",
+    "/soc@0/pinctrl@f100000/gtch-interrupt-state",
+    "/soc@0/pinctrl@f100000/gtch-power-state",
+    "/soc@0/pinctrl@f100000/gtch-reset-active-state",
+    "/soc@0/pinctrl@f100000/gtch-reset-assert-state",
+    "/soc@0/pinctrl@f100000/qup-qspi10-data23-state"
+  ],
+  "touchpad_wifi_bluetooth_usb_nodes_unchanged_after_phandle_normalization": true,
+  "i2c_test_removed": true,
+  "spi_frequency_hz": 20000000,
+  "reset_assert_ms_existing_driver": 300,
+  "power_startup_us": 500000,
+  "power_voltage_not_guessed": true,
+  "power_always_on_for_initial_test": true,
+  "wake_virtual_gpio_896_not_mapped": true,
+  "runtime_tested": false,
+  "candidate_dtb_sha256": "d4458b50d8f0750c5ce0a3b4a5ae0ba39a1b1c09a92cb17f841dfd055af8f09a"
+}

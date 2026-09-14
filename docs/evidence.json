@@ -1,0 +1,248 @@
+{
+  "captured_at": "2026-09-14T13:50:57.584283+08:00",
+  "scope": "Read-only investigation; no system settings, drivers, boot files, keys or services changed.",
+  "uname": {
+    "exit_code": 0,
+    "stdout": "Linux 7.2.0-5-generic #5-Ubuntu SMP PREEMPT_DYNAMIC Wed Aug 19 12:47:36 UTC 2026 aarch64 GNU/Linux",
+    "stderr": ""
+  },
+  "os_release": "PRETTY_NAME=\"Ubuntu Stonking Stingray (development branch)\"\nNAME=\"Ubuntu\"\nVERSION_ID=\"26.10\"\nVERSION=\"26.10 (Stonking Stingray)\"\nVERSION_CODENAME=stonking\nRELEASE_TYPE=development\nID=ubuntu\nID_LIKE=debian\nHOME_URL=\"https://www.ubuntu.com/\"\nDOCUMENTATION_URL=\"https://docs.ubuntu.com\"\nSUPPORT_URL=\"https://help.ubuntu.com/\"\nBUG_REPORT_URL=\"https://bugs.launchpad.net/ubuntu/\"\nPRIVACY_POLICY_URL=\"https://www.ubuntu.com/legal/terms-and-policies/privacy-policy\"\nLOGO=ubuntu-logo\nVENDOR_NAME=\"Canonical\"\nVENDOR_URL=\"https://canonical.com/\"\nUBUNTU_CODENAME=stonking",
+  "device_tree_model": "Microsoft Surface Laptop 7 (13.8 inch)",
+  "device_tree_compatible": "microsoft,romulus13\nqcom,x1e80100",
+  "rfkill": [
+    {
+      "name": "hci0",
+      "type": "bluetooth",
+      "soft": "0",
+      "hard": "0",
+      "state": "1"
+    },
+    {
+      "name": "phy0",
+      "type": "wlan",
+      "soft": "0",
+      "hard": "1",
+      "state": "2"
+    }
+  ],
+  "wireless_driver": "/sys/bus/pci/drivers/ath12k_wifi7_pci",
+  "spi_controllers": [
+    {
+      "path": "/proc/device-tree/soc@0/geniqup@bc0000/spi@b8c000",
+      "compatible": "qcom,geni-spi",
+      "status": "disabled"
+    },
+    {
+      "path": "/proc/device-tree/soc@0/geniqup@bc0000/spi@b94000",
+      "compatible": "qcom,geni-spi",
+      "status": "disabled"
+    },
+    {
+      "path": "/proc/device-tree/soc@0/geniqup@bc0000/spi@b80000",
+      "compatible": "qcom,geni-spi",
+      "status": "disabled"
+    },
+    {
+      "path": "/proc/device-tree/soc@0/geniqup@bc0000/spi@b9c000",
+      "compatible": "qcom,geni-spi",
+      "status": "disabled"
+    },
+    {
+      "path": "/proc/device-tree/soc@0/geniqup@bc0000/spi@b90000",
+      "compatible": "qcom,geni-spi",
+      "status": "disabled"
+    },
+    {
+      "path": "/proc/device-tree/soc@0/geniqup@bc0000/spi@b88000",
+      "compatible": "qcom,geni-spi",
+      "status": "disabled"
+    },
+    {
+      "path": "/proc/device-tree/soc@0/geniqup@bc0000/spi@b98000",
+      "compatible": "qcom,geni-spi",
+      "status": "disabled"
+    },
+    {
+      "path": "/proc/device-tree/soc@0/geniqup@bc0000/spi@b84000",
+      "compatible": "qcom,geni-spi",
+      "status": "disabled"
+    },
+    {
+      "path": "/proc/device-tree/soc@0/geniqup@8c0000/spi@88c000",
+      "compatible": "qcom,geni-spi",
+      "status": "disabled"
+    },
+    {
+      "path": "/proc/device-tree/soc@0/geniqup@8c0000/spi@894000",
+      "compatible": "qcom,geni-spi",
+      "status": "disabled"
+    },
+    {
+      "path": "/proc/device-tree/soc@0/geniqup@8c0000/spi@880000",
+      "compatible": "qcom,geni-spi",
+      "status": "disabled"
+    },
+    {
+      "path": "/proc/device-tree/soc@0/geniqup@8c0000/spi@89c000",
+      "compatible": "qcom,geni-spi",
+      "status": "disabled"
+    },
+    {
+      "path": "/proc/device-tree/soc@0/geniqup@8c0000/spi@890000",
+      "compatible": "qcom,geni-spi",
+      "status": "disabled"
+    },
+    {
+      "path": "/proc/device-tree/soc@0/geniqup@8c0000/spi@888000",
+      "compatible": "qcom,geni-spi",
+      "status": "disabled"
+    },
+    {
+      "path": "/proc/device-tree/soc@0/geniqup@8c0000/spi@898000",
+      "compatible": "qcom,geni-spi",
+      "status": "disabled"
+    },
+    {
+      "path": "/proc/device-tree/soc@0/geniqup@8c0000/spi@884000",
+      "compatible": "qcom,geni-spi",
+      "status": "disabled"
+    },
+    {
+      "path": "/proc/device-tree/soc@0/geniqup@ac0000/spi@a8c000",
+      "compatible": "qcom,geni-spi",
+      "status": "disabled"
+    },
+    {
+      "path": "/proc/device-tree/soc@0/geniqup@ac0000/spi@a94000",
+      "compatible": "qcom,geni-spi",
+      "status": "disabled"
+    },
+    {
+      "path": "/proc/device-tree/soc@0/geniqup@ac0000/spi@a80000",
+      "compatible": "qcom,geni-spi",
+      "status": "disabled"
+    },
+    {
+      "path": "/proc/device-tree/soc@0/geniqup@ac0000/spi@a9c000",
+      "compatible": "qcom,geni-spi",
+      "status": "disabled"
+    },
+    {
+      "path": "/proc/device-tree/soc@0/geniqup@ac0000/spi@a90000",
+      "compatible": "qcom,geni-spi",
+      "status": "disabled"
+    },
+    {
+      "path": "/proc/device-tree/soc@0/geniqup@ac0000/spi@a88000",
+      "compatible": "qcom,geni-spi",
+      "status": "disabled"
+    },
+    {
+      "path": "/proc/device-tree/soc@0/geniqup@ac0000/spi@a98000",
+      "compatible": "qcom,geni-spi",
+      "status": "disabled"
+    },
+    {
+      "path": "/proc/device-tree/soc@0/geniqup@ac0000/spi@a84000",
+      "compatible": "qcom,geni-spi",
+      "status": "disabled"
+    }
+  ],
+  "spi_devices": [],
+  "touchpad_names": [],
+  "selected_kernel_config": [
+    "CONFIG_MODULE_SIG=y",
+    "CONFIG_SPI_QCOM_QSPI=m",
+    "CONFIG_SPI_QCOM_GENI=m",
+    "CONFIG_LOCK_DOWN_IN_SECURE_BOOT=y",
+    "CONFIG_INTEGRITY_MACHINE_KEYRING=y"
+  ],
+  "iptsd_installed": {
+    "exit_code": 1,
+    "stdout": "",
+    "stderr": "dpkg-query: package 'iptsd' is not installed and no information is available\nUse dpkg --info (= dpkg-deb --info) to examine archive files."
+  },
+  "board_override": {
+    "path": "/usr/lib/firmware/updates/ath12k/WCN7850/hw2.0/board-2.bin",
+    "bytes": 2254080,
+    "sha256": "30ced6b4ba1968866ddf15c9d128860a9c0a44f430a41f278d9daa1a44e194b7"
+  },
+  "secureboot": {
+    "exit_code": 0,
+    "stdout": "SecureBoot enabled",
+    "stderr": ""
+  },
+  "lockdown": "none [integrity] confidentiality",
+  "kernel_pe_signatures": {
+    "exit_code": 0,
+    "stdout": "signature 1\nimage signature issuers:\n - /C=GB/ST=Isle of Man/L=Douglas/O=Canonical Ltd./CN=Canonical Ltd. Master Certificate Authority\nimage signature certificates:\n - subject: /C=GB/ST=Isle of Man/O=Canonical Ltd./OU=Secure Boot/CN=Canonical Ltd. Secure Boot Signing (2022 v1)\n   issuer:  /C=GB/ST=Isle of Man/L=Douglas/O=Canonical Ltd./CN=Canonical Ltd. Master Certificate Authority",
+    "stderr": ""
+  },
+  "shim_pe_signatures": {
+    "exit_code": 0,
+    "stdout": "signature 1\nimage signature issuers:\n - /C=US/ST=Washington/L=Redmond/O=Microsoft Corporation/CN=Microsoft Corporation UEFI CA 2011\nimage signature certificates:\n - subject: /C=US/ST=Washington/L=Redmond/O=Microsoft Corporation/CN=Microsoft Windows UEFI Driver Publisher\n   issuer:  /C=US/ST=Washington/L=Redmond/O=Microsoft Corporation/CN=Microsoft Corporation UEFI CA 2011\n - subject: /C=US/ST=Washington/L=Redmond/O=Microsoft Corporation/CN=Microsoft Corporation UEFI CA 2011\n   issuer:  /C=US/ST=Washington/L=Redmond/O=Microsoft Corporation/CN=Microsoft Corporation Third Party Marketplace Root",
+    "stderr": "warning: data remaining[846328 vs 987440]: gaps between PE/COFF sections?"
+  },
+  "grub_pe_signatures": {
+    "exit_code": 0,
+    "stdout": "signature 1\nimage signature issuers:\n - /C=GB/ST=Isle of Man/L=Douglas/O=Canonical Ltd./CN=Canonical Ltd. Master Certificate Authority\nimage signature certificates:\n - subject: /C=GB/ST=Isle of Man/O=Canonical Ltd./OU=Secure Boot/CN=Canonical Ltd. Secure Boot Signing (2022 v1)\n   issuer:  /C=GB/ST=Isle of Man/L=Douglas/O=Canonical Ltd./CN=Canonical Ltd. Master Certificate Authority",
+    "stderr": ""
+  },
+  "embedded_romulus13_dtb": {
+    "bytes": 210399,
+    "sha256": "0a0c2e035b1aed9409c52219370f2814389cdfb96dd4cea5e59d205243738b68",
+    "matches_boot_dtb": true,
+    "touchpad_mentions": 0,
+    "hid_over_spi_mentions": 0
+  },
+  "kernel_pe_sections": [
+    ".text",
+    ".rodata",
+    ".data",
+    ".reloc",
+    ".dtbauto",
+    ".dtbauto",
+    ".dtbauto",
+    ".dtbauto",
+    ".dtbauto",
+    ".dtbauto",
+    ".dtbauto",
+    ".dtbauto",
+    ".dtbauto",
+    ".dtbauto",
+    ".dtbauto",
+    ".dtbauto",
+    ".dtbauto",
+    ".dtbauto",
+    ".dtbauto",
+    ".dtbauto",
+    ".dtbauto",
+    ".dtbauto",
+    ".dtbauto",
+    ".dtbauto",
+    ".dtbauto",
+    ".dtbauto",
+    ".dtbauto",
+    ".dtbauto",
+    ".dtbauto",
+    ".dtbauto",
+    ".dtbauto",
+    ".dtbauto",
+    ".dtbauto",
+    ".dtbauto",
+    ".dtbauto",
+    ".hwids",
+    ".uname",
+    ".linux",
+    ".sbat"
+  ],
+  "ellx_rc4_12_pe_header": {
+    "read_scope": "partial package data, PE header only; full payload not downloaded or verified",
+    "machine": "0xaa64",
+    "format": "0x20b",
+    "security_directory_file_offset_and_size": [
+      0,
+      0
+    ]
+  }
+}

@@ -1,0 +1,107 @@
+{
+  "timestamp": "2026-09-14T21:03:14.165099+08:00",
+  "user_confirmed_touchscreen": "Screen works!",
+  "cmdline": "BOOT_IMAGE=/boot/sl7/7.2.0-5-sl7-spi-touchscreen-test/kernel.efi root=UUID=79246795-8cbd-4eaa-bbbb-cf2c6ac4f0f1 ro clk_ignore_unused pd_ignore_unused cma=128M efi=noruntime quiet splash console=tty0 crashkernel=2G-4G:320M,4G-32G:512M,32G-64G:1024M,64G-128G:2048M,128G-:4096M",
+  "kernel": "7.2.0-5-sl7",
+  "iptsd": "3.1.0+sl7.2",
+  "secure_boot": "SecureBoot enabled",
+  "lockdown": "none [integrity] confidentiality",
+  "signature": "Signature verification OK",
+  "inputs": [
+    {
+      "event": "event9",
+      "name": "spi 045E:0C6F"
+    },
+    {
+      "event": "event15",
+      "name": "IPTSD Virtual Stylus 045E:0C6F"
+    },
+    {
+      "event": "event7",
+      "name": "spi 045E:0C77 Mouse"
+    },
+    {
+      "event": "event5",
+      "name": "spi 045E:0C77 UNKNOWN"
+    },
+    {
+      "event": "event11",
+      "name": "spi 045E:0C6F Touchscreen"
+    },
+    {
+      "event": "event8",
+      "name": "spi 045E:0C77 Touchpad"
+    },
+    {
+      "event": "event14",
+      "name": "IPTSD Virtual Touchscreen 045E:0C6F"
+    },
+    {
+      "event": "event6",
+      "name": "spi 045E:0C77 UNKNOWN"
+    },
+    {
+      "event": "event12",
+      "name": "spi 045E:0C6F"
+    },
+    {
+      "event": "event4",
+      "name": "spi 045E:0C77 UNKNOWN"
+    },
+    {
+      "event": "event10",
+      "name": "spi 045E:0C6F"
+    }
+  ],
+  "hidraw": [
+    {
+      "node": "hidraw2",
+      "path": "/sys/devices/platform/soc@0/ac0000.geniqup/a88000.spi/spi_master/spi1/spi1.0/001C:045E:0C6F.0003",
+      "properties": {
+        "DRIVER": "hid-generic",
+        "HID_ID": "001C:0000045E:00000C6F",
+        "HID_NAME": "spi 045E:0C6F",
+        "HID_PHYS": "spi1.0",
+        "HID_UNIQ": "",
+        "MODALIAS": "hid:b001Cg0001v0000045Ep00000C6F"
+      }
+    },
+    {
+      "node": "hidraw1",
+      "path": "/sys/devices/platform/soc@0/8c0000.geniqup/88c000.spi/spi_master/spi0/spi0.0/001C:045E:0C77.0002",
+      "properties": {
+        "DRIVER": "hid-multitouch",
+        "HID_ID": "001C:0000045E:00000C77",
+        "HID_NAME": "spi 045E:0C77",
+        "HID_PHYS": "spi0.0",
+        "HID_UNIQ": "",
+        "MODALIAS": "hid:b001Cg0004v0000045Ep00000C77"
+      }
+    }
+  ],
+  "spi": [
+    {
+      "device": "spi0.0",
+      "path": "/sys/devices/platform/soc@0/8c0000.geniqup/88c000.spi/spi_master/spi0/spi0.0",
+      "ready": "ready",
+      "bus_errors": "0 (-110)",
+      "resets": "0"
+    },
+    {
+      "device": "spi1.0",
+      "path": "/sys/devices/platform/soc@0/ac0000.geniqup/a88000.spi/spi_master/spi1/spi1.0",
+      "ready": "ready",
+      "bus_errors": "0 (0)",
+      "resets": "0"
+    }
+  ],
+  "network_devices": [
+    "wlP4p1s0:wifi:connected",
+    "lo:loopback:connected (externally)",
+    "p2p-dev-wlP4p1s0:wifi-p2p:disconnected"
+  ],
+  "wifi_mac": "78:86:2e:5e:ec:47",
+  "bluetooth_service": "active",
+  "boot_environment": "next_entry=",
+  "known_touchpad_heatmap_suppression_unresolved": true
+}

@@ -1,0 +1,26 @@
+{
+  "timestamp": "2026-09-14T20:31:59.719034+08:00",
+  "original_version": "3.1.0+sl7.1",
+  "original_process": "/usr/bin/iptsd",
+  "user_reported_stall_after_repeated_fast_physical_clicks": true,
+  "user_reported_about_ten_double_clicks": true,
+  "user_confirmed_motion_and_haptics_recovered": true,
+  "no_service_restart_or_driver_switch_this_turn": true,
+  "before_irq_count": 41640,
+  "after_irq_count": 44982,
+  "capture_packet_count": 3342,
+  "packet_ids": {
+    "0a": 3341,
+    "0c": 1
+  },
+  "first_observed_packets": "2026-09-14T20:28:54.794834+08:00",
+  "errors": [
+    "0 (0)"
+  ],
+  "resets": [
+    "0"
+  ],
+  "reported_stall_exists_without_click_candidate": true,
+  "runtime_pm_test_prepared_not_applied": true,
+  "runtime_pm_causality_not_proven": true
+}

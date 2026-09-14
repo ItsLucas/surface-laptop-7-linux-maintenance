@@ -1,0 +1,17 @@
+{
+  "created": "2026-09-14T20:16:58.291066+08:00",
+  "baseline_commit": "3663e96e758145801c3cb1ce7c72f362d0d4a5f5",
+  "installed_version": "3.1.0+sl7.1",
+  "installed_binary_sha256": "f9a9a8cd09d1bdf5d224cdef8623f10d0d6b15680707ba29125a546616cb65ee",
+  "installed_binary_matches_package": true,
+  "candidate_binary_sha256": "dc04340014d582072807275a5caf90932c2b4766ad44b3362c64a5e724f96282",
+  "patch_sha256": "41ea8d5fcbdbae352b792abeaeae54e523a4e982b6dd0d9d534ddf178c09298e",
+  "calibration_sha256": "14f90f9eaaa855f4bdf52cdc41d158a9d763d4d0e35f6af40166c0f74c5b3847",
+  "build_only_user_daemon": true,
+  "runtime_installed": false,
+  "tap_to_click_preserve": true,
+  "click_count_trial_passed": true,
+  "reliability_trial_passed": false,
+  "permanent_install_eligible": false,
+  "reason": "Unexplained 102-second gap during reported loss of input and haptics; keep original service."
+}

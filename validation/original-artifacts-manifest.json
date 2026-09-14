@@ -1,0 +1,180 @@
+{
+  "timestamp": "2026-09-14T15:49:37.345523+08:00",
+  "release": "7.2.0-5-sl7",
+  "ubuntu_source_version": "7.2.0-5.5",
+  "files": {
+    "artifacts/linux-image-7.2.0-5-sl7_7.2.0-5.5+sl7.1_arm64.deb": {
+      "size_bytes": 194649486,
+      "sha256": "fea73d237108ca5724581f92faadba6cb2591dcee752fb74b0c532678afa4848"
+    },
+    "artifacts/iptsd_3.1.0+sl7.1_arm64.deb": {
+      "size_bytes": 450614,
+      "sha256": "ee26b4941cf982fc5f5299170f9dc5d993c3639da5c950eb28b5fa61915ac4d0"
+    },
+    "artifacts/sl7-combined-signed.efi": {
+      "size_bytes": 18056672,
+      "sha256": "5a5af0e5bbe42664d91d490b43c068b51fcb40dab71cf5712551eb142a4cc597"
+    },
+    "artifacts/sl7-inner-signed.efi": {
+      "size_bytes": 17701344,
+      "sha256": "eca6f7850625580516098d1df89f86790b08d975f2444b97c1d4e1351e8dbc6f"
+    },
+    "artifacts/SL7-Kernel-BOOT.der": {
+      "size_bytes": 1111,
+      "sha256": "cbc87e436c5328a50a6e1ddcb39e1b12b56762f63fd7ea3c9f95feac1e4a377b"
+    },
+    "artifacts/SL7-WiFi-MOK.der": {
+      "size_bytes": 1134,
+      "sha256": "9090c15e23590f75a7ab614fd566eaad85cc8c3be34a5ef6e3b67c4631f4669d"
+    },
+    "sl7-wifi-mac.py": {
+      "size_bytes": 2929,
+      "sha256": "5269f0cc0d8f96801d89ede484991cce471e2066aa1fc94dbce254e7f44d1363"
+    },
+    "sl7-wifi-mac.service": {
+      "size_bytes": 560,
+      "sha256": "9ee12c3ca406bcfda7c1bdc75ed6f934d874a8aa16e48d60b7bbe64ec1f9b9f6"
+    },
+    "zz-sl7-local-kernel.cfg": {
+      "size_bytes": 158,
+      "sha256": "f13465938b271e57dea3be9c84ebc8eac117d23509d01a7da0019eaa9a8056c9"
+    },
+    "artifacts/sl7-finger-thumb-calibration.conf": {
+      "size_bytes": 267,
+      "sha256": "14f90f9eaaa855f4bdf52cdc41d158a9d763d4d0e35f6af40166c0f74c5b3847"
+    }
+  },
+  "validation": {
+    "combined-image-verification": {
+      "ok": true,
+      "release": "7.2.0-5-sl7",
+      "outer_pe_sha256": "5a5af0e5bbe42664d91d490b43c068b51fcb40dab71cf5712551eb142a4cc597",
+      "inner_pe_sha256": "eca6f7850625580516098d1df89f86790b08d975f2444b97c1d4e1351e8dbc6f",
+      "dtb_sha256": "19a6f7010e0e6768ed93f2565ac175d2b2c443a27f9df7d49359e6391eff8f00",
+      "outer_and_inner_signatures_verified": true,
+      "embedded_kernel_and_device_tree_match_staged_artifacts": true,
+      "romulus13_hwid_match_count": 4,
+      "hardware_runtime_tested": false
+    },
+    "combined-module-verification": {
+      "ok": true,
+      "release": "7.2.0-5-sl7",
+      "signed_modules_checked": 8643,
+      "all_module_hashes_architectures_versions_and_signature_trailers_match": true,
+      "all_imported_symbol_crcs_checked_using_kernel_version_table_rules": 358295,
+      "depmod_legacy_table_false_positives_explained": 101,
+      "module_public_certificate_embedded_in_kernel": true,
+      "critical_module_cryptographic_and_symbol_checks": {
+        "gpi": {
+          "imported_symbols_checked": 67,
+          "signature": {
+            "present": true,
+            "cryptographically_verified": true,
+            "pkcs7_bytes": 552,
+            "certificate_sha256": "9090c15e23590f75a7ab614fd566eaad85cc8c3be34a5ef6e3b67c4631f4669d",
+            "certificate_subject": "subject=CN=SL7 WiFi Local Module Signing 2026",
+            "kernel_trust_checked": false
+          }
+        },
+        "spi_hid": {
+          "imported_symbols_checked": 59,
+          "signature": {
+            "present": true,
+            "cryptographically_verified": true,
+            "pkcs7_bytes": 552,
+            "certificate_sha256": "9090c15e23590f75a7ab614fd566eaad85cc8c3be34a5ef6e3b67c4631f4669d",
+            "certificate_subject": "subject=CN=SL7 WiFi Local Module Signing 2026",
+            "kernel_trust_checked": false
+          }
+        },
+        "surface_hid": {
+          "imported_symbols_checked": 15,
+          "signature": {
+            "present": true,
+            "cryptographically_verified": true,
+            "pkcs7_bytes": 552,
+            "certificate_sha256": "9090c15e23590f75a7ab614fd566eaad85cc8c3be34a5ef6e3b67c4631f4669d",
+            "certificate_subject": "subject=CN=SL7 WiFi Local Module Signing 2026",
+            "kernel_trust_checked": false
+          }
+        },
+        "ath12k": {
+          "imported_symbols_checked": 340,
+          "signature": {
+            "present": true,
+            "cryptographically_verified": true,
+            "pkcs7_bytes": 552,
+            "certificate_sha256": "9090c15e23590f75a7ab614fd566eaad85cc8c3be34a5ef6e3b67c4631f4669d",
+            "certificate_subject": "subject=CN=SL7 WiFi Local Module Signing 2026",
+            "kernel_trust_checked": false
+          }
+        },
+        "ath12k_wifi7": {
+          "imported_symbols_checked": 177,
+          "signature": {
+            "present": true,
+            "cryptographically_verified": true,
+            "pkcs7_bytes": 552,
+            "certificate_sha256": "9090c15e23590f75a7ab614fd566eaad85cc8c3be34a5ef6e3b67c4631f4669d",
+            "certificate_subject": "subject=CN=SL7 WiFi Local Module Signing 2026",
+            "kernel_trust_checked": false
+          }
+        },
+        "nvme": {
+          "imported_symbols_checked": 184,
+          "signature": {
+            "present": true,
+            "cryptographically_verified": true,
+            "pkcs7_bytes": 552,
+            "certificate_sha256": "9090c15e23590f75a7ab614fd566eaad85cc8c3be34a5ef6e3b67c4631f4669d",
+            "certificate_subject": "subject=CN=SL7 WiFi Local Module Signing 2026",
+            "kernel_trust_checked": false
+          }
+        },
+        "spi_geni_qcom": {
+          "imported_symbols_checked": 89,
+          "signature": {
+            "present": true,
+            "cryptographically_verified": true,
+            "pkcs7_bytes": 552,
+            "certificate_sha256": "9090c15e23590f75a7ab614fd566eaad85cc8c3be34a5ef6e3b67c4631f4669d",
+            "certificate_subject": "subject=CN=SL7 WiFi Local Module Signing 2026",
+            "kernel_trust_checked": false
+          }
+        }
+      },
+      "hardware_runtime_tested": false
+    },
+    "initrd-verification": {
+      "ok": true,
+      "generator": "dracut 112-6",
+      "release": "7.2.0-5-sl7",
+      "initrd_sha256": "e125e9d9e9b6f5aa9754c530f09ca57a78c1c23b3bacfea61ae694a365232328",
+      "signed_touchpad_modules_preserved_byte_for_byte": {
+        "kernel/drivers/dma/qcom/gpi.ko.zst": "e285aefac053235c7d16b113d38acb53ef97125e3ba922647dc0084cad215187",
+        "kernel/drivers/hid/spi-hid/spi-hid.ko.zst": "80b3325967a814f98fc9b788fd3a27843f91cdec82e4affb568ca32c6eab8922",
+        "kernel/drivers/spi/spi-geni-qcom.ko.zst": "bcaa428f6311ea73e0d909bb877607213fb28ab4a5f0dc026341f0e47add9bf2"
+      },
+      "wifi_board_override_matches_installed": true
+    }
+  },
+  "apt_simulation": {
+    "upgraded": 0,
+    "newly_installed": 2,
+    "removed": 0,
+    "packages": [
+      "iptsd",
+      "linux-image-7.2.0-5-sl7"
+    ]
+  },
+  "installed": true,
+  "hardware_runtime_tested": true,
+  "boot_certificate_fingerprint_sha256": "cbc87e436c5328a50a6e1ddcb39e1b12b56762f63fd7ea3c9f95feac1e4a377b",
+  "documentation_correction": "Fixed certificate fingerprint transcription; kernel, modules and actual certificates unchanged",
+  "installation_verification": "logs/combined-install-verification.json",
+  "boot_pending": "logs/combined-boot-pending.json",
+  "runtime_verification": "logs/final-runtime-verification.json",
+  "default_kernel_configuration": "logs/default-kernel-installed.json",
+  "wifi_mac_configuration": "logs/wifi-mac-installed.json",
+  "touchpad_calibration": "logs/touchpad-calibration-merged.json"
+}

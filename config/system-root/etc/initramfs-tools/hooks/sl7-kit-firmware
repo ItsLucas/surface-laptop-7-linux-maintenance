@@ -1,0 +1,13 @@
+#!/bin/sh
+# initramfs-tools hook: copy the kit's two override files into the boot image.
+set -e
+case "${1:-}" in prereqs) exit 0 ;; esac
+: "${DESTDIR:?initramfs-tools must set DESTDIR}"
+for rel in updates/qcom/x1e80100/microsoft/qcdxkmsuc8380.mbn updates/ath12k/WCN7850/hw2.0/board-2.bin; do
+    src="/usr/lib/firmware/$rel"
+    [ -f "$src" ] || continue
+    dest="$DESTDIR/lib/firmware/$rel"
+    mkdir -p "$(dirname "$dest")"
+    cp --remove-destination -L -- "$src" "$dest"
+    chmod 0644 "$dest"
+done

@@ -1,0 +1,26 @@
+{
+  "ok": true,
+  "kernel": {
+    "exact_ubuntu_source_version": "7.2.0-5.5",
+    "patches_applied": 2,
+    "old_files_extracted": 10,
+    "result_files_matched": 15,
+    "all_result_files_match_compiled_source": true,
+    "patch_output": [
+      "patching file drivers/net/wireless/ath/ath12k/core.c\n",
+      "patching file drivers/spi/spi-geni-qcom.c\npatching file drivers/dma/qcom/gpi.c\npatching file include/dt-bindings/dma/qcom-gpi.h\npatching file include/linux/dma/qcom-gpi-dma.h\npatching file drivers/hid/hid-core.c\npatching file include/linux/hid.h\npatching file drivers/hid/Kconfig\npatching file drivers/hid/Makefile\npatching file arch/arm64/boot/dts/qcom/x1e80100-microsoft-romulus13.dts\npatching file drivers/hid/spi-hid/Kconfig\npatching file drivers/hid/spi-hid/Makefile\npatching file drivers/hid/spi-hid/spi-hid-core.c\npatching file drivers/hid/spi-hid/spi-hid-core.h\npatching file arch/arm64/boot/dts/qcom/x1e80100-microsoft-romulus13-touchpad.dtsi\n"
+    ]
+  },
+  "iptsd": {
+    "base": "a83bc1232f7096f8b33b50fdbda249cd640de670",
+    "tested_head": "3663e96e758145801c3cb1ce7c72f362d0d4a5f5",
+    "aggregate_patch_recreates_entire_tested_source": true,
+    "files_matched": 147
+  },
+  "firmware": {
+    "regenerated_board_matches_installed": true,
+    "original_name_count": 66,
+    "patched_name_count": 67,
+    "sha256": "30ced6b4ba1968866ddf15c9d128860a9c0a44f430a41f278d9daa1a44e194b7"
+  }
+}

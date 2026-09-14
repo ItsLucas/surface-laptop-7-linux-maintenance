@@ -1,0 +1,34 @@
+{
+  "capture": "spi-touchscreen-test/click-layers-201229.jsonl",
+  "rounds": [
+    {
+      "file": "spi-touchscreen-test/click-test-results/1789387956950.json",
+      "user_confirmed_physical_presses": 10,
+      "raw_presses": 10,
+      "evdev_left_presses": 10,
+      "browser_clicks": 14,
+      "browser_double_events": 1
+    },
+    {
+      "file": "spi-touchscreen-test/click-test-results/1789387972331.json",
+      "user_confirmed_physical_presses": 10,
+      "raw_presses": 10,
+      "evdev_left_presses": 10,
+      "browser_clicks": 17,
+      "browser_double_events": 2
+    }
+  ],
+  "native_button_events": 0,
+  "standalone_reports": 0,
+  "parse_errors": 0,
+  "tap_to_click_at_synchronized_test": true,
+  "user_requested_keep_tapping": true,
+  "proven_early_button_release_example_ms": {
+    "raw_press": 30920.347,
+    "raw_release": 31499.764,
+    "iptsd_release": 31028.053,
+    "early_by": 471.711
+  },
+  "relative_time_origin_epoch_ms": 1789387949836.438,
+  "runtime_fix_not_tested": true
+}

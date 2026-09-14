@@ -1,0 +1,19 @@
+{
+  "timestamp": "2026-09-14T15:53:23.859559+08:00",
+  "ok": true,
+  "packages_installed": [
+    "iptsd 3.1.0+sl7.1",
+    "linux-image-7.2.0-5-sl7 7.2.0-5.5+sl7.1"
+  ],
+  "all_packaged_files_verified": true,
+  "original_boot_files_unchanged": true,
+  "installed_pe_signature_verified": true,
+  "installed_initrd_sha256": "581c333e17580bd4b80ad36ea50bf823713ed360483e86afcf203177f10c0654",
+  "signed_touchpad_modules_preserved": true,
+  "board_override_preserved": true,
+  "grub_syntax_valid": true,
+  "entry_uses_efi_noruntime": true,
+  "coldplug_enabled": true,
+  "current_kernel": "7.2.0-5-generic",
+  "hardware_runtime_tested": false
+}

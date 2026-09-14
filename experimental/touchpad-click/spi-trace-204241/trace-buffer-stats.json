@@ -1,0 +1,14 @@
+{
+  "per_cpu/cpu11/stats": "entries: 0\noverrun: 0\ncommit overrun: 0\nbytes: 0\noldest event ts:  3929.847790\nnow ts:  3931.505455\ndropped events: 0\nread events: 2531",
+  "per_cpu/cpu10/stats": "entries: 0\noverrun: 0\ncommit overrun: 0\nbytes: 0\noldest event ts:  3931.103337\nnow ts:  3931.505486\ndropped events: 0\nread events: 2266",
+  "per_cpu/cpu9/stats": "entries: 0\noverrun: 0\ncommit overrun: 0\nbytes: 7896\noldest event ts:  3931.496784\nnow ts:  3931.505511\ndropped events: 0\nread events: 166905",
+  "per_cpu/cpu8/stats": "entries: 0\noverrun: 0\ncommit overrun: 0\nbytes: 0\noldest event ts:  3931.390480\nnow ts:  3931.505532\ndropped events: 0\nread events: 3515",
+  "per_cpu/cpu7/stats": "entries: 0\noverrun: 0\ncommit overrun: 0\nbytes: 0\noldest event ts:  3923.894922\nnow ts:  3931.505555\ndropped events: 0\nread events: 396",
+  "per_cpu/cpu6/stats": "entries: 0\noverrun: 0\ncommit overrun: 0\nbytes: 0\noldest event ts:  3913.926712\nnow ts:  3931.505577\ndropped events: 0\nread events: 196",
+  "per_cpu/cpu5/stats": "entries: 0\noverrun: 0\ncommit overrun: 0\nbytes: 0\noldest event ts:  3904.800840\nnow ts:  3931.505601\ndropped events: 0\nread events: 394",
+  "per_cpu/cpu4/stats": "entries: 0\noverrun: 0\ncommit overrun: 0\nbytes: 0\noldest event ts:  3922.990836\nnow ts:  3931.505622\ndropped events: 0\nread events: 373",
+  "per_cpu/cpu3/stats": "entries: 0\noverrun: 0\ncommit overrun: 0\nbytes: 0\noldest event ts:  3921.415534\nnow ts:  3931.505643\ndropped events: 0\nread events: 938",
+  "per_cpu/cpu2/stats": "entries: 0\noverrun: 0\ncommit overrun: 0\nbytes: 0\noldest event ts:  3919.567551\nnow ts:  3931.505665\ndropped events: 0\nread events: 937",
+  "per_cpu/cpu1/stats": "entries: 0\noverrun: 0\ncommit overrun: 0\nbytes: 0\noldest event ts:  3927.814868\nnow ts:  3931.505686\ndropped events: 0\nread events: 834",
+  "per_cpu/cpu0/stats": "entries: 0\noverrun: 0\ncommit overrun: 0\nbytes: 0\noldest event ts:  3931.414197\nnow ts:  3931.505707\ndropped events: 0\nread events: 76082"
+}

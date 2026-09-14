@@ -1,0 +1,4 @@
+ gpio31  : out low  func0 2mA no pull
+ gpio32  : in  high func1 2mA pull up
+ gpio33  : in  high func1 2mA pull up
+ gpio38  : in  low  func0 16mA no pull

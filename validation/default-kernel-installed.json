@@ -1,0 +1,11 @@
+{
+  "timestamp": "2026-09-14T16:09:41.562816+08:00",
+  "default_entry": "sl7-combined-kernel",
+  "menu_timeout_seconds": 5,
+  "official_kernel_preserved": true,
+  "original_files_unchanged": true,
+  "secure_boot_enabled": true,
+  "lockdown": "integrity",
+  "config_file": "/etc/default/grub.d/zz-sl7-local-kernel.cfg",
+  "grub_syntax_valid": true
+}

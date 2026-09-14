@@ -1,0 +1,30 @@
+#!/usr/bin/python3
+"""Bounded boot-time reconnect for the user's bonded Bluetooth mouse."""
+import os
+import subprocess
+import time
+
+os.environ['LC_ALL'] = 'C'
+mouse = 'ED:8E:0E:00:03:E8'
+
+def ctl(*args):
+    try:
+        p = subprocess.run(['/usr/bin/bluetoothctl', '--timeout', '8', *args],
+                           capture_output=True, text=True, timeout=10)
+        return p.stdout + p.stderr
+    except subprocess.TimeoutExpired:
+        return ''
+
+deadline = time.monotonic() + 150
+while time.monotonic() < deadline:
+    info = ctl('info', mouse)
+    if 'Connected: yes' in info:
+        print('BT5.2 Mouse connected', flush=True)
+        raise SystemExit(0)
+    if 'Paired: yes' in info and 'Trusted: yes' in info:
+        if 'Powered: no' in ctl('show'):
+            ctl('power', 'on')
+        ctl('connect', mouse)
+    time.sleep(3)
+print('Mouse not available during boot retry window; BlueZ remains enabled', flush=True)
+raise SystemExit(1)

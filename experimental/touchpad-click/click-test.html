@@ -1,0 +1,24 @@
+<!doctype html>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>触控板单击测试</title>
+<style>
+body{font:18px system-ui,sans-serif;background:#edf2f6;color:#18232d;margin:0;padding:36px}main{max-width:860px;margin:auto}h1{font-size:28px}p{line-height:1.7}#pad{width:100%;min-height:260px;background:#fff;border:3px solid #4677a1;border-radius:20px;display:flex;flex-direction:column;align-items:center;justify-content:center;user-select:none;touch-action:none;cursor:default;box-sizing:border-box}#count{font-size:80px;font-weight:700;color:#245881}#state{font-size:24px}#dbl{color:#9b432e;font-weight:600}button{font:inherit;padding:12px 20px;margin:22px 14px 0 0;border:1px solid #71869a;border-radius:9px;background:white;cursor:pointer}#status{color:#406047}pre{white-space:pre-wrap;font:14px monospace;background:#fff;padding:16px;border-radius:10px}
+</style>
+<main>
+<h1>触控板单击测试 · 同步采样</h1>
+<p>先点「清零」，再把指针移入下面区域。<b>慢速物理单击 10 次，每次间隔至少 1 秒</b>，正常应显示 10。然后可清零，试着<b>按住 1 秒再松开</b>；一次按住应只产生一次点击。</p>
+<div id="pad"><span>只在这个区域做测试</span><span id="count">0</span><span id="state">已松开</span><p>系统双击事件：<span id="dbl">0</span></p></div>
+<button id="reset">清零</button><button id="done">完成并保存</button>
+<p id="status">仅记录这个区域内的按钮事件和时间，不记录键盘或移动轨迹。</p>
+<pre id="recent"></pre>
+</main>
+<script>
+let count=0,doubles=0,records=[],sequence=0,timer=null,session=String(Date.now());
+const pad=document.getElementById('pad');
+function payload(){return {session,sequence:++sequence,count,doubles,events:records};}
+async function save(finish=false){try{const r=await fetch(finish?'/finish':'/save',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload())});if(!r.ok)throw Error();document.getElementById('status').textContent=finish?'已保存。请返回聊天，说明实际按了几次、页面显示几次。':'诊断已自动保存到本机。';}catch(e){document.getElementById('status').textContent='保存未完成，请保留本页并返回聊天。';}}
+for(const type of ['pointerdown','pointerup','click','dblclick'])pad.addEventListener(type,e=>{if(e.button!==0)return;if(type==='click')count++;if(type==='dblclick')doubles++;if(type==='pointerdown')document.getElementById('state').textContent='按下中';if(type==='pointerup')document.getElementById('state').textContent='已松开';records.push({type,epoch_ms:performance.timeOrigin+performance.now(),ms:Math.round(performance.now()*1000)/1000,detail:e.detail});document.getElementById('count').textContent=count;document.getElementById('dbl').textContent=doubles;document.getElementById('recent').textContent=records.slice(-12).map(x=>x.ms+' ms  '+x.type+'  '+x.detail).join('\n');clearTimeout(timer);timer=setTimeout(()=>save(),200);});
+document.getElementById('reset').onclick=()=>{clearTimeout(timer);save();session=String(Date.now());count=0;doubles=0;records=[];document.getElementById('count').textContent=0;document.getElementById('dbl').textContent=0;document.getElementById('state').textContent='已松开';document.getElementById('recent').textContent='';};
+document.getElementById('done').onclick=()=>{clearTimeout(timer);save(true);};
+</script>

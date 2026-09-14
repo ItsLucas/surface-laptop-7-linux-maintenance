@@ -1,0 +1,10 @@
+{
+  "timestamp": "2026-09-14T21:05:17.912460+08:00",
+  "user_approved": true,
+  "default": "sl7-spi-touchscreen-test",
+  "normal_fallback": "sl7-combined-kernel",
+  "timeout_seconds": 5,
+  "image_unchanged": true,
+  "rebooted": false,
+  "backup": "/var/backups/sl7-combined/touchscreen-default-20260914-210516"
+}

@@ -1,0 +1,55 @@
+{
+  "timestamp": "2026-09-14T21:08:05.974454+08:00",
+  "kernel": "7.2.0-5-sl7",
+  "iptsd": "3.1.0+sl7.2-1",
+  "services": [
+    {
+      "service": "iptsd@dev-hidraw2.service",
+      "pid": "9393",
+      "properties": "ActiveEnterTimestamp=Mon 2026-09-14 21:05:16 CST\nNRestarts=0",
+      "device_unit_state": "active"
+    },
+    {
+      "service": "iptsd@dev-hidraw1.service",
+      "pid": "9396",
+      "properties": "ActiveEnterTimestamp=Mon 2026-09-14 21:05:16 CST\nNRestarts=0",
+      "device_unit_state": "active"
+    }
+  ],
+  "virtual_touchscreen_present": true,
+  "virtual_touchpad_present": true,
+  "touchscreen_user_verified": true,
+  "click_logic_trial_passed": true,
+  "secure_boot": "SecureBoot enabled",
+  "lockdown": "none [integrity] confidentiality",
+  "calibration_unchanged": true,
+  "tap_to_click": "true",
+  "default_entry": "sl7-spi-touchscreen-test",
+  "default_fallback": "sl7-combined-kernel",
+  "grub_timeout_seconds": 5,
+  "next_entry": "next_entry=",
+  "wifi_mac": "78:86:2e:5e:ec:47",
+  "network_states": [
+    "wlP4p1s0:wifi:connected",
+    "lo:loopback:connected (externally)",
+    "p2p-dev-wlP4p1s0:wifi-p2p:disconnected"
+  ],
+  "bluetooth_active": "active",
+  "boot_artifacts": [
+    {
+      "path": "/boot/sl7/7.2.0-5-sl7-spi-touchscreen-test/kernel.efi",
+      "sha256": "94003dc6c6c1e194054037ced995eb2258a08e1c346acaaf0964a37c673e927f",
+      "bytes": 18058208
+    },
+    {
+      "path": "/boot/sl7/7.2.0-5-sl7/initrd.img",
+      "sha256": "581c333e17580bd4b80ad36ea50bf823713ed360483e86afcf203177f10c0654",
+      "bytes": 106698846
+    }
+  ],
+  "known_issues": [
+    "Occasional heatmap suppression during rapid physical clicks; report flags0x08/type0x12 not decoded.",
+    "Suspend/resume and touchscreen power management not fully validated."
+  ],
+  "system_rebooted_by_this_closure": false
+}

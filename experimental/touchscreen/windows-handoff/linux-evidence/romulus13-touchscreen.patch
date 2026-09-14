@@ -1,0 +1,19 @@
+--- a/arch/arm64/boot/dts/qcom/x1e80100-microsoft-romulus13.dts
++++ b/arch/arm64/boot/dts/qcom/x1e80100-microsoft-romulus13.dts
+@@ -12,3 +12,16 @@
+ 	model = "Microsoft Surface Laptop 7 (13.8 inch)";
+ 	compatible = "microsoft,romulus13", "qcom,x1e80100";
+ };
++
++&i2c8 {
++	clock-frequency = <400000>;
++	status = "okay";
++
++	touchscreen@34 {
++		compatible = "hid-over-i2c";
++		reg = <0x34>;
++		hid-descr-addr = <0x0000>;
++		interrupts-extended = <&tlmm 38 IRQ_TYPE_LEVEL_LOW>;
++		reset-gpios = <&tlmm 31 GPIO_ACTIVE_LOW>;
++	};
++};

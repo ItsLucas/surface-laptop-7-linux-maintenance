@@ -1,0 +1,13 @@
+[Unit]
+Description=Replay SL7 touch device events after switching to the real root
+ConditionKernelVersion=7.2.0-5-sl7
+After=systemd-udevd.service systemd-udev-trigger.service
+Before=display-manager.service
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/udevadm trigger --action=add --subsystem-match=hidraw
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target

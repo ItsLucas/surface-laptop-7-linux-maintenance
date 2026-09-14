@@ -1,0 +1,13 @@
+{
+  "package": "/home/lucas/code/sl7-wifi-fix/touchpad-click-fix/iptsd_3.1.0+sl7.2_arm64.deb",
+  "version": "3.1.0+sl7.2",
+  "sha256": "67404c090557a71498f1d2e3d3cb8e2863c6d099d8617eafa10383da5bc16672",
+  "daemon_sha256": "26c9ca51dfc97372f4ae4dd7767ae42a49f49220fdc2d1c9b990bd9ff3c06822",
+  "binary_stripped": true,
+  "installed": false,
+  "user_approved_only_temporary_trial": true,
+  "click_count_trial_passed": true,
+  "reliability_trial_passed": false,
+  "permanent_install_eligible": false,
+  "reason": "Unexplained 102-second gap during reported loss of input and haptics; keep original service."
+}

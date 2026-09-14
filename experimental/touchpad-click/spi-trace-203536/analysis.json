@@ -1,0 +1,570 @@
+{
+  "trace_directory": "touchpad-click-fix/spi-trace-203536",
+  "events": {
+    "irq_handler_entry": 14041,
+    "irq_handler_exit": 14041,
+    "sched_waking": 15458,
+    "sched_switch": 30933,
+    "spi_message_submit": 7720,
+    "rpm_resume": 7720,
+    "rpm_idle": 6,
+    "rpm_return_int": 15577,
+    "spi_controller_busy": 7720,
+    "spi_message_start": 7720,
+    "spi_message_done": 7720,
+    "rpm_suspend": 7851,
+    "tracing_mark_write": 8
+  },
+  "latencies": {
+    "count": 7720,
+    "median_ms": 0.36599999975805986,
+    "p99_ms": 5.112000000281114,
+    "max_ms": 19.514000000071974,
+    "over_10ms": 9
+  },
+  "pending_at_trace_end": {},
+  "ordering_anomalies": [],
+  "user_markers": [
+    {
+      "marker": {
+        "type": "hang",
+        "browser_epoch_ms": 1789389369998,
+        "browser_clicks": 33,
+        "received_epoch_ms": 1789389370002.7002
+      },
+      "monotonic": 3360.226580793,
+      "last_completed_transaction": {
+        "submit": 3360.175,
+        "start": 3360.175041,
+        "done": 3360.175792,
+        "length": "0/1004",
+        "duration_ms": 0.7919999998193816
+      },
+      "next_transaction": {
+        "submit": 3361.049786,
+        "start": 3361.050702,
+        "done": 3361.05125,
+        "length": "0/4",
+        "duration_ms": 1.4639999999417341
+      },
+      "snapshot": {
+        "type": "user_marker",
+        "epoch_ms": 1789389370052.7578,
+        "monotonic": 3360.226580793,
+        "packet_ids_since_sample": {
+          "0a": 30
+        },
+        "total_packets": 2083,
+        "runtime": "active",
+        "runtime_control": "auto",
+        "device": {
+          "ready": "ready",
+          "bus_error_count": "0 (0)",
+          "device_initiated_reset_count": "0"
+        },
+        "threads": {
+          "425": {
+            "comm": "spi0",
+            "stack": "[<0>] kthread_worker_fn+0x1f4/0x3f0\n[<0>] kthread+0x138/0x150\n[<0>] ret_from_fork+0x10/0x20"
+          },
+          "426": {
+            "comm": "irq/183-spi0.0",
+            "stack": "[<0>] irq_thread+0x138/0x430\n[<0>] kthread+0x138/0x150\n[<0>] ret_from_fork+0x10/0x20"
+          },
+          "20079": {
+            "comm": "iptsd",
+            "stack": "[<0>] hidraw_read+0x23c/0x3f0 [hid]\n[<0>] vfs_read+0xd0/0x380\n[<0>] ksys_read+0x70/0x130\n[<0>] __arm64_sys_read+0x24/0x50\n[<0>] invoke_syscall.constprop.0+0xb0/0x130\n[<0>] el0_svc_common.constprop.0+0x44/0x140\n[<0>] do_el0_svc+0x28/0x58\n[<0>] el0_svc+0x48/0x310\n[<0>] el0t_64_sync_handler+0xc0/0x110\n[<0>] el0t_64_sync+0x1b8/0x1c0"
+          }
+        },
+        "irqs": [
+          "129:          0          0          0          0          0          0          0          0          0          0          0          0  GICv3                      843 Level     88c000.spi",
+          "161:     125755          0          0          0          0          0          0          0          0          0          0          0  GICv3                      821 Level     gpi-dma",
+          "183:      50394          0          0          0          0          0          0          0          0          0          0          0  msmgpio                      3 Level     spi0.0"
+        ],
+        "touchpad_gpio": [
+          "gpio3   : in  high func0 16mA pull up",
+          "gpio65  : out high func0 16mA no pull",
+          "gpio120 : out high func0 16mA no pull"
+        ],
+        "marker": {
+          "type": "hang",
+          "browser_epoch_ms": 1789389369998,
+          "browser_clicks": 33,
+          "received_epoch_ms": 1789389370002.7002
+        }
+      }
+    },
+    {
+      "marker": {
+        "type": "hang",
+        "browser_epoch_ms": 1789389370204,
+        "browser_clicks": 33,
+        "received_epoch_ms": 1789389370207.3752
+      },
+      "monotonic": 3360.388880881,
+      "last_completed_transaction": {
+        "submit": 3360.175,
+        "start": 3360.175041,
+        "done": 3360.175792,
+        "length": "0/1004",
+        "duration_ms": 0.7919999998193816
+      },
+      "next_transaction": {
+        "submit": 3361.049786,
+        "start": 3361.050702,
+        "done": 3361.05125,
+        "length": "0/4",
+        "duration_ms": 1.4639999999417341
+      },
+      "snapshot": {
+        "type": "user_marker",
+        "epoch_ms": 1789389370215.0583,
+        "monotonic": 3360.388880881,
+        "packet_ids_since_sample": {},
+        "total_packets": 2083,
+        "runtime": "active",
+        "runtime_control": "auto",
+        "device": {
+          "ready": "ready",
+          "bus_error_count": "0 (0)",
+          "device_initiated_reset_count": "0"
+        },
+        "threads": {
+          "425": {
+            "comm": "spi0",
+            "stack": "[<0>] kthread_worker_fn+0x1f4/0x3f0\n[<0>] kthread+0x138/0x150\n[<0>] ret_from_fork+0x10/0x20"
+          },
+          "426": {
+            "comm": "irq/183-spi0.0",
+            "stack": "[<0>] irq_thread+0x138/0x430\n[<0>] kthread+0x138/0x150\n[<0>] ret_from_fork+0x10/0x20"
+          },
+          "20079": {
+            "comm": "iptsd",
+            "stack": "[<0>] hidraw_read+0x23c/0x3f0 [hid]\n[<0>] vfs_read+0xd0/0x380\n[<0>] ksys_read+0x70/0x130\n[<0>] __arm64_sys_read+0x24/0x50\n[<0>] invoke_syscall.constprop.0+0xb0/0x130\n[<0>] el0_svc_common.constprop.0+0x44/0x140\n[<0>] do_el0_svc+0x28/0x58\n[<0>] el0_svc+0x48/0x310\n[<0>] el0t_64_sync_handler+0xc0/0x110\n[<0>] el0t_64_sync+0x1b8/0x1c0"
+          }
+        },
+        "irqs": [
+          "129:          0          0          0          0          0          0          0          0          0          0          0          0  GICv3                      843 Level     88c000.spi",
+          "161:     125755          0          0          0          0          0          0          0          0          0          0          0  GICv3                      821 Level     gpi-dma",
+          "183:      50394          0          0          0          0          0          0          0          0          0          0          0  msmgpio                      3 Level     spi0.0"
+        ],
+        "touchpad_gpio": [
+          "gpio3   : in  high func0 16mA pull up",
+          "gpio65  : out high func0 16mA no pull",
+          "gpio120 : out high func0 16mA no pull"
+        ],
+        "marker": {
+          "type": "hang",
+          "browser_epoch_ms": 1789389370204,
+          "browser_clicks": 33,
+          "received_epoch_ms": 1789389370207.3752
+        }
+      }
+    },
+    {
+      "marker": {
+        "type": "hang",
+        "browser_epoch_ms": 1789389370362,
+        "browser_clicks": 33,
+        "received_epoch_ms": 1789389370366.1016
+      },
+      "monotonic": 3360.550562191,
+      "last_completed_transaction": {
+        "submit": 3360.175,
+        "start": 3360.175041,
+        "done": 3360.175792,
+        "length": "0/1004",
+        "duration_ms": 0.7919999998193816
+      },
+      "next_transaction": {
+        "submit": 3361.049786,
+        "start": 3361.050702,
+        "done": 3361.05125,
+        "length": "0/4",
+        "duration_ms": 1.4639999999417341
+      },
+      "snapshot": {
+        "type": "user_marker",
+        "epoch_ms": 1789389370376.7393,
+        "monotonic": 3360.550562191,
+        "packet_ids_since_sample": {},
+        "total_packets": 2083,
+        "runtime": "suspended",
+        "runtime_control": "auto",
+        "device": {
+          "ready": "ready",
+          "bus_error_count": "0 (0)",
+          "device_initiated_reset_count": "0"
+        },
+        "threads": {
+          "425": {
+            "comm": "spi0",
+            "stack": "[<0>] kthread_worker_fn+0x1f4/0x3f0\n[<0>] kthread+0x138/0x150\n[<0>] ret_from_fork+0x10/0x20"
+          },
+          "426": {
+            "comm": "irq/183-spi0.0",
+            "stack": "[<0>] irq_thread+0x138/0x430\n[<0>] kthread+0x138/0x150\n[<0>] ret_from_fork+0x10/0x20"
+          },
+          "20079": {
+            "comm": "iptsd",
+            "stack": "[<0>] hidraw_read+0x23c/0x3f0 [hid]\n[<0>] vfs_read+0xd0/0x380\n[<0>] ksys_read+0x70/0x130\n[<0>] __arm64_sys_read+0x24/0x50\n[<0>] invoke_syscall.constprop.0+0xb0/0x130\n[<0>] el0_svc_common.constprop.0+0x44/0x140\n[<0>] do_el0_svc+0x28/0x58\n[<0>] el0_svc+0x48/0x310\n[<0>] el0t_64_sync_handler+0xc0/0x110\n[<0>] el0t_64_sync+0x1b8/0x1c0"
+          }
+        },
+        "irqs": [
+          "129:          0          0          0          0          0          0          0          0          0          0          0          0  GICv3                      843 Level     88c000.spi",
+          "161:     125755          0          0          0          0          0          0          0          0          0          0          0  GICv3                      821 Level     gpi-dma",
+          "183:      50394          0          0          0          0          0          0          0          0          0          0          0  msmgpio                      3 Level     spi0.0"
+        ],
+        "touchpad_gpio": [
+          "gpio3   : in  high func0 16mA pull up",
+          "gpio65  : out high func0 16mA no pull",
+          "gpio120 : out high func0 16mA no pull"
+        ],
+        "marker": {
+          "type": "hang",
+          "browser_epoch_ms": 1789389370362,
+          "browser_clicks": 33,
+          "received_epoch_ms": 1789389370366.1016
+        }
+      }
+    },
+    {
+      "marker": {
+        "type": "hang",
+        "browser_epoch_ms": 1789389370543,
+        "browser_clicks": 33,
+        "received_epoch_ms": 1789389370552.2312
+      },
+      "monotonic": 3360.760578754,
+      "last_completed_transaction": {
+        "submit": 3360.175,
+        "start": 3360.175041,
+        "done": 3360.175792,
+        "length": "0/1004",
+        "duration_ms": 0.7919999998193816
+      },
+      "next_transaction": {
+        "submit": 3361.049786,
+        "start": 3361.050702,
+        "done": 3361.05125,
+        "length": "0/4",
+        "duration_ms": 1.4639999999417341
+      },
+      "snapshot": {
+        "type": "user_marker",
+        "epoch_ms": 1789389370586.756,
+        "monotonic": 3360.760578754,
+        "packet_ids_since_sample": {},
+        "total_packets": 2083,
+        "runtime": "suspended",
+        "runtime_control": "auto",
+        "device": {
+          "ready": "ready",
+          "bus_error_count": "0 (0)",
+          "device_initiated_reset_count": "0"
+        },
+        "threads": {
+          "425": {
+            "comm": "spi0",
+            "stack": "[<0>] kthread_worker_fn+0x1f4/0x3f0\n[<0>] kthread+0x138/0x150\n[<0>] ret_from_fork+0x10/0x20"
+          },
+          "426": {
+            "comm": "irq/183-spi0.0",
+            "stack": "[<0>] irq_thread+0x138/0x430\n[<0>] kthread+0x138/0x150\n[<0>] ret_from_fork+0x10/0x20"
+          },
+          "20079": {
+            "comm": "iptsd",
+            "stack": "[<0>] hidraw_read+0x23c/0x3f0 [hid]\n[<0>] vfs_read+0xd0/0x380\n[<0>] ksys_read+0x70/0x130\n[<0>] __arm64_sys_read+0x24/0x50\n[<0>] invoke_syscall.constprop.0+0xb0/0x130\n[<0>] el0_svc_common.constprop.0+0x44/0x140\n[<0>] do_el0_svc+0x28/0x58\n[<0>] el0_svc+0x48/0x310\n[<0>] el0t_64_sync_handler+0xc0/0x110\n[<0>] el0t_64_sync+0x1b8/0x1c0"
+          }
+        },
+        "irqs": [
+          "129:          0          0          0          0          0          0          0          0          0          0          0          0  GICv3                      843 Level     88c000.spi",
+          "161:     125755          0          0          0          0          0          0          0          0          0          0          0  GICv3                      821 Level     gpi-dma",
+          "183:      50394          0          0          0          0          0          0          0          0          0          0          0  msmgpio                      3 Level     spi0.0"
+        ],
+        "touchpad_gpio": [
+          "gpio3   : in  high func0 16mA pull up",
+          "gpio65  : out high func0 16mA no pull",
+          "gpio120 : out high func0 16mA no pull"
+        ],
+        "marker": {
+          "type": "hang",
+          "browser_epoch_ms": 1789389370543,
+          "browser_clicks": 33,
+          "received_epoch_ms": 1789389370552.2312
+        }
+      }
+    },
+    {
+      "marker": {
+        "type": "recovered",
+        "browser_epoch_ms": 1789389373824,
+        "browser_clicks": 34,
+        "received_epoch_ms": 1789389373826.3704
+      },
+      "monotonic": 3364.005931109,
+      "last_completed_transaction": {
+        "submit": 3364.005753,
+        "start": 3364.00576,
+        "done": 3364.005908,
+        "length": "0/4",
+        "duration_ms": 0.1550000001770968
+      },
+      "next_transaction": {
+        "submit": 3364.013671,
+        "start": 3364.013672,
+        "done": 3364.013733,
+        "length": "0/4",
+        "duration_ms": 0.06199999961609137
+      },
+      "snapshot": {
+        "type": "user_marker",
+        "epoch_ms": 1789389373832.1104,
+        "monotonic": 3364.005931109,
+        "packet_ids_since_sample": {
+          "0a": 18
+        },
+        "total_packets": 2351,
+        "runtime": "active",
+        "runtime_control": "auto",
+        "device": {
+          "ready": "ready",
+          "bus_error_count": "0 (0)",
+          "device_initiated_reset_count": "0"
+        },
+        "threads": {
+          "425": {
+            "comm": "spi0",
+            "stack": "[<0>] kthread_worker_fn+0x1f4/0x3f0\n[<0>] kthread+0x138/0x150\n[<0>] ret_from_fork+0x10/0x20"
+          },
+          "426": {
+            "comm": "irq/183-spi0.0",
+            "stack": "[<0>] 0x30f3e6526fb"
+          },
+          "20079": {
+            "comm": "iptsd",
+            "stack": "[<0>] hidraw_read+0x23c/0x3f0 [hid]\n[<0>] vfs_read+0xd0/0x380\n[<0>] ksys_read+0x70/0x130\n[<0>] __arm64_sys_read+0x24/0x50\n[<0>] invoke_syscall.constprop.0+0xb0/0x130\n[<0>] el0_svc_common.constprop.0+0x44/0x140\n[<0>] do_el0_svc+0x28/0x58\n[<0>] el0_svc+0x48/0x310\n[<0>] el0t_64_sync_handler+0xc0/0x110\n[<0>] el0t_64_sync+0x1b8/0x1c0"
+          }
+        },
+        "irqs": [
+          "129:          0          0          0          0          0          0          0          0          0          0          0          0  GICv3                      843 Level     88c000.spi",
+          "161:     126396          0          0          0          0          0          0          0          0          0          0          0  GICv3                      821 Level     gpi-dma",
+          "183:      50663          0          0          0          0          0          0          0          0          0          0          0  msmgpio                      3 Level     spi0.0"
+        ],
+        "touchpad_gpio": [
+          "gpio3   : in  high func0 16mA pull up",
+          "gpio65  : out high func0 16mA no pull",
+          "gpio120 : out high func0 16mA no pull"
+        ],
+        "marker": {
+          "type": "recovered",
+          "browser_epoch_ms": 1789389373824,
+          "browser_clicks": 34,
+          "received_epoch_ms": 1789389373826.3704
+        }
+      }
+    },
+    {
+      "marker": {
+        "type": "hang",
+        "browser_epoch_ms": 1789389384275,
+        "browser_clicks": 40,
+        "received_epoch_ms": 1789389384278.0212
+      },
+      "monotonic": 3374.452553477,
+      "last_completed_transaction": {
+        "submit": 3374.452019,
+        "start": 3374.452021,
+        "done": 3374.452452,
+        "length": "0/4",
+        "duration_ms": 0.4330000001573353
+      },
+      "next_transaction": {
+        "submit": 3374.464529,
+        "start": 3374.46453,
+        "done": 3374.464713,
+        "length": "0/4",
+        "duration_ms": 0.183999999990192
+      },
+      "snapshot": {
+        "type": "user_marker",
+        "epoch_ms": 1789389384278.731,
+        "monotonic": 3374.452553477,
+        "packet_ids_since_sample": {
+          "0a": 35
+        },
+        "total_packets": 3462,
+        "runtime": "active",
+        "runtime_control": "auto",
+        "device": {
+          "ready": "ready",
+          "bus_error_count": "0 (0)",
+          "device_initiated_reset_count": "0"
+        },
+        "threads": {
+          "425": {
+            "comm": "spi0",
+            "stack": "[<0>] kthread_worker_fn+0x1f4/0x3f0\n[<0>] kthread+0x138/0x150\n[<0>] ret_from_fork+0x10/0x20"
+          },
+          "426": {
+            "comm": "irq/183-spi0.0",
+            "stack": "[<0>] spi_transfer_one_message+0x678/0x9d0\n[<0>] __spi_pump_transfer_message+0x1f4/0x7e0\n[<0>] __spi_sync+0x304/0x5f0\n[<0>] spi_sync+0x3c/0x78\n[<0>] spi_sync_transfer.constprop.0+0x90/0xf8 [spi_hid]\n[<0>] spi_hid_irq_thread+0x19c/0x4d8 [spi_hid]\n[<0>] irq_thread_fn+0x34/0xd8\n[<0>] irq_thread+0x1a4/0x430\n[<0>] kthread+0x138/0x150\n[<0>] ret_from_fork+0x10/0x20"
+          },
+          "20079": {
+            "comm": "iptsd",
+            "stack": "[<0>] hidraw_read+0x23c/0x3f0 [hid]\n[<0>] vfs_read+0xd0/0x380\n[<0>] ksys_read+0x70/0x130\n[<0>] __arm64_sys_read+0x24/0x50\n[<0>] invoke_syscall.constprop.0+0xb0/0x130\n[<0>] el0_svc_common.constprop.0+0x44/0x140\n[<0>] do_el0_svc+0x28/0x58\n[<0>] el0_svc+0x48/0x310\n[<0>] el0t_64_sync_handler+0xc0/0x110\n[<0>] el0t_64_sync+0x1b8/0x1c0"
+          }
+        },
+        "irqs": [
+          "129:          0          0          0          0          0          0          0          0          0          0          0          0  GICv3                      843 Level     88c000.spi",
+          "161:     129297          0          0          0          0          0          0          0          0          0          0          0  GICv3                      821 Level     gpi-dma",
+          "183:      51774          0          0          0          0          0          0          0          0          0          0          0  msmgpio                      3 Level     spi0.0"
+        ],
+        "touchpad_gpio": [
+          "gpio3   : in  high func0 16mA pull up",
+          "gpio65  : out high func0 16mA no pull",
+          "gpio120 : out high func0 16mA no pull"
+        ],
+        "marker": {
+          "type": "hang",
+          "browser_epoch_ms": 1789389384275,
+          "browser_clicks": 40,
+          "received_epoch_ms": 1789389384278.0212
+        }
+      }
+    },
+    {
+      "marker": {
+        "type": "recovered",
+        "browser_epoch_ms": 1789389387497,
+        "browser_clicks": 40,
+        "received_epoch_ms": 1789389387499.9282
+      },
+      "monotonic": 3377.675366449,
+      "last_completed_transaction": {
+        "submit": 3377.674979,
+        "start": 3377.67498,
+        "done": 3377.675344,
+        "length": "0/1004",
+        "duration_ms": 0.3650000003290188
+      },
+      "next_transaction": {
+        "submit": 3377.681918,
+        "start": 3377.68192,
+        "done": 3377.682089,
+        "length": "0/4",
+        "duration_ms": 0.17099999968195334
+      },
+      "snapshot": {
+        "type": "user_marker",
+        "epoch_ms": 1789389387501.5435,
+        "monotonic": 3377.675366449,
+        "packet_ids_since_sample": {
+          "0a": 5
+        },
+        "total_packets": 3770,
+        "runtime": "active",
+        "runtime_control": "auto",
+        "device": {
+          "ready": "ready",
+          "bus_error_count": "0 (0)",
+          "device_initiated_reset_count": "0"
+        },
+        "threads": {
+          "425": {
+            "comm": "spi0",
+            "stack": "[<0>] kthread_worker_fn+0x1f4/0x3f0\n[<0>] kthread+0x138/0x150\n[<0>] ret_from_fork+0x10/0x20"
+          },
+          "426": {
+            "comm": "irq/183-spi0.0",
+            "stack": "[<0>] irq_thread+0x138/0x430\n[<0>] kthread+0x138/0x150\n[<0>] ret_from_fork+0x10/0x20"
+          },
+          "20079": {
+            "comm": "iptsd",
+            "stack": "[<0>] hidraw_read+0x23c/0x3f0 [hid]\n[<0>] vfs_read+0xd0/0x380\n[<0>] ksys_read+0x70/0x130\n[<0>] __arm64_sys_read+0x24/0x50\n[<0>] invoke_syscall.constprop.0+0xb0/0x130\n[<0>] el0_svc_common.constprop.0+0x44/0x140\n[<0>] do_el0_svc+0x28/0x58\n[<0>] el0_svc+0x48/0x310\n[<0>] el0t_64_sync_handler+0xc0/0x110\n[<0>] el0t_64_sync+0x1b8/0x1c0"
+          }
+        },
+        "irqs": [
+          "129:          0          0          0          0          0          0          0          0          0          0          0          0  GICv3                      843 Level     88c000.spi",
+          "161:     130098          0          0          0          0          0          0          0          0          0          0          0  GICv3                      821 Level     gpi-dma",
+          "183:      52082          0          0          0          0          0          0          0          0          0          0          0  msmgpio                      3 Level     spi0.0"
+        ],
+        "touchpad_gpio": [
+          "gpio3   : in  high func0 16mA pull up",
+          "gpio65  : out high func0 16mA no pull",
+          "gpio120 : out high func0 16mA no pull"
+        ],
+        "marker": {
+          "type": "recovered",
+          "browser_epoch_ms": 1789389387497,
+          "browser_clicks": 40,
+          "received_epoch_ms": 1789389387499.9282
+        }
+      }
+    },
+    {
+      "marker": {
+        "type": "finish",
+        "browser_epoch_ms": 1789389389145,
+        "browser_clicks": 40,
+        "received_epoch_ms": 1789389389147.965
+      },
+      "monotonic": 3379.359892848,
+      "last_completed_transaction": {
+        "submit": 3378.38892,
+        "start": 3378.38892,
+        "done": 3378.389614,
+        "length": "0/1004",
+        "duration_ms": 0.6940000002941815
+      },
+      "next_transaction": null,
+      "snapshot": {
+        "type": "user_marker",
+        "epoch_ms": 1789389389186.07,
+        "monotonic": 3379.359892848,
+        "packet_ids_since_sample": {},
+        "total_packets": 3860,
+        "runtime": "suspended",
+        "runtime_control": "auto",
+        "device": {
+          "ready": "ready",
+          "bus_error_count": "0 (0)",
+          "device_initiated_reset_count": "0"
+        },
+        "threads": {
+          "425": {
+            "comm": "spi0",
+            "stack": "[<0>] kthread_worker_fn+0x1f4/0x3f0\n[<0>] kthread+0x138/0x150\n[<0>] ret_from_fork+0x10/0x20"
+          },
+          "426": {
+            "comm": "irq/183-spi0.0",
+            "stack": "[<0>] irq_thread+0x138/0x430\n[<0>] kthread+0x138/0x150\n[<0>] ret_from_fork+0x10/0x20"
+          },
+          "20079": {
+            "comm": "iptsd",
+            "stack": "[<0>] hidraw_read+0x23c/0x3f0 [hid]\n[<0>] vfs_read+0xd0/0x380\n[<0>] ksys_read+0x70/0x130\n[<0>] __arm64_sys_read+0x24/0x50\n[<0>] invoke_syscall.constprop.0+0xb0/0x130\n[<0>] el0_svc_common.constprop.0+0x44/0x140\n[<0>] do_el0_svc+0x28/0x58\n[<0>] el0_svc+0x48/0x310\n[<0>] el0t_64_sync_handler+0xc0/0x110\n[<0>] el0t_64_sync+0x1b8/0x1c0"
+          }
+        },
+        "irqs": [
+          "129:          0          0          0          0          0          0          0          0          0          0          0          0  GICv3                      843 Level     88c000.spi",
+          "161:     130349          0          0          0          0          0          0          0          0          0          0          0  GICv3                      821 Level     gpi-dma",
+          "183:      52171          0          0          0          0          0          0          0          0          0          0          0  msmgpio                      3 Level     spi0.0"
+        ],
+        "touchpad_gpio": [
+          "gpio3   : in  high func0 16mA pull up",
+          "gpio65  : out high func0 16mA no pull",
+          "gpio120 : out high func0 16mA no pull"
+        ],
+        "marker": {
+          "type": "finish",
+          "browser_epoch_ms": 1789389389145,
+          "browser_clicks": 40,
+          "received_epoch_ms": 1789389389147.965
+        }
+      }
+    }
+  ],
+  "trace_start_monotonic": 3327.113722085,
+  "trace_last_event_monotonic": 3379.359851,
+  "capture_finished": true
+}

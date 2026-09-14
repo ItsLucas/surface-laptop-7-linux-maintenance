@@ -1,0 +1,16 @@
+#!/bin/sh
+# Local SL7 kernel; the authenticated image contains its own device tree.
+cat <<'SL7_COMBINED_MENU'
+menuentry 'SL7 - Wi-Fi, touchpad and touchscreen' --class ubuntu --class gnu-linux --class gnu --class os --id 'sl7-spi-touchscreen-test' {
+	recordfail
+	load_video
+	set gfxpayload=$linux_gfx_mode
+	insmod gzio
+	if [ x$grub_platform = xxen ]; then insmod xzio; insmod lzopio; fi
+	insmod part_gpt
+	insmod ext2
+	search --no-floppy --fs-uuid --set=root 79246795-8cbd-4eaa-bbbb-cf2c6ac4f0f1
+	linux	/boot/sl7/7.2.0-5-sl7-spi-touchscreen-test/kernel.efi root=UUID=79246795-8cbd-4eaa-bbbb-cf2c6ac4f0f1 ro  clk_ignore_unused pd_ignore_unused cma=128M efi=noruntime quiet splash console=tty0 crashkernel=2G-4G:320M,4G-32G:512M,32G-64G:1024M,64G-128G:2048M,128G-:4096M
+	initrd	/boot/sl7/7.2.0-5-sl7/initrd.img
+}
+SL7_COMBINED_MENU

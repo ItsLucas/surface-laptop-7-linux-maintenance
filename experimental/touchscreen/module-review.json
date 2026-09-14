@@ -1,0 +1,50 @@
+{
+  "i2c_hid_of": {
+    "path": "/lib/modules/7.2.0-5-sl7/kernel/drivers/hid/i2c-hid/i2c-hid-of.ko.zst",
+    "signature": {
+      "present": true,
+      "cryptographically_verified": true,
+      "pkcs7_bytes": 552,
+      "certificate_sha256": "9090c15e23590f75a7ab614fd566eaad85cc8c3be34a5ef6e3b67c4631f4669d",
+      "certificate_subject": "subject=CN=SL7 WiFi Local Module Signing 2026",
+      "kernel_trust_checked": false
+    },
+    "vermagic": "7.2.0-5-sl7 SMP preempt mod_unload modversions aarch64"
+  },
+  "i2c_hid": {
+    "path": "/lib/modules/7.2.0-5-sl7/kernel/drivers/hid/i2c-hid/i2c-hid.ko.zst",
+    "signature": {
+      "present": true,
+      "cryptographically_verified": true,
+      "pkcs7_bytes": 552,
+      "certificate_sha256": "9090c15e23590f75a7ab614fd566eaad85cc8c3be34a5ef6e3b67c4631f4669d",
+      "certificate_subject": "subject=CN=SL7 WiFi Local Module Signing 2026",
+      "kernel_trust_checked": false
+    },
+    "vermagic": "7.2.0-5-sl7 SMP preempt mod_unload modversions aarch64"
+  },
+  "hid_multitouch": {
+    "path": "/lib/modules/7.2.0-5-sl7/kernel/drivers/hid/hid-multitouch.ko.zst",
+    "signature": {
+      "present": true,
+      "cryptographically_verified": true,
+      "pkcs7_bytes": 552,
+      "certificate_sha256": "9090c15e23590f75a7ab614fd566eaad85cc8c3be34a5ef6e3b67c4631f4669d",
+      "certificate_subject": "subject=CN=SL7 WiFi Local Module Signing 2026",
+      "kernel_trust_checked": false
+    },
+    "vermagic": "7.2.0-5-sl7 SMP preempt mod_unload modversions aarch64"
+  },
+  "i2c_qcom_geni": {
+    "path": "/lib/modules/7.2.0-5-sl7/kernel/drivers/i2c/busses/i2c-qcom-geni.ko.zst",
+    "signature": {
+      "present": true,
+      "cryptographically_verified": true,
+      "pkcs7_bytes": 552,
+      "certificate_sha256": "9090c15e23590f75a7ab614fd566eaad85cc8c3be34a5ef6e3b67c4631f4669d",
+      "certificate_subject": "subject=CN=SL7 WiFi Local Module Signing 2026",
+      "kernel_trust_checked": false
+    },
+    "vermagic": "7.2.0-5-sl7 SMP preempt mod_unload modversions aarch64"
+  }
+}

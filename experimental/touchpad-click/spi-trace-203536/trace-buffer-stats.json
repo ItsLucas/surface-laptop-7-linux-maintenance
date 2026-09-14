@@ -1,0 +1,14 @@
+{
+  "per_cpu/cpu11/stats": "entries: 0\noverrun: 0\ncommit overrun: 0\nbytes: 0\noldest event ts:  3377.766577\nnow ts:  3379.368845\ndropped events: 0\nread events: 2446",
+  "per_cpu/cpu10/stats": "entries: 0\noverrun: 0\ncommit overrun: 0\nbytes: 3588\noldest event ts:  3378.526817\nnow ts:  3379.368879\ndropped events: 0\nread events: 89111",
+  "per_cpu/cpu9/stats": "entries: 0\noverrun: 0\ncommit overrun: 0\nbytes: 0\noldest event ts:  3378.338966\nnow ts:  3379.368905\ndropped events: 0\nread events: 2748",
+  "per_cpu/cpu8/stats": "entries: 0\noverrun: 0\ncommit overrun: 0\nbytes: 0\noldest event ts:  3377.850397\nnow ts:  3379.368928\ndropped events: 0\nread events: 2352",
+  "per_cpu/cpu7/stats": "entries: 0\noverrun: 0\ncommit overrun: 0\nbytes: 0\noldest event ts:  3342.951526\nnow ts:  3379.368951\ndropped events: 0\nread events: 78",
+  "per_cpu/cpu6/stats": "entries: 0\noverrun: 0\ncommit overrun: 0\nbytes: 0\noldest event ts:     0.000000\nnow ts:  3379.368975\ndropped events: 0\nread events: 0",
+  "per_cpu/cpu5/stats": "entries: 0\noverrun: 0\ncommit overrun: 0\nbytes: 0\noldest event ts:     0.000000\nnow ts:  3379.369016\ndropped events: 0\nread events: 0",
+  "per_cpu/cpu4/stats": "entries: 0\noverrun: 0\ncommit overrun: 0\nbytes: 0\noldest event ts:     0.000000\nnow ts:  3379.369039\ndropped events: 0\nread events: 0",
+  "per_cpu/cpu3/stats": "entries: 0\noverrun: 0\ncommit overrun: 0\nbytes: 0\noldest event ts:  3374.452528\nnow ts:  3379.369061\ndropped events: 0\nread events: 1",
+  "per_cpu/cpu2/stats": "entries: 0\noverrun: 0\ncommit overrun: 0\nbytes: 0\noldest event ts:     0.000000\nnow ts:  3379.369085\ndropped events: 0\nread events: 0",
+  "per_cpu/cpu1/stats": "entries: 0\noverrun: 0\ncommit overrun: 0\nbytes: 0\noldest event ts:  3356.078700\nnow ts:  3379.369108\ndropped events: 0\nread events: 14",
+  "per_cpu/cpu0/stats": "entries: 0\noverrun: 0\ncommit overrun: 0\nbytes: 0\noldest event ts:  3378.379724\nnow ts:  3379.369130\ndropped events: 0\nread events: 39765"
+}

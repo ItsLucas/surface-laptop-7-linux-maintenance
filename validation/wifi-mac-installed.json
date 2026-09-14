@@ -1,0 +1,13 @@
+{
+  "timestamp": "2026-09-14T16:09:27.575947+08:00",
+  "interface": "wlP4p1s0",
+  "previous_address": "00:03:7f:12:8e:cd",
+  "uefi_derived_address": "78:86:2e:5e:ec:47",
+  "current_address": "78:86:2e:5e:ec:47",
+  "boot_service_enabled": true,
+  "networkmanager_default_verified": true,
+  "backup_directory": "/var/backups/sl7-combined/wifi-mac-20260914-160924",
+  "bluetooth_modified": false,
+  "next_boot_verified": false,
+  "corporate_connection_verified": false
+}

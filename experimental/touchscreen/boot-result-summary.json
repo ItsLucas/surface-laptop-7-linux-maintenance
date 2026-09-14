@@ -1,0 +1,52 @@
+{
+  "timestamp": "2026-09-14T16:46:59.288939+08:00",
+  "iptsd_state": {
+    "returncode": 0,
+    "out": "ActiveState=active\nMainPID=1556\nExecMainStartTimestamp=Mon 2026-09-14 16:44:20 CST\n",
+    "err": ""
+  },
+  "secure_boot": {
+    "returncode": 0,
+    "out": "SecureBoot enabled\n",
+    "err": ""
+  },
+  "grubenv": {
+    "returncode": 0,
+    "out": "next_entry=\n",
+    "err": ""
+  },
+  "wifi_state": {
+    "returncode": 0,
+    "out": "100 (connected)\n78\\:86\\:2E\\:5E\\:EC\\:47\n",
+    "err": ""
+  },
+  "i2c_touchscreen": {
+    "name": "hid-over-i2c\n",
+    "modalias": "of:NtouchscreenT(null)Chid-over-i2c\n",
+    "uevent": "OF_NAME=touchscreen\nOF_FULLNAME=/soc@0/geniqup@ac0000/i2c@a80000/touchscreen@34\nOF_COMPATIBLE_0=hid-over-i2c\nOF_COMPATIBLE_N=1\nMODALIAS=of:NtouchscreenT(null)Chid-over-i2c\n",
+    "waiting_for_supplier": "0\n",
+    "driver": null,
+    "children": [
+      "uevent",
+      "of_node",
+      "power",
+      "supplier:platform:f100000.pinctrl",
+      "subsystem",
+      "waiting_for_supplier",
+      "name",
+      "modalias"
+    ]
+  },
+  "/sys/kernel/debug/devices_deferred": "",
+  "calibration_sha256": "14f90f9eaaa855f4bdf52cdc41d158a9d763d4d0e35f6af40166c0f74c5b3847",
+  "calibration_matches_final": true,
+  "user_confirmed_touchscreen_previously_worked_in_windows_or_uefi": true,
+  "calibration_loaded": true,
+  "probe_address_error": -6,
+  "post_reset_wait_ms_tested": [
+    50,
+    200,
+    800
+  ],
+  "touchscreen_working": false
+}

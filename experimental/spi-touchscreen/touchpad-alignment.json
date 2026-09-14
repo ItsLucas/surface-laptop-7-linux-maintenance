@@ -1,0 +1,24 @@
+{
+  "live_linux_metadata": {
+    "vendor": "045e",
+    "product": "0c77",
+    "rows": 18,
+    "columns": 26,
+    "width_cm": 12,
+    "height_cm": 8,
+    "invert_x": false,
+    "invert_y": false,
+    "device_mode_changed": false
+  },
+  "windows_current_params_match": true,
+  "installed_calibration_matches_tested_finger_thumb_config": true,
+  "contacts": {
+    "SizeMin": 0.8,
+    "SizeMax": 2.0,
+    "AspectMin": 1.0,
+    "AspectMax": 2.1
+  },
+  "geometry_override_needed": false,
+  "windows_dll_not_loaded_or_transplanted": true,
+  "touchpad_driver_and_config_changed": false
+}

@@ -1,0 +1,217 @@
+{
+  "filtered": [
+    {
+      "time": "2026-09-14T20:19:30.092459",
+      "process": "gnome-shell",
+      "message": "libinput error: event10 - IPTSD Virtual Touchpad 045E:0C77: kernel bug: Touch jump detected and discarded."
+    },
+    {
+      "time": "2026-09-14T20:19:30.092459",
+      "process": "gnome-shell",
+      "message": "See https://wayland.freedesktop.org/libinput/doc/1.31.3/touchpad-jumping-cursors.html for details"
+    },
+    {
+      "time": "2026-09-14T20:19:31.373107",
+      "process": "gnome-shell",
+      "message": "libinput error: event10 - IPTSD Virtual Touchpad 045E:0C77: kernel bug: Touch jump detected and discarded."
+    },
+    {
+      "time": "2026-09-14T20:19:31.373107",
+      "process": "gnome-shell",
+      "message": "See https://wayland.freedesktop.org/libinput/doc/1.31.3/touchpad-jumping-cursors.html for details"
+    },
+    {
+      "time": "2026-09-14T20:19:33.995999",
+      "process": "gnome-shell",
+      "message": "libinput error: event10 - IPTSD Virtual Touchpad 045E:0C77: kernel bug: Touch jump detected and discarded."
+    },
+    {
+      "time": "2026-09-14T20:19:33.995999",
+      "process": "gnome-shell",
+      "message": "See https://wayland.freedesktop.org/libinput/doc/1.31.3/touchpad-jumping-cursors.html for details"
+    },
+    {
+      "time": "2026-09-14T20:19:34.515310",
+      "process": "gnome-shell",
+      "message": "libinput error: event10 - IPTSD Virtual Touchpad 045E:0C77: kernel bug: Touch jump detected and discarded."
+    },
+    {
+      "time": "2026-09-14T20:19:34.515310",
+      "process": "gnome-shell",
+      "message": "See https://wayland.freedesktop.org/libinput/doc/1.31.3/touchpad-jumping-cursors.html for details"
+    },
+    {
+      "time": "2026-09-14T20:19:34.515310",
+      "process": "gnome-shell",
+      "message": "libinput error: event10 - IPTSD Virtual Touchpad 045E:0C77: WARNING: log rate limit exceeded (5 msgs per 24h). Discarding future messages."
+    },
+    {
+      "time": "2026-09-14T20:19:42.371929",
+      "process": "systemd",
+      "message": "Started sl7-iptsd-click-rollback.timer - [systemd-run] /usr/bin/python3 /run/sl7-iptsd-click-test/rollback.py."
+    },
+    {
+      "time": "2026-09-14T20:19:42.681848",
+      "process": "systemd",
+      "message": "Stopping iptsd@dev-hidraw1.service - Intel Precise Touch & Stylus Daemon..."
+    },
+    {
+      "time": "2026-09-14T20:19:42.807672",
+      "process": "systemd",
+      "message": "iptsd@dev-hidraw1.service: Deactivated successfully."
+    },
+    {
+      "time": "2026-09-14T20:19:42.807982",
+      "process": "systemd",
+      "message": "Stopped iptsd@dev-hidraw1.service - Intel Precise Touch & Stylus Daemon."
+    },
+    {
+      "time": "2026-09-14T20:19:42.809375",
+      "process": "systemd",
+      "message": "Started iptsd@dev-hidraw1.service - Intel Precise Touch & Stylus Daemon."
+    },
+    {
+      "time": "2026-09-14T20:19:42.829420",
+      "process": "iptsd",
+      "message": "[20:19:42.829] [info] Loading config /usr/share/iptsd/surface-laptop-7-qspi.conf."
+    },
+    {
+      "time": "2026-09-14T20:19:42.829724",
+      "process": "iptsd",
+      "message": "[20:19:42.829] [info] Loading config /etc/iptsd.conf."
+    },
+    {
+      "time": "2026-09-14T20:19:42.829724",
+      "process": "iptsd",
+      "message": "[20:19:42.829] [info] Loading config /etc/iptsd.d/91-calibration-045E-0C77.conf."
+    },
+    {
+      "time": "2026-09-14T20:19:42.830229",
+      "process": null,
+      "message": "input: IPTSD Virtual Touchpad 045E:0C77 as /devices/virtual/input/input19"
+    },
+    {
+      "time": "2026-09-14T20:19:55.095561",
+      "process": "sudo",
+      "message": "lucas :  PWD=/home/lucas/code/sl7-wifi-fix ; USER=root ; COMMAND=/usr/bin/journalctl -b -u iptsd@dev-hidraw1.service --no-pager -n 8"
+    },
+    {
+      "time": "2026-09-14T20:19:59.826868",
+      "process": "gnome-shell",
+      "message": "libinput error: event10 - IPTSD Virtual Touchpad 045E:0C77: kernel bug: Touch jump detected and discarded."
+    },
+    {
+      "time": "2026-09-14T20:19:59.826868",
+      "process": "gnome-shell",
+      "message": "See https://wayland.freedesktop.org/libinput/doc/1.31.3/touchpad-jumping-cursors.html for details"
+    },
+    {
+      "time": "2026-09-14T20:20:11.502147",
+      "process": "gnome-shell",
+      "message": "libinput error: event10 - IPTSD Virtual Touchpad 045E:0C77: kernel bug: Touch jump detected and discarded."
+    },
+    {
+      "time": "2026-09-14T20:20:11.502147",
+      "process": "gnome-shell",
+      "message": "See https://wayland.freedesktop.org/libinput/doc/1.31.3/touchpad-jumping-cursors.html for details"
+    },
+    {
+      "time": "2026-09-14T20:20:13.656402",
+      "process": "gnome-shell",
+      "message": "libinput error: event10 - IPTSD Virtual Touchpad 045E:0C77: kernel bug: Touch jump detected and discarded."
+    },
+    {
+      "time": "2026-09-14T20:20:13.656402",
+      "process": "gnome-shell",
+      "message": "See https://wayland.freedesktop.org/libinput/doc/1.31.3/touchpad-jumping-cursors.html for details"
+    },
+    {
+      "time": "2026-09-14T20:22:05.607652",
+      "process": "gnome-shell",
+      "message": "libinput error: event10 - IPTSD Virtual Touchpad 045E:0C77: kernel bug: Touch jump detected and discarded."
+    },
+    {
+      "time": "2026-09-14T20:22:05.607652",
+      "process": "gnome-shell",
+      "message": "See https://wayland.freedesktop.org/libinput/doc/1.31.3/touchpad-jumping-cursors.html for details"
+    },
+    {
+      "time": "2026-09-14T20:22:05.866764",
+      "process": "gnome-shell",
+      "message": "libinput error: event10 - IPTSD Virtual Touchpad 045E:0C77: kernel bug: Touch jump detected and discarded."
+    },
+    {
+      "time": "2026-09-14T20:22:05.866764",
+      "process": "gnome-shell",
+      "message": "See https://wayland.freedesktop.org/libinput/doc/1.31.3/touchpad-jumping-cursors.html for details"
+    },
+    {
+      "time": "2026-09-14T20:22:05.866764",
+      "process": "gnome-shell",
+      "message": "libinput error: event10 - IPTSD Virtual Touchpad 045E:0C77: WARNING: log rate limit exceeded (5 msgs per 24h). Discarding future messages."
+    },
+    {
+      "time": "2026-09-14T20:22:36.927707",
+      "process": "sudo",
+      "message": "lucas :  PWD=/home/lucas/code/sl7-wifi-fix ; USER=root ; COMMAND=/usr/bin/python3 /run/sl7-iptsd-click-test/rollback.py"
+    },
+    {
+      "time": "2026-09-14T20:22:37.252782",
+      "process": "systemd",
+      "message": "Stopping iptsd@dev-hidraw1.service - Intel Precise Touch & Stylus Daemon..."
+    },
+    {
+      "time": "2026-09-14T20:22:37.383658",
+      "process": "systemd",
+      "message": "iptsd@dev-hidraw1.service: Deactivated successfully."
+    },
+    {
+      "time": "2026-09-14T20:22:37.384003",
+      "process": "systemd",
+      "message": "Stopped iptsd@dev-hidraw1.service - Intel Precise Touch & Stylus Daemon."
+    },
+    {
+      "time": "2026-09-14T20:22:37.386894",
+      "process": "systemd",
+      "message": "Started iptsd@dev-hidraw1.service - Intel Precise Touch & Stylus Daemon."
+    },
+    {
+      "time": "2026-09-14T20:22:37.391479",
+      "process": "systemd",
+      "message": "sl7-iptsd-click-rollback.timer: Deactivated successfully."
+    },
+    {
+      "time": "2026-09-14T20:22:37.391537",
+      "process": "systemd",
+      "message": "Stopped sl7-iptsd-click-rollback.timer - [systemd-run] /usr/bin/python3 /run/sl7-iptsd-click-test/rollback.py."
+    },
+    {
+      "time": "2026-09-14T20:22:37.401291",
+      "process": "iptsd",
+      "message": "[20:22:37.401] [info] Loading config /usr/share/iptsd/surface-laptop-7-qspi.conf."
+    },
+    {
+      "time": "2026-09-14T20:22:37.401582",
+      "process": "iptsd",
+      "message": "[20:22:37.401] [info] Loading config /etc/iptsd.conf."
+    },
+    {
+      "time": "2026-09-14T20:22:37.401582",
+      "process": "iptsd",
+      "message": "[20:22:37.401] [info] Loading config /etc/iptsd.d/91-calibration-045E-0C77.conf."
+    },
+    {
+      "time": "2026-09-14T20:22:37.402191",
+      "process": null,
+      "message": "input: IPTSD Virtual Touchpad 045E:0C77 as /devices/virtual/input/input20"
+    },
+    {
+      "time": "2026-09-14T20:22:37.410648",
+      "process": "sudo",
+      "message": "lucas :  PWD=/home/lucas/code/sl7-wifi-fix ; USER=root ; COMMAND=/usr/bin/journalctl -b -u iptsd@dev-hidraw1.service --no-pager -n 20"
+    }
+  ],
+  "unrelated_message_counts": {
+    "desktop_icons_messages": 744
+  }
+}

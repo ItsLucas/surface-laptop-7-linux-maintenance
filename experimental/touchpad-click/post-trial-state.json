@@ -1,0 +1,9 @@
+{
+  "timestamp": "2026-09-14T20:27:31.348016+08:00",
+  "iptsd_service": "ActiveState=active\nSubState=running\nExecStart={ path=/usr/bin/iptsd ; argv[]=/usr/bin/iptsd /dev/hidraw1 ; ignore_errors=no ; start_time=[Mon 2026-09-14 20:22:37 CST] ; stop_time=[n/a] ; pid=20079 ; code=(null) ; status=0/0 }\n",
+  "tap_to_click": "true",
+  "temporary_override_removed": true,
+  "rollback_timer": "inactive",
+  "test_server_running": false,
+  "passive_monitor_running": false
+}

@@ -1,0 +1,12 @@
+Package: iptsd
+Version: 3.1.0+sl7.2-1
+Architecture: arm64
+Maintainer: Local Surface Support <root@localhost>
+Depends: systemd, udev, libc6 (>= 2.44), libstdc++6 (>= 16), libgcc-s1, libfmt10, libinireader0, libspdlog1.15
+Section: misc
+Priority: optional
+Description: Surface touch input processing with SL7 haptic touchpad support
+ Locally built from alex-lentz/iptsd commit
+ 3663e96e758145801c3cb1ce7c72f362d0d4a5f5 for Ubuntu 26.10 arm64.
+ Includes systemd and udev integration and initial SL7 contact thresholds.
+ Preserves touch and physical button state through unstable contact frames.

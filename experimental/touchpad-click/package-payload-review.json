@@ -1,0 +1,10 @@
+{
+  "changed_payload_files": [
+    "./usr/bin/iptsd"
+  ],
+  "added_payload_files": [
+    "./usr/share/doc/iptsd/sl7-click-state-fix.txt"
+  ],
+  "removed_payload_files": [],
+  "existing_config_services_helpers_preserved": true
+}

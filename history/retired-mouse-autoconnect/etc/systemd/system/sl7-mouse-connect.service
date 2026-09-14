@@ -1,0 +1,12 @@
+[Unit]
+Description=Reconnect the paired BT5.2 mouse at boot
+Wants=bluetooth.service sl7-bt-address.service
+After=bluetooth.service sl7-bt-address.service
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/sbin/sl7-mouse-connect
+TimeoutStartSec=180
+
+[Install]
+WantedBy=multi-user.target

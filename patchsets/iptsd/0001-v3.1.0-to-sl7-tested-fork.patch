@@ -1,0 +1,549 @@
+diff --git a/README.md b/README.md
+index 91b797a..f36ed5b 100644
+--- a/README.md
++++ b/README.md
+@@ -1,21 +1,54 @@
+ # IPTSD
+ 
++> **This is a personal fork of [linux-surface/iptsd](https://github.com/linux-surface/iptsd)**,
++> **vibe coded** (you have been warned) to get my MS Surface Laptop 7 Intel haptic trackpad to work. It tracks the upstream project and adds a small set of patches not yet
++> merged upstream. See [Changes from upstream](#changes-from-upstream) below.
++
+ This is the userspace touch processing daemon for Microsoft Surface devices using Intel Precise
+ Touch technology.
+ 
+ The daemon will read incoming HID reports containing raw capacitive touch data, stylus coordinates
+ and DFT pen measurements, and create standard input events from it using uinput devices.
+ 
++### Changes from upstream
++
++The following patches are applied on top of [v3.1.0](https://github.com/linux-surface/iptsd/releases/tag/v3.1.0):
++
++- **Fix physical click on Sensel haptic touchpad** (`ipts/parser`, `daemon`) — Parses IPTS report
++  frame type `0x94`, which carries touchpad button state on devices like the Surface Laptop 7
++  Intel. Bit 1 of byte 2 signals a physical button press; this is now routed through the existing
++  `on_button` path so `BTN_LEFT` is emitted correctly.
++
++- **Fix iptsd not recovering after sleep when hidraw device persists** (`etc`) — Adds a
++  `systemd-sleep` hook that re-fires udev `add` events for all hidraw devices on post-resume. On
++  some Surface devices the hidraw node is not removed during suspend, so no udev `ACTION=="add"`
++  event fires on wake and `iptsd@.service` is never restarted. The hook works around this by
++  running `udevadm trigger` after resume. Also adds `Restart=on-failure` to the service unit so
++  that a transient startup failure immediately after wake is retried automatically.
++
++### Credits
++
++IPTSD is developed and maintained by the [linux-surface](https://github.com/linux-surface) team,
++primarily [Maximilian Luz](https://github.com/quo) and [Dorian Stoll](https://github.com/StollD).
++All core functionality originates from the upstream project. The patches in this fork were authored
++by Alex Lentz with assistance from [Claude](https://claude.ai).
++
+ ### Installing
+ 
+-IPTSD is included in the linux-surface repository. This is the recommended way of installing it.
++This fork's patches are **not** part of the linux-surface package repository, so installing IPTSD
++through the normal linux-surface packages will get you upstream IPTSD without the fixes described
++above.
+ 
+-**Important:** Support on Debian based distributions only goes back to Debian 11 / Ubuntu 22.04.
++There's no prebuilt package for this fork, and its GitHub Actions workflow (inherited from
++upstream) depends on linux-surface's release/signing secrets, which this fork doesn't have — so
++CI here doesn't produce installable artifacts. The supported way to use this fork is to build it
++from source; see [Building](#building) below.
+ 
+-If you want to try out changes that are not yet released, GitHub Actions builds Arch Linux, Debian
+-and Fedora packages for every commit. You'll need to be signed in to GitHub, then go to
+-https://github.com/linux-surface/iptsd/actions, select the latest successful workflow and download
+-the artifact named `<your distro>-latest`.
++If you don't need these patches, use
++[upstream linux-surface/iptsd](https://github.com/linux-surface/iptsd#installing) and its official
++packages instead.
++
++**Important:** Support on Debian based distributions only goes back to Debian 11 / Ubuntu 22.04.
+ 
+ ### Building
+ 
+@@ -41,7 +74,7 @@ Most of the dependencies can be downloaded and included automatically by meson,
+ distribution not include them.
+ 
+ ```bash
+-$ git clone https://github.com/linux-surface/iptsd
++$ git clone https://github.com/alex-lentz/iptsd
+ $ cd iptsd
+ $ meson setup build
+ $ ninja -C build
+@@ -76,5 +109,5 @@ $ sudo restorecon -vF /usr/lib/systemd/system/iptsd@.service
+ $ sudo restorecon -vF /usr/local/bin/ipts*
+ ```
+ 
+-This is only necessary when using `ninja install`. When you install one of the packages from
+-GitHub Actions, or build your own package, everything will just work.
++This is only necessary when using `ninja install`. When you build your own package, everything
++will just work.
+diff --git a/etc/iptsd.conf b/etc/iptsd.conf
+index 140fb2b..259f4f2 100644
+--- a/etc/iptsd.conf
++++ b/etc/iptsd.conf
+@@ -45,6 +45,15 @@
+ ##
+ # Overshoot = 0.5
+ 
++##
++## Minimum time (in milliseconds) between accepted touchpad button transitions.
++## A state change requested sooner than this after the last one is dropped as
++## contact bounce on the firmware's raw pressure-threshold bit, instead of being
++## treated as a deliberate press or release. This is what filters out accidental
++## double-clicks on haptic/force touchpads.
++##
++# ButtonDebounceMs = 25
++
+ [Contacts]
+ ##
+ ## How the neutral value of the heatmap will be determined.
+diff --git a/etc/meson.build b/etc/meson.build
+index 652817d..dc7f56f 100644
+--- a/etc/meson.build
++++ b/etc/meson.build
+@@ -40,6 +40,10 @@ if service_manager.contains('systemd')
+ 	if systemd.found()
+ 		unitdir = systemd.get_variable(pkgconfig: 'systemdsystemunitdir')
+ 
++		fs = import('fs')
++		sleepdir = systemd.get_variable(pkgconfig: 'systemdsleepdir',
++			default_value: fs.parent(unitdir) / 'system-sleep')
++
+ 		udev = dependency('udev')
+ 		udevdir = udev.get_variable(pkgconfig: 'udevdir')
+ 		rulesdir = join_paths(udevdir, 'rules.d')
+@@ -49,6 +53,11 @@ if service_manager.contains('systemd')
+ 
+ 		install_data(unit, install_dir: unitdir)
+ 		install_data(rule, install_dir: rulesdir)
++		install_data(
++			'systemd-sleep/iptsd',
++			install_dir: sleepdir,
++			install_mode: 'rwxr-xr-x',
++		)
+ 
+ 		install_data(
+ 			'scripts/iptsd-systemd',
+diff --git a/etc/systemd-sleep/iptsd b/etc/systemd-sleep/iptsd
+new file mode 100644
+index 0000000..e5c593b
+--- /dev/null
++++ b/etc/systemd-sleep/iptsd
+@@ -0,0 +1,4 @@
++#!/bin/bash
++# SPDX-License-Identifier: GPL-2.0-or-later
++
++[ "$1" = "post" ] && udevadm trigger --action=add --subsystem-match=hidraw
+diff --git a/etc/systemd/iptsd@.service.in b/etc/systemd/iptsd@.service.in
+index 433e92e..ab4f8e7 100644
+--- a/etc/systemd/iptsd@.service.in
++++ b/etc/systemd/iptsd@.service.in
+@@ -7,3 +7,5 @@ BindsTo=%i.device
+ [Service]
+ Type=simple
+ ExecStart=@bindir@/iptsd /%I
++Restart=on-failure
++RestartSec=2
+diff --git a/src/apps/daemon/daemon.hpp b/src/apps/daemon/daemon.hpp
+index 5a633fd..6b8208e 100644
+--- a/src/apps/daemon/daemon.hpp
++++ b/src/apps/daemon/daemon.hpp
+@@ -76,6 +76,20 @@ public:
+ 		m_touch->update(button);
+ 	}
+ 
++	void on_button_report(const gsl::span<u8> data) override
++	{
++		if (!m_touch.has_value() || data.size() < 2)
++			return;
++
++		// Standard HID button bitmask: bit 0 = BTN_LEFT.
++		// Used by haptic touchpads (e.g. Sensel on Surface Laptop 7 Intel) that send
++		// button state in a separate report rather than inside the IPTS frame stream.
++		ipts::samples::Button button {};
++		button.active = (data[1] & 0x01) != 0;
++		button.pressure = button.active ? 1.0 : 0.0;
++		m_touch->update(button);
++	}
++
+ 	void on_stylus(const ipts::samples::Stylus &stylus) override
+ 	{
+ 		if (!m_stylus.has_value())
+diff --git a/src/apps/daemon/touch.hpp b/src/apps/daemon/touch.hpp
+index ae1b682..d890b31 100644
+--- a/src/apps/daemon/touch.hpp
++++ b/src/apps/daemon/touch.hpp
+@@ -17,6 +17,7 @@
+ #include <linux/input-event-codes.h>
+ 
+ #include <algorithm>
++#include <chrono>
+ #include <cmath>
+ #include <iterator>
+ #include <memory>
+@@ -68,6 +69,25 @@ private:
+ 	// Whether the device is enabled.
+ 	bool m_enabled = true;
+ 
++	// Minimum time between accepted button transitions, to filter out
++	// rapid press/release flicker from the firmware's raw pressure-threshold bit.
++	f64 m_button_debounce_ms = 0;
++
++	// The last debounced (emitted) state of the touchpad button.
++	bool m_button_state = false;
++
++	// When the last accepted button transition happened.
++	std::chrono::steady_clock::time_point m_button_last_change {};
++
++	// Whether m_button_last_change holds a real timestamp yet.
++	bool m_button_initialized = false;
++
++	// Whether all output is currently suppressed because a palm was registered.
++	// Tracked here (not just locally in update(contacts)) so that update(Button) can
++	// also respect it -- the raw button sample path is otherwise a separate channel
++	// that bypasses contact-based palm suppression entirely.
++	bool m_blocked = false;
++
+ public:
+ 	TouchDevice(const core::Config &config, const core::DeviceInfo &info)
+ 		: m_config {config},
+@@ -106,6 +126,8 @@ public:
+ 			m_disable_on_palm = config.touchscreen_disable_on_palm;
+ 		}
+ 
++		m_button_debounce_ms = config.touchpad_button_debounce_ms;
++
+ 		const f64 diag = std::hypot(config.width, config.height);
+ 
+ 		// Resolution for X / Y is expected to be units/mm.
+@@ -140,7 +162,9 @@ public:
+ 		// Find the inputs that need to be lifted
+ 		this->search_lifted(contacts);
+ 
+-		if (this->is_blocked(contacts))
++		m_blocked = this->is_blocked(contacts);
++
++		if (m_blocked)
+ 			this->lift_all();
+ 		else
+ 			this->process(contacts);
+@@ -155,11 +179,36 @@ public:
+ 	 */
+ 	void update(const ipts::samples::Button &button)
+ 	{
+-		// If the touch device is disabled ignore all inputs.
+-		if (!m_enabled)
++		// If the touch device is disabled, or all output is suppressed because of a
++		// palm, ignore the raw button sample too. Without this, a firm palm press that
++		// mechanically trips the click sensor would still register a click even though
++		// pointer motion is correctly frozen -- this is a separate channel from the
++		// contact-derived BTN_LEFT emitted/lifted in process()/lift_all().
++		if (!m_enabled || m_blocked)
+ 			return;
+ 
+-		m_uinput->emit(EV_KEY, BTN_LEFT, button.active ? 1 : 0);
++		// No state change requested, nothing to debounce or emit.
++		if (button.active == m_button_state)
++			return;
++
++		const auto now = std::chrono::steady_clock::now();
++
++		// Debounce: a state change requested too soon after the last accepted one
++		// is treated as contact bounce on the firmware's pressure-threshold bit
++		// rather than a deliberate press/release, and is dropped.
++		if (m_button_initialized) {
++			const auto elapsed =
++				std::chrono::duration<f64, std::milli>(now - m_button_last_change).count();
++
++			if (elapsed < m_button_debounce_ms)
++				return;
++		}
++
++		m_button_state = button.active;
++		m_button_last_change = now;
++		m_button_initialized = true;
++
++		m_uinput->emit(EV_KEY, BTN_LEFT, m_button_state ? 1 : 0);
+ 		this->sync();
+ 	}
+ 
+@@ -177,6 +226,7 @@ public:
+ 		m_current.clear();
+ 		m_last.clear();
+ 		m_lift.clear();
++		m_blocked = false;
+ 	}
+ 
+ 	/*!
+diff --git a/src/contacts/tracking/tracker.hpp b/src/contacts/tracking/tracker.hpp
+index 068c6d4..096cba2 100644
+--- a/src/contacts/tracking/tracker.hpp
++++ b/src/contacts/tracking/tracker.hpp
+@@ -27,6 +27,11 @@ private:
+ 	// The distances between all contacts from the current and the last frame.
+ 	Image<T> m_distances {};
+ 
++	// Max normalized distance a contact may move between frames and still be
++	// tracked as the same contact. Farther = lift+reposition; contact keeps its
++	// fresh index and emits no stale delta. Suppresses scroll flyback.
++	T m_reposition_ceiling = static_cast<T>(0.15);
++
+ public:
+ 	/*!
+ 	 * Resets the tracker by clearing the stored copy of the last frame.
+@@ -63,7 +68,13 @@ public:
+ 				Eigen::Index y = 0;
+ 				Eigen::Index x = 0;
+ 
+-				m_distances.minCoeff(&y, &x);
++				const T dist = m_distances.minCoeff(&y, &x);
++
++				// Lift+reposition guard: nearest match too far to be real motion → stop
++				// inheriting indices. minCoeff returns the smallest remaining distance, so
++				// once it exceeds the ceiling every other unmatched pair is too far as well.
++				if (dist > m_reposition_ceiling)
++					break;
+ 
+ 				// Copy the index of the contact
+ 				frame[casts::to_unsigned(x)].index =
+diff --git a/src/core/generic/application.hpp b/src/core/generic/application.hpp
+index 1734e9d..9f90c52 100644
+--- a/src/core/generic/application.hpp
++++ b/src/core/generic/application.hpp
+@@ -112,6 +112,16 @@ public:
+ 		this->on_data(data);
+ 	}
+ 
++	/*!
++	 * Process a standalone HID button report.
++	 *
++	 * @param[in] data The raw HID report (first byte is the report ID).
++	 */
++	void process_button_report(const gsl::span<u8> data)
++	{
++		this->on_button_report(data);
++	}
++
+ 	/*!
+ 	 * For running application specific code after the runner has started.
+ 	 */
+@@ -147,6 +157,13 @@ protected:
+ 	 */
+ 	virtual void on_button(const ipts::samples::Button & /* unused */) {};
+ 
++	/*!
++	 * For handling a standalone HID button report (e.g. Sensel haptic touchpad).
++	 *
++	 * The default implementation is a no-op; override in device-specific applications.
++	 */
++	virtual void on_button_report(const gsl::span<u8> /* data */) {};
++
+ private:
+ 	/*!
+ 	 * Runs contact detection on an IPTS heatmap.
+diff --git a/src/core/generic/config.hpp b/src/core/generic/config.hpp
+index f16553d..c14de83 100644
+--- a/src/core/generic/config.hpp
++++ b/src/core/generic/config.hpp
+@@ -34,6 +34,7 @@ public:
+ 	bool touchpad_disable = false;
+ 	bool touchpad_disable_on_palm = false;
+ 	f64 touchpad_overshoot = 0.5;
++	f64 touchpad_button_debounce_ms = 25;
+ 
+ 	// [Contacts]
+ 	std::string contacts_neutral = "mode";
+diff --git a/src/core/linux/config-loader.hpp b/src/core/linux/config-loader.hpp
+index 8ffd944..2623a58 100644
+--- a/src/core/linux/config-loader.hpp
++++ b/src/core/linux/config-loader.hpp
+@@ -160,6 +160,7 @@ private:
+ 		this->get(ini, "Touchpad", "Disable", m_config.touchpad_disable);
+ 		this->get(ini, "Touchpad", "DisableOnPalm", m_config.touchpad_disable_on_palm);
+ 		this->get(ini, "Touchpad", "Overshoot", m_config.touchpad_overshoot);
++		this->get(ini, "Touchpad", "ButtonDebounceMs", m_config.touchpad_button_debounce_ms);
+ 
+ 		this->get(ini, "Contacts", "Neutral", m_config.contacts_neutral);
+ 		this->get(ini, "Contacts", "NeutralValue", m_config.contacts_neutral_value);
+diff --git a/src/core/linux/runner.hpp b/src/core/linux/runner.hpp
+index 83aef4a..f90a911 100644
+--- a/src/core/linux/runner.hpp
++++ b/src/core/linux/runner.hpp
+@@ -143,11 +143,15 @@ public:
+ 				const usize size = m_device->read(m_buffer);
+ 				const gsl::span<u8> data {m_buffer.data(), size};
+ 
+-				// Does this report contain touch data?
+-				if (!m_ipts.is_touch_data(m_buffer))
++				if (m_ipts.is_touch_data(m_buffer)) {
++					m_application->process(data);
++				} else if (m_ipts.is_button_data(m_buffer)) {
++					m_application->process_button_report(data);
++				} else {
++					if (size > 0)
++						spdlog::debug("Unknown report: id=0x{:02x} size={}", m_buffer[0], size);
+ 					continue;
+-
+-				m_application->process(data);
++				}
+ 			} catch (const common::Error<device::Error::EndOfData> & /* unused */) {
+ 				break;
+ 			} catch (const std::exception &e) {
+diff --git a/src/ipts/descriptor.hpp b/src/ipts/descriptor.hpp
+index 5c8e8ed..8cc13b9 100644
+--- a/src/ipts/descriptor.hpp
++++ b/src/ipts/descriptor.hpp
+@@ -45,6 +45,19 @@ public:
+ 		return m_hid_descriptor.find_report(protocol::descriptor::is_set_mode);
+ 	}
+ 
++	/*!
++	 * Searches for a standalone button input report in the HID descriptor.
++	 *
++	 * On haptic touchpads (e.g. Sensel) the physical button is reported separately
++	 * from the IPTS touch data, using a plain HID button bitmask.
++	 *
++	 * @return The button input report if one exists, null otherwise.
++	 */
++	[[nodiscard]] std::optional<hid::Report> find_button_report() const
++	{
++		return m_hid_descriptor.find_report(protocol::descriptor::is_button_input);
++	}
++
+ 	/*!
+ 	 * Searches for the metadata report in the HID descriptor.
+ 	 *
+diff --git a/src/ipts/device.hpp b/src/ipts/device.hpp
+index b31c4ff..958b431 100644
+--- a/src/ipts/device.hpp
++++ b/src/ipts/device.hpp
+@@ -67,11 +67,15 @@ private:
+ 	// All reports of the HID descriptor that contain touch data
+ 	std::vector<hid::Report> m_touch_data_reports;
+ 
++	// The standalone button input report, if present (e.g. Sensel haptic touchpad)
++	std::optional<hid::Report> m_button_report;
++
+ public:
+ 	Device(std::shared_ptr<hid::Device> hid)
+ 		: m_hid {std::move(hid)},
+ 		  m_descriptor {m_hid->descriptor()},
+-		  m_touch_data_reports {m_descriptor.find_touch_data_reports()}
++		  m_touch_data_reports {m_descriptor.find_touch_data_reports()},
++		  m_button_report {m_descriptor.find_button_report()}
+ 	{
+ 		// Check if the device can switch modes
+ 		if (!m_descriptor.find_modesetting_report().has_value())
+@@ -197,6 +201,20 @@ public:
+ 			m_touch_data_reports.cend(),
+ 			[&](const hid::Report &report) { return report.report_id == buffer[0]; });
+ 	}
++
++	/*!
++	 * Checks whether a buffer contains a standalone button report.
++	 *
++	 * @param[in] buffer The buffer that was read from the device.
++	 * @return Whether the buffer contains button input data.
++	 */
++	[[nodiscard]] bool is_button_data(const gsl::span<u8> buffer) const
++	{
++		if (!m_button_report.has_value() || buffer.empty())
++			return false;
++
++		return m_button_report->report_id == buffer[0];
++	}
+ };
+ 
+ } // namespace iptsd::ipts
+diff --git a/src/ipts/parser.hpp b/src/ipts/parser.hpp
+index 9489e07..af39c41 100644
+--- a/src/ipts/parser.hpp
++++ b/src/ipts/parser.hpp
+@@ -22,6 +22,7 @@
+ #include <common/types.hpp>
+ 
+ #include <gsl/gsl>
++#include <spdlog/spdlog.h>
+ 
+ #include <functional>
+ #include <optional>
+@@ -126,7 +127,7 @@ private:
+ 			this->parse_report_frames(sub);
+ 			break;
+ 		default:
+-			// TODO: Add handler for unknown data and wire up debug tools
++			spdlog::debug("Unknown HID frame type: 0x{:02x}", static_cast<u8>(frame.type));
+ 			break;
+ 		}
+ 	}
+@@ -234,10 +235,22 @@ private:
+ 		case protocol::report::Type::Button:
+ 			this->parse_button(sub);
+ 			break;
+-		default:
+-			// TODO: Add handler for unknown data and wire up debug tools
++		default: {
++			const auto type_byte = static_cast<u8>(frame.type);
++			if (type_byte == 0x94) {
++				const auto bytes = sub.subspan<u8>(sub.size());
++				if (bytes.size() >= 3 && this->on_button) {
++					samples::Button button {};
++					button.active = (bytes[2] & 0x02) != 0;
++					button.pressure = button.active ? 1.0 : 0.0;
++					this->on_button(button);
++				}
++			} else {
++				spdlog::debug("Unknown report frame type: 0x{:02x} size={}", type_byte, frame.size);
++			}
+ 			break;
+ 		}
++		}
+ 	}
+ 
+ 	/*!
+diff --git a/src/ipts/protocol/descriptor.hpp b/src/ipts/protocol/descriptor.hpp
+index a8774b8..f8eb97f 100644
+--- a/src/ipts/protocol/descriptor.hpp
++++ b/src/ipts/protocol/descriptor.hpp
+@@ -12,6 +12,7 @@ namespace iptsd::ipts::protocol::descriptor {
+ // Needed because we have a hid namespace in iptsd::ipts::protocol
+ namespace hid = iptsd::hid;
+ 
++constexpr u16 USAGE_PAGE_BUTTON = 0x0009;
+ constexpr u16 USAGE_PAGE_DIGITIZER = 0x000D;
+ constexpr u16 USAGE_PAGE_VENDOR = 0xFF00;
+ 
+@@ -23,6 +24,8 @@ constexpr u8 USAGE_GESTURE_DATA = 0x61;
+ constexpr u8 USAGE_SET_MODE = 0xC8;
+ constexpr u8 USAGE_METADATA = 0x63;
+ 
++constexpr u16 USAGE_BUTTON_1 = 0x0001;
++
+ /*!
+  * Checks if a given report contains touch data.
+  *
+@@ -36,6 +39,21 @@ inline bool is_touch_data(const hid::Report &report)
+ 	       report.has_usage(USAGE_PAGE_DIGITIZER, USAGE_GESTURE_DATA);
+ }
+ 
++/*!
++ * Checks if a given report is a standalone HID button input report.
++ *
++ * This matches a simple button-bitmask Input report (e.g. on Sensel haptic touchpads)
++ * that is distinct from the main IPTS touch data report.
++ *
++ * @param[in] report The report to check.
++ * @return Whether the report matches the properties for a button input report.
++ */
++inline bool is_button_input(const hid::Report &report)
++{
++	return report.type == hid::Report::Type::Input && !is_touch_data(report) &&
++	       report.has_usage(USAGE_PAGE_BUTTON, USAGE_BUTTON_1);
++}
++
+ /*!
+  * Checks if a given report sets the mode of the device.
+  *

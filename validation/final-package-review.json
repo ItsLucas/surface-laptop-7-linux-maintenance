@@ -1,0 +1,12 @@
+{
+  "package": "/home/lucas/code/sl7-wifi-fix/touchpad-click-fix/iptsd_3.1.0+sl7.2-1_arm64.deb",
+  "version": "3.1.0+sl7.2-1",
+  "sha256": "8c2c08c77d88d31111e651b2c5127f29acb08a975628dd542915f3882003c28b",
+  "binary_sha256": "26c9ca51dfc97372f4ae4dd7767ae42a49f49220fdc2d1c9b990bd9ff3c06822",
+  "same_binary_as_successful_click_trial": true,
+  "packaging_change": "Only first installation triggers hidraw add; upgrades retain device tags while restarting existing services.",
+  "installed": true,
+  "user_approved": true,
+  "both_services_verified_running": true,
+  "known_stall_not_fixed": true
+}

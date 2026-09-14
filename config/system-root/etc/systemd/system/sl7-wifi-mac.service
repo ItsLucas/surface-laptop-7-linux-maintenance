@@ -1,0 +1,20 @@
+[Unit]
+Description=Provision Surface Laptop 7 Wi-Fi address from UEFI
+DefaultDependencies=no
+After=sys-firmware-efi-efivars.mount
+Before=systemd-udev-trigger.service NetworkManager.service sysinit.target
+ConditionPathExists=/sys/firmware/efi/efivars/MacAddressEmulationAddress-b7f95555-4ea5-4786-b088-78ba350a1b56
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+ExecStart=/usr/local/libexec/sl7-wifi-mac stage
+TimeoutStartSec=15
+CapabilityBoundingSet=
+NoNewPrivileges=yes
+ProtectSystem=strict
+ProtectHome=yes
+ReadWritePaths=/run
+
+[Install]
+WantedBy=sysinit.target

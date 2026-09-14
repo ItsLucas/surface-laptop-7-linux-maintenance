@@ -1,0 +1,13 @@
+#!/bin/sh
+set -e
+case "$1" in
+    remove|deconfigure)
+        if [ "$(uname -r)" = 7.2.0-5-sl7 ]; then
+            echo 'Boot the original Ubuntu kernel before removing the running SL7 kernel.' >&2
+            exit 1
+        fi
+        if [ -d /run/systemd/system ]; then
+            systemctl disable --now sl7-iptsd-coldplug.service
+        fi
+        ;;
+esac

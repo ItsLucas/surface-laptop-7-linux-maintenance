@@ -1,0 +1,12 @@
+{
+  "current_image_sha256": "5a5af0e5bbe42664d91d490b43c068b51fcb40dab71cf5712551eb142a4cc597",
+  "test_image_sha256": "d25c3487fb3374fe14de3bf56895a28d247a7ab90c532bfb31209f02b536e093",
+  "same_inner_kernel": true,
+  "same_hwids": true,
+  "changed_sections": [
+    ".dtbauto"
+  ],
+  "outer_and_inner_signatures_valid": true,
+  "boot_certificate_enrolled": true,
+  "runtime_tested": false
+}

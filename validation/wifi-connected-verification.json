@@ -1,0 +1,36 @@
+{
+  "timestamp": "2026-09-14T16:31:10.783770+08:00",
+  "kernel": "7.2.0-5-sl7",
+  "secure_boot": "SecureBoot enabled",
+  "lockdown": "none [integrity] confidentiality",
+  "wifi_interface": "wlP4p1s0",
+  "wifi_state": "100 (connected)",
+  "wifi_mac": "78:86:2e:5e:ec:47",
+  "outbound_route_device": "wlP4p1s0",
+  "user_confirmed_wifi_internet": true,
+  "user_confirmed_finger_thumb_and_two_finger_touchpad": true,
+  "next_boot_mac_provisioning_retested": false,
+  "suspend_resume_tested": false,
+  "installed_kernel_package": "7.2.0-5.5+sl7.1",
+  "sl7-wifi-mac.service": [
+    "active",
+    "success",
+    "0"
+  ],
+  "iptsd@dev-hidraw1.service": [
+    "active",
+    "success",
+    "0"
+  ],
+  "sl7-bt-address.service": [
+    "inactive",
+    "success",
+    "0"
+  ],
+  "sl7-mouse-connect.service": [
+    "failed",
+    "exit-code",
+    "1"
+  ],
+  "https_request_bound_to_wifi": "HTTP/2 200 from https://ubuntu.com/"
+}

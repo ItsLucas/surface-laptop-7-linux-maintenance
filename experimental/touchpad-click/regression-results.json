@@ -1,0 +1,12 @@
+{
+  "baseline": {
+    "exit_code": 1,
+    "output": "FAIL first contact with nonzero ID is present immediately\nFAIL first contact with nonzero ID is present immediately\nFAIL unstable existing contact retains touch presence\nFAIL unstable existing contact retains touch presence\nFAIL primary handoff does not release remaining finger\nFAIL primary handoff does not release remaining finger\nFAIL palm and new unstable contact do not inflate finger count\nFAIL physical hold survives unstable measurement\nFAIL contact loss does not release physical button\nFAIL disable resets emitted button state\nFAIL palm release leaves button state synchronized\nFAIL screen contact starts immediately\nFAIL screen unstable contact remains present\n46 checks, 13 failures\n",
+    "stderr": ""
+  },
+  "candidate": {
+    "exit_code": 0,
+    "output": "46 checks, 0 failures\n",
+    "stderr": ""
+  }
+}

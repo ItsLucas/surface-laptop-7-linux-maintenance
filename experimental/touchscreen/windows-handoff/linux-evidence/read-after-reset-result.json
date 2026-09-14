@@ -1,0 +1,42 @@
+{
+  "timestamp": "2026-09-14T16:54:20.906457+08:00",
+  "address": "8-0034",
+  "gpio": 31,
+  "observations": [
+    {
+      "elapsed_ms": 50,
+      "smbus_presence": {
+        "errno": 6,
+        "error": "[Errno 6] No such device or address"
+      },
+      "descriptor": {
+        "errno": 6,
+        "error": "[Errno 6] No such device or address"
+      }
+    },
+    {
+      "elapsed_ms": 200,
+      "smbus_presence": {
+        "errno": 6,
+        "error": "[Errno 6] No such device or address"
+      },
+      "descriptor": {
+        "errno": 6,
+        "error": "[Errno 6] No such device or address"
+      }
+    },
+    {
+      "elapsed_ms": 800,
+      "smbus_presence": {
+        "errno": 6,
+        "error": "[Errno 6] No such device or address"
+      },
+      "descriptor": {
+        "errno": 6,
+        "error": "[Errno 6] No such device or address"
+      }
+    }
+  ],
+  "original_reset_low_restored": true,
+  "driver_was_unbound": true
+}

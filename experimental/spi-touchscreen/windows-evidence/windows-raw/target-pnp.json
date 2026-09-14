@@ -1,0 +1,109 @@
+{
+  "CapturedAt": "2026-09-14T17:15:51.6535785+08:00",
+  "TouchscreenCount": 1,
+  "UserTouchTest": "User confirmed touch works in Windows on 2026-09-14",
+  "Devices": [
+    {
+      "InstanceId": "ACPI\\MSHW0461\\2&daba3ff&0",
+      "Name": "SPI HID 设备",
+      "Status": "OK",
+      "HardwareIds": [
+        "ACPI\\VEN_MSHW&DEV_0461&REV_0001",
+        "ACPI\\VEN_MSHW&DEV_0461",
+        "ACPI\\MSHW0461",
+        "*MSHW0461"
+      ],
+      "CompatibleIds": [
+        "ACPI\\PNP0C51",
+        "PNP0C51"
+      ],
+      "Parent": "ACPI_HAL\\PNP0C08\\0",
+      "LocationPaths": [
+        "ACPI(_SB_)#ACPI(GTCH)"
+      ],
+      "Service": "hidspi",
+      "DriverInfPath": "hidspi_km.inf",
+      "DriverVersion": "10.0.26100.8972",
+      "DriverProvider": "Microsoft",
+      "DriverDate": "2006-06-21T08:00:00+08:00",
+      "ProblemCode": 0,
+      "UpperFilters": null,
+      "LowerFilters": null
+    },
+    {
+      "InstanceId": "ACPI\\QCOM0C0E\\14",
+      "Name": "Qualcomm(R) SPI Bus Device",
+      "Status": "OK",
+      "HardwareIds": [
+        "ACPI\\VEN_QCOM&DEV_0C0E&SUBSYS_MSHW0469",
+        "ACPI\\QCOM0C0E",
+        "*QCOM0C0E"
+      ],
+      "CompatibleIds": [
+        "ACPI\\VEN_QCOM&DEV_0C0E"
+      ],
+      "Parent": "ACPI_HAL\\PNP0C08\\0",
+      "LocationPaths": [
+        "ACPI(_SB_)#ACPI(SP20)"
+      ],
+      "Service": "qcspi",
+      "DriverInfPath": "oem100.inf",
+      "DriverVersion": "1.0.4160.6000",
+      "DriverProvider": "Qualcomm Technologies, Inc.",
+      "DriverDate": "2024-10-29T08:00:00+08:00",
+      "ProblemCode": 0,
+      "UpperFilters": null,
+      "LowerFilters": null
+    },
+    {
+      "InstanceId": "ACPI\\QCOM0C0E\\B",
+      "Name": "Qualcomm(R) SPI Bus Device",
+      "Status": "OK",
+      "HardwareIds": [
+        "ACPI\\VEN_QCOM&DEV_0C0E&SUBSYS_CRD08380",
+        "ACPI\\QCOM0C0E",
+        "*QCOM0C0E"
+      ],
+      "CompatibleIds": [
+        "ACPI\\VEN_QCOM&DEV_0C0E"
+      ],
+      "Parent": "ACPI_HAL\\PNP0C08\\0",
+      "LocationPaths": [
+        "ACPI(_SB_)#ACPI(SP11)"
+      ],
+      "Service": "qcspi",
+      "DriverInfPath": "oem100.inf",
+      "DriverVersion": "1.0.4160.6000",
+      "DriverProvider": "Qualcomm Technologies, Inc.",
+      "DriverDate": "2024-10-29T08:00:00+08:00",
+      "ProblemCode": 0,
+      "UpperFilters": null,
+      "LowerFilters": null
+    },
+    {
+      "InstanceId": "HID\\MSHW0461&COL03\\3&10E5E2B0&0&0002",
+      "Name": "Surface Touch Screen Device",
+      "Status": "OK",
+      "HardwareIds": [
+        "HID\\VEN_MSHW&DEV_0461&REV_0001&Col03",
+        "HID\\VEN_MSHW&DEV_0461&Col03",
+        "HID\\MSHW0461&Col03",
+        "HID\\*MSHW0461&Col03",
+        "HID\\VID_045E&UP:000D_U:0004",
+        "HID_DEVICE_UP:000D_U:0004",
+        "HID_DEVICE"
+      ],
+      "CompatibleIds": [],
+      "Parent": "ACPI\\MSHW0461\\2&daba3ff&0",
+      "LocationPaths": null,
+      "Service": null,
+      "DriverInfPath": "input.inf",
+      "DriverVersion": "10.0.26100.9444",
+      "DriverProvider": "Microsoft",
+      "DriverDate": "2006-06-21T08:00:00+08:00",
+      "ProblemCode": 0,
+      "UpperFilters": null,
+      "LowerFilters": null
+    }
+  ]
+}

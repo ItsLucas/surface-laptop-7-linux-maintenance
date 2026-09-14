@@ -1,0 +1,20 @@
+{
+  "timestamp": "2026-09-14T20:53:14.717589+08:00",
+  "sha256": {
+    "/boot/sl7/7.2.0-5-sl7-spi-touchscreen-test/kernel.efi": "94003dc6c6c1e194054037ced995eb2258a08e1c346acaaf0964a37c673e927f",
+    "/boot/sl7/7.2.0-5-sl7/kernel.efi": "5a5af0e5bbe42664d91d490b43c068b51fcb40dab71cf5712551eb142a4cc597",
+    "/boot/sl7/7.2.0-5-sl7/initrd.img": "581c333e17580bd4b80ad36ea50bf823713ed360483e86afcf203177f10c0654",
+    "/etc/iptsd.d/91-calibration-045E-0C77.conf": "14f90f9eaaa855f4bdf52cdc41d158a9d763d4d0e35f6af40166c0f74c5b3847"
+  },
+  "signature_verification": "Signature verification OK\n",
+  "secure_boot": "SecureBoot enabled",
+  "grub_environment": "next_entry=sl7-spi-touchscreen-test",
+  "default": "sl7-combined-kernel",
+  "current_boot_image": "BOOT_IMAGE=/boot/sl7/7.2.0-5-sl7-touchscreen-test/kernel.efi",
+  "spi_touchscreen_runtime_test_pending": true,
+  "touchpad_original_package_active": true,
+  "click_candidate_not_permanently_installed": true,
+  "calibration_unchanged": true,
+  "tracing_finished": true,
+  "spi_runtime_pm_control": "auto"
+}

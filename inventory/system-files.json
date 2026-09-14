@@ -1,0 +1,23 @@
+[
+  "/usr/local/libexec/sl7-wifi-mac",
+  "/etc/systemd/system/sl7-wifi-mac.service",
+  "/run/systemd/network/05-sl7-wifi-mac.link",
+  "/run/NetworkManager/conf.d/90-sl7-wifi-mac.conf",
+  "/etc/default/grub.d/zz-sl7-local-kernel.cfg",
+  "/etc/grub.d/43_sl7_combined_kernel",
+  "/etc/default/grub.d/ubuntu-x1e-settings.cfg",
+  "/etc/iptsd.conf",
+  "/etc/iptsd.d/91-calibration-045E-0C77.conf",
+  "/usr/share/iptsd/surface-laptop-7-qspi.conf",
+  "/usr/lib/systemd/system/iptsd@.service",
+  "/usr/lib/systemd/system/sl7-iptsd-coldplug.service",
+  "/usr/local/sbin/sl7-bt-address",
+  "/etc/systemd/system/sl7-bt-address.service",
+  "/etc/systemd/system/bluetooth.service.d/10-sl7-address.conf",
+  "/etc/udev/rules.d/80-sl7-bt-address.rules",
+  "/etc/bluetooth/main.conf",
+  "/etc/bluetooth/main.conf.before-sl7-autoconnect",
+  "/etc/initramfs-tools/hooks/sl7-kit-firmware",
+  "/etc/NetworkManager/NetworkManager.conf",
+  "/etc/apt/sources.list.d/ubuntu.sources"
+]

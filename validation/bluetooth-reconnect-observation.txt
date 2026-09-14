@@ -1,0 +1,4 @@
+Final observation on 2026-09-14: sl7-bt-address.service completed successfully.
+sl7-mouse-connect.service exited 1 with: Mouse not available during boot retry window; BlueZ remains enabled.
+This does not establish whether the mouse was powered on during that interval; boot reconnect remains to verify.
+No Bluetooth service was restarted or failure state reset during this archive task.

@@ -1,0 +1,17 @@
+#!/bin/sh
+set -e
+if [ "$1" = configure ]; then
+    if [ -S /run/udev/control ]; then
+        udevadm control --reload-rules
+    fi
+    if [ -d /run/systemd/system ]; then
+        systemctl daemon-reload
+        systemctl try-restart 'iptsd@*.service'
+    fi
+    # On upgrade the existing device units already own the daemons.
+    # Re-probing immediately after restart can race device initialization,
+    # fail the HID feature query and remove the systemd device tag.
+    if [ -z "${2:-}" ] && [ -S /run/udev/control ]; then
+        udevadm trigger --action=add --subsystem-match=hidraw
+    fi
+fi

@@ -1,0 +1,11 @@
+{
+  "ok": true,
+  "release": "7.2.0-5-sl7",
+  "outer_pe_sha256": "5a5af0e5bbe42664d91d490b43c068b51fcb40dab71cf5712551eb142a4cc597",
+  "inner_pe_sha256": "eca6f7850625580516098d1df89f86790b08d975f2444b97c1d4e1351e8dbc6f",
+  "dtb_sha256": "19a6f7010e0e6768ed93f2565ac175d2b2c443a27f9df7d49359e6391eff8f00",
+  "outer_and_inner_signatures_verified": true,
+  "embedded_kernel_and_device_tree_match_staged_artifacts": true,
+  "romulus13_hwid_match_count": 4,
+  "hardware_runtime_tested": false
+}

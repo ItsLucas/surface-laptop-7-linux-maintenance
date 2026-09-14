@@ -1,0 +1,11 @@
+{
+  "timestamp": "2026-09-14T16:35:16.247284+08:00",
+  "reason": "User turned off mouse and no longer needs automatic reconnect after touchpad fix",
+  "removed_files": [
+    "/etc/systemd/system/sl7-mouse-connect.service",
+    "/usr/local/sbin/sl7-mouse-connect"
+  ],
+  "backup_directory": "/var/backups/sl7-combined/mouse-autoconnect-retired-20260914-163515",
+  "bluetooth_address_service_preserved": true,
+  "bluetooth_config_and_pairing_records_unchanged": true
+}

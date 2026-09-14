@@ -1,0 +1,14 @@
+[req]
+distinguished_name = subject
+x509_extensions = boot_signing
+prompt = no
+
+[subject]
+CN = SL7 Local Kernel Signing 2026
+
+[boot_signing]
+basicConstraints = critical,CA:FALSE
+keyUsage = critical,digitalSignature
+extendedKeyUsage = codeSigning
+subjectKeyIdentifier = hash
+authorityKeyIdentifier = keyid:always

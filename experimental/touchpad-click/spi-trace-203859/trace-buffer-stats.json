@@ -1,0 +1,14 @@
+{
+  "per_cpu/cpu11/stats": "entries: 0\noverrun: 0\ncommit overrun: 0\nbytes: 0\noldest event ts:  3620.148637\nnow ts:  3620.868031\ndropped events: 0\nread events: 4728",
+  "per_cpu/cpu10/stats": "entries: 0\noverrun: 0\ncommit overrun: 0\nbytes: 2744\noldest event ts:  3615.643600\nnow ts:  3620.868065\ndropped events: 0\nread events: 57168",
+  "per_cpu/cpu9/stats": "entries: 0\noverrun: 0\ncommit overrun: 0\nbytes: 6880\noldest event ts:  3620.691904\nnow ts:  3620.868092\ndropped events: 0\nread events: 161651",
+  "per_cpu/cpu8/stats": "entries: 0\noverrun: 0\ncommit overrun: 0\nbytes: 0\noldest event ts:  3620.510986\nnow ts:  3620.868116\ndropped events: 0\nread events: 5685",
+  "per_cpu/cpu7/stats": "entries: 0\noverrun: 0\ncommit overrun: 0\nbytes: 0\noldest event ts:  3618.180876\nnow ts:  3620.868141\ndropped events: 0\nread events: 786",
+  "per_cpu/cpu6/stats": "entries: 0\noverrun: 0\ncommit overrun: 0\nbytes: 0\noldest event ts:  3617.892803\nnow ts:  3620.868165\ndropped events: 0\nread events: 442",
+  "per_cpu/cpu5/stats": "entries: 0\noverrun: 0\ncommit overrun: 0\nbytes: 0\noldest event ts:  3582.639686\nnow ts:  3620.868189\ndropped events: 0\nread events: 212",
+  "per_cpu/cpu4/stats": "entries: 0\noverrun: 0\ncommit overrun: 0\nbytes: 0\noldest event ts:  3530.323005\nnow ts:  3620.868222\ndropped events: 0\nread events: 32",
+  "per_cpu/cpu3/stats": "entries: 0\noverrun: 0\ncommit overrun: 0\nbytes: 0\noldest event ts:  3578.428829\nnow ts:  3620.868244\ndropped events: 0\nread events: 407",
+  "per_cpu/cpu2/stats": "entries: 0\noverrun: 0\ncommit overrun: 0\nbytes: 0\noldest event ts:  3595.113066\nnow ts:  3620.868268\ndropped events: 0\nread events: 551",
+  "per_cpu/cpu1/stats": "entries: 0\noverrun: 0\ncommit overrun: 0\nbytes: 0\noldest event ts:  3575.294772\nnow ts:  3620.868291\ndropped events: 0\nread events: 313",
+  "per_cpu/cpu0/stats": "entries: 0\noverrun: 0\ncommit overrun: 0\nbytes: 0\noldest event ts:  3620.651953\nnow ts:  3620.868314\ndropped events: 0\nread events: 97233"
+}

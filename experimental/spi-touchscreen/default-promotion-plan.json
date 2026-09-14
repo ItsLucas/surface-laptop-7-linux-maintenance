@@ -1,0 +1,14 @@
+{
+  "read_only_preflight_passed": true,
+  "new_default": "sl7-spi-touchscreen-test",
+  "menu_title": "SL7 - Wi-Fi, touchpad and touchscreen",
+  "fallback": "sl7-combined-kernel",
+  "menu_timeout_seconds": 5,
+  "only_changed_files": [
+    "/etc/default/grub.d/zz-sl7-local-kernel.cfg",
+    "/etc/grub.d/45_sl7_spi_touchscreen_test"
+  ],
+  "runs_update_grub": true,
+  "replaces_kernel": false,
+  "reboots": false
+}

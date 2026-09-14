@@ -1,0 +1,50 @@
+#!/usr/bin/python3
+"""Provision only an unconfigured SL7 onboard Bluetooth controller.
+
+Address derivation follows https://github.com/valeronm/sl7-mac.
+UEFI is read only; no firmware or paired-device records are modified.
+"""
+import os
+from pathlib import Path
+import subprocess
+import time
+
+os.environ['LC_ALL'] = 'C'
+model = Path('/sys/firmware/devicetree/base/model').read_bytes()
+if b'Microsoft Surface Laptop 7' not in model:
+    raise SystemExit('Unsupported machine')
+variable = Path('/sys/firmware/efi/efivars/MacAddressEmulationAddress-b7f95555-4ea5-4786-b088-78ba350a1b56')
+data = variable.read_bytes()
+if len(data) != 10 or data[4] & 1 or int.from_bytes(data[4:], 'big') < 2:
+    raise SystemExit('Invalid UEFI address variable')
+address = ':'.join(f'{b:02X}' for b in (int.from_bytes(data[4:], 'big') - 1).to_bytes(6, 'big'))
+
+def query(index, *args):
+    try:
+        result = subprocess.run(['/usr/bin/btmgmt', '--index', index, *args],
+                                capture_output=True, text=True, timeout=5)
+        return result.stdout + result.stderr
+    except subprocess.TimeoutExpired:
+        return ''
+
+deadline = time.monotonic() + 45
+while time.monotonic() < deadline:
+    for device in Path('/sys/class/bluetooth').glob('hci*'):
+        # Match the onboard WCN7850 UART, never an external USB adapter.
+        compatible = device / 'device/of_node/compatible'
+        if not compatible.exists() or b'qcom,wcn7850-bt' not in compatible.read_bytes():
+            continue
+        index = device.name[3:]
+        info = query(index, 'info')
+        if 'Primary controller' in info:
+            print('Controller already configured; leaving it unchanged', flush=True)
+            raise SystemExit(0)
+        config = query(index, 'config')
+        if 'missing options: public-address' not in config:
+            continue
+        result = query(index, 'public-addr', address)
+        if 'Set Public Address complete' in result:
+            print('Bluetooth public address provisioned from UEFI', flush=True)
+        # Firmware setup restarts asynchronously. Verify on the next iteration.
+    time.sleep(1)
+raise SystemExit('Bluetooth provisioning did not complete within 45 seconds')

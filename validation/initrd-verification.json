@@ -1,0 +1,12 @@
+{
+  "ok": true,
+  "generator": "dracut 112-6",
+  "release": "7.2.0-5-sl7",
+  "initrd_sha256": "e125e9d9e9b6f5aa9754c530f09ca57a78c1c23b3bacfea61ae694a365232328",
+  "signed_touchpad_modules_preserved_byte_for_byte": {
+    "kernel/drivers/dma/qcom/gpi.ko.zst": "e285aefac053235c7d16b113d38acb53ef97125e3ba922647dc0084cad215187",
+    "kernel/drivers/hid/spi-hid/spi-hid.ko.zst": "80b3325967a814f98fc9b788fd3a27843f91cdec82e4affb568ca32c6eab8922",
+    "kernel/drivers/spi/spi-geni-qcom.ko.zst": "bcaa428f6311ea73e0d909bb877607213fb28ab4a5f0dc026341f0e47add9bf2"
+  },
+  "wifi_board_override_matches_installed": true
+}

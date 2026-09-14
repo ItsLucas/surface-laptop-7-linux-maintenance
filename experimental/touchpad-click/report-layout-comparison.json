@@ -1,0 +1,253 @@
+{
+  "hang_marker_epoch_ms": 1789389922381,
+  "examples": {
+    "normal": {
+      "epoch_ms": 1789389917385.1968,
+      "report_id": 10,
+      "length": 1000,
+      "layout": {
+        "frame_type": 0,
+        "length": 750,
+        "children": [
+          {
+            "frame_type": 1,
+            "length": 484,
+            "heat_bytes": 468,
+            "heat_min": 70,
+            "heat_max": 193,
+            "heat_sum": 82890
+          },
+          {
+            "frame_type": 255,
+            "length": 259,
+            "reports": [
+              {
+                "type": 0,
+                "flags": 4,
+                "length": 8
+              },
+              {
+                "type": 3,
+                "flags": 4,
+                "length": 8,
+                "dimensions": [
+                  18,
+                  26,
+                  0,
+                  17,
+                  0,
+                  25,
+                  14,
+                  0
+                ]
+              },
+              {
+                "type": 11,
+                "flags": 4,
+                "length": 8
+              },
+              {
+                "type": 4,
+                "flags": 4,
+                "length": 68
+              },
+              {
+                "type": 7,
+                "flags": 4,
+                "length": 4
+              },
+              {
+                "type": 50,
+                "flags": 4,
+                "length": 8
+              },
+              {
+                "type": 148,
+                "flags": 4,
+                "length": 60,
+                "button_bit": true
+              },
+              {
+                "type": 150,
+                "flags": 4,
+                "length": 48
+              },
+              {
+                "type": 255,
+                "flags": 4,
+                "length": 4
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "hang": {
+      "epoch_ms": 1789389922610.5125,
+      "report_id": 10,
+      "length": 1000,
+      "layout": {
+        "frame_type": 0,
+        "length": 282,
+        "children": [
+          {
+            "frame_type": 255,
+            "length": 275,
+            "reports": [
+              {
+                "type": 0,
+                "flags": 8,
+                "length": 8
+              },
+              {
+                "type": 3,
+                "flags": 8,
+                "length": 8,
+                "dimensions": [
+                  18,
+                  26,
+                  0,
+                  17,
+                  0,
+                  25,
+                  11,
+                  0
+                ]
+              },
+              {
+                "type": 4,
+                "flags": 8,
+                "length": 68
+              },
+              {
+                "type": 7,
+                "flags": 8,
+                "length": 4
+              },
+              {
+                "type": 50,
+                "flags": 4,
+                "length": 8
+              },
+              {
+                "type": 150,
+                "flags": 8,
+                "length": 48
+              },
+              {
+                "type": 148,
+                "flags": 8,
+                "length": 60,
+                "button_bit": false
+              },
+              {
+                "type": 18,
+                "flags": 8,
+                "length": 24
+              },
+              {
+                "type": 255,
+                "flags": 8,
+                "length": 4
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "recovered": {
+      "epoch_ms": 1789389923883.4238,
+      "report_id": 10,
+      "length": 1000,
+      "layout": {
+        "frame_type": 0,
+        "length": 750,
+        "children": [
+          {
+            "frame_type": 1,
+            "length": 484,
+            "heat_bytes": 468,
+            "heat_min": 66,
+            "heat_max": 183,
+            "heat_sum": 83737
+          },
+          {
+            "frame_type": 255,
+            "length": 259,
+            "reports": [
+              {
+                "type": 0,
+                "flags": 4,
+                "length": 8
+              },
+              {
+                "type": 3,
+                "flags": 4,
+                "length": 8,
+                "dimensions": [
+                  18,
+                  26,
+                  0,
+                  17,
+                  0,
+                  25,
+                  14,
+                  0
+                ]
+              },
+              {
+                "type": 11,
+                "flags": 4,
+                "length": 8
+              },
+              {
+                "type": 4,
+                "flags": 4,
+                "length": 68
+              },
+              {
+                "type": 7,
+                "flags": 4,
+                "length": 4
+              },
+              {
+                "type": 50,
+                "flags": 4,
+                "length": 8
+              },
+              {
+                "type": 148,
+                "flags": 4,
+                "length": 60,
+                "button_bit": false
+              },
+              {
+                "type": 150,
+                "flags": 4,
+                "length": 48
+              },
+              {
+                "type": 255,
+                "flags": 4,
+                "length": 4
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "known": {
+    "normal_heatmap_bytes": 468,
+    "normal_dimensions": [
+      18,
+      26
+    ],
+    "heatmap_absent_in_hang_window": true
+  },
+  "unknown": [
+    "meaning of flags 0x08",
+    "meaning and payload layout of report 0x12",
+    "reason for suppression of heatmap and haptic feedback"
+  ]
+}

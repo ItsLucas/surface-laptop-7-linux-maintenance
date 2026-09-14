@@ -1,0 +1,21 @@
+linux-generic-hwe-26.04:
+  Installed: 7.2.0-5.5
+  Candidate: 7.2.0-5.5
+  Version table:
+ *** 7.2.0-5.5 500
+        500 http://cn.archive.ubuntu.com/ubuntu stonking/main arm64 Packages
+        100 /var/lib/dpkg/status
+linux-image-generic-hwe-26.04:
+  Installed: 7.2.0-5.5
+  Candidate: 7.2.0-5.5
+  Version table:
+ *** 7.2.0-5.5 500
+        500 http://cn.archive.ubuntu.com/ubuntu stonking/main arm64 Packages
+        100 /var/lib/dpkg/status
+linux-headers-generic-hwe-26.04:
+  Installed: 7.2.0-5.5
+  Candidate: 7.2.0-5.5
+  Version table:
+ *** 7.2.0-5.5 500
+        500 http://cn.archive.ubuntu.com/ubuntu stonking/main arm64 Packages
+        100 /var/lib/dpkg/status

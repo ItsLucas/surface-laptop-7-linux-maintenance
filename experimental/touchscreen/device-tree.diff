@@ -1,0 +1,27 @@
+--- /home/lucas/code/sl7-wifi-fix/touchscreen-test/current.dts	2026-09-14 16:35:56.103207422 +0800
++++ /home/lucas/code/sl7-wifi-fix/touchscreen-test/test.dts	2026-09-14 16:35:56.118206874 +0800
+@@ -3787,6 +3787,7 @@
+ 			i2c@a80000 {
+ 				#address-cells = <0x01>;
+ 				#size-cells = <0x00>;
++				clock-frequency = <0x61a80>;
+ 				clock-names = "se";
+ 				clocks = <0x3e 0xb8>;
+ 				compatible = "qcom,geni-i2c";
+@@ -3801,7 +3802,15 @@
+ 				power-domains = <0x3c 0x00>;
+ 				reg = <0x00 0xa80000 0x00 0x4000>;
+ 				required-opps = <0x2f>;
+-				status = "disabled";
++				status = "okay";
++
++				touchscreen@34 {
++					compatible = "hid-over-i2c";
++					hid-descr-addr = <0x00>;
++					interrupts-extended = <0x53 0x26 0x08>;
++					reg = <0x34>;
++					reset-gpios = <0x53 0x1f 0x01>;
++				};
+ 			};
+ 
+ 			i2c@a84000 {

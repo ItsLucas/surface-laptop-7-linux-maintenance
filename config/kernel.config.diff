@@ -1,0 +1,28 @@
+--- stock.config
++++ sl7.config
+@@ -2,7 +2,7 @@
+ # Automatically generated file; DO NOT EDIT.
+ # Linux/arm64 7.2.0 Kernel Configuration
+ #
+-CONFIG_CC_VERSION_TEXT="aarch64-linux-gnu-gcc (Ubuntu 15.3.0-2ubuntu1) 15.3.0"
++CONFIG_CC_VERSION_TEXT="gcc (Ubuntu 15.3.0-3ubuntu1) 15.3.0"
+ CONFIG_CC_IS_GCC=y
+ CONFIG_GCC_VERSION=150300
+ CONFIG_CLANG_VERSION=0
+@@ -10243,6 +10243,7 @@
+ CONFIG_I2C_HID_OF_ELAN=m
+ CONFIG_I2C_HID_OF_GOODIX=m
+ CONFIG_I2C_HID_CORE=m
++CONFIG_SPI_HID=m
+ 
+ #
+ # Surface System Aggregator Module HID support
+@@ -15229,7 +15230,7 @@
+ #
+ # Certificates for signature checking
+ #
+-CONFIG_MODULE_SIG_KEY="certs/signing_key.pem"
++CONFIG_MODULE_SIG_KEY="certs/sl7-module-cert.pem"
+ CONFIG_MODULE_SIG_KEY_TYPE_RSA=y
+ # CONFIG_MODULE_SIG_KEY_TYPE_ECDSA is not set
+ # CONFIG_MODULE_SIG_KEY_TYPE_MLDSA_44 is not set

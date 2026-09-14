@@ -1,0 +1,26 @@
+#!/bin/sh
+set -e
+release=7.2.0-5-sl7
+boot_dir=/boot/sl7/$release
+case "$1" in
+    configure)
+        sbverify --cert /usr/share/sl7-kernel/SL7-Kernel-BOOT.pem "$boot_dir/kernel.efi"
+        depmod -a "$release"
+        wifi_board=/usr/lib/firmware/updates/ath12k/WCN7850/hw2.0/board-2.bin
+        if [ -f "$wifi_board" ]; then
+            dracut --force --kver "$release" --nostrip --no-hostonly-cmdline \
+                --add-drivers 'spi_hid spi_geni_qcom gpi' \
+                --include "$wifi_board" "$wifi_board" "$boot_dir/initrd.img.new"
+        else
+            dracut --force --kver "$release" --nostrip --no-hostonly-cmdline \
+                --add-drivers 'spi_hid spi_geni_qcom gpi' "$boot_dir/initrd.img.new"
+        fi
+        mv -f "$boot_dir/initrd.img.new" "$boot_dir/initrd.img"
+        chmod 0600 "$boot_dir/initrd.img"
+        if [ -d /run/systemd/system ]; then
+            systemctl daemon-reload
+            systemctl enable sl7-iptsd-coldplug.service
+        fi
+        update-grub
+        ;;
+esac

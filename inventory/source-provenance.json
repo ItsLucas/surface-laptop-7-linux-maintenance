@@ -1,0 +1,13 @@
+{
+  "created": "2026-09-14T16:24:26.349126+08:00",
+  "ubuntu_version": "26.10 development",
+  "media": "daily 20260902 arm64",
+  "kernel_source_package": "linux-source-7.2.0",
+  "kernel_source_version": "7.2.0-5.5",
+  "custom_release": "7.2.0-5-sl7",
+  "custom_package_version": "7.2.0-5.5+sl7.1",
+  "iptsd_upstream": "a83bc1232f7096f8b33b50fdbda249cd640de670",
+  "iptsd_tested_fork": "3663e96e758145801c3cb1ce7c72f362d0d4a5f5",
+  "ellx_reference": "0e9944fa4cf2ccf575f5162bfd53ed4dc1592251",
+  "kernel_source_sha256": "0f9af4336b5aac5141a4b8efcd55ab741f2a9bcb17c41bb74193ae024fbce870"
+}
